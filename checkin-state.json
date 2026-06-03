@@ -5497,14 +5497,16 @@
       "schluessel": 0,
       "schluessel_retour": false,
       "nachbuchungen": [],
-      "notiz": "",
+      "notiz": "raus",
       "notizColor": "",
       "stirnlampe": {
         "anzahl": 0,
         "retour": false
       },
       "personStatus": "offen",
-      "_ts": {}
+      "_ts": {
+        "notiz": 1780490174744
+      }
     },
     "110131_Egbert_Peter": {
       "zimmer": "",
@@ -6394,6 +6396,15 @@
   },
   "changeLog": [
     {
+      "ts": 1780490174744,
+      "personId": "110115_Adler_Kevin",
+      "name": "Kevin Adler",
+      "vorgang": "110115",
+      "field": "Notiz",
+      "oldVal": "",
+      "newVal": "raus"
+    },
+    {
       "ts": 1780489763212,
       "personId": "100402_Heer_Alenia",
       "name": "Alenia Heer",
@@ -6403,5 +6414,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780489764022
+  "savedAt": 1780490175548
 }

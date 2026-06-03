@@ -4929,7 +4929,7 @@
         "anzahl": 1,
         "retour": true
       },
-      "personStatus": "abgereist",
+      "personStatus": "offen",
       "_ts": {}
     },
     "105233_Dörr_Carolina": {
@@ -6396,6 +6396,15 @@
   },
   "changeLog": [
     {
+      "ts": 1780492074835,
+      "personId": "105231_Andresen_Jane",
+      "name": "Jane Andresen",
+      "vorgang": "105231",
+      "field": "Reisestatus",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
       "ts": 1780492067860,
       "personId": "105231_Andresen_Jane",
       "name": "Jane Andresen",
@@ -6558,5 +6567,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780492073632
+  "savedAt": 1780492075676
 }

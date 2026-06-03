@@ -370,7 +370,6 @@
     vertical-align: middle;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 0;
   }
   .checkin-table tr:last-child td { border-bottom: none; }
   .checkin-table tr.checked-in { background: rgba(10,158,110,.06); }
@@ -2286,6 +2285,7 @@ function renderRow(p, showVorgang = false) {
   <td style="padding:8px 10px;width:32px">
     <input type="checkbox" class="row-check" data-id="${p.id}" title="Auswählen">
   </td>
+  <td class="name-cell">${p.name}</td>
   <td class="vorname-cell">${p.vorname}</td>
   ${vorgangCell}
   <td class="mono hide-sm col-geb">${p.geb}</td>

@@ -8901,7 +8901,7 @@
     },
     "109699_Zimmermann_Jakob": {
       "zimmer": "Nicht Teil der Schule",
-      "schluessel": 1,
+      "schluessel": 0,
       "schluessel_retour": false,
       "nachbuchungen": [],
       "notiz": "",
@@ -9832,6 +9832,15 @@
     "110428": "aktiv"
   },
   "changeLog": [
+    {
+      "ts": 1780513944477,
+      "personId": "109699_Zimmermann_Jakob",
+      "name": "Jakob Zimmermann",
+      "vorgang": "109699",
+      "field": "Schlüssel Anzahl",
+      "oldVal": "1",
+      "newVal": "0"
+    },
     {
       "ts": 1780513942404,
       "personId": "109699_Zimmermann_Jakob",
@@ -11300,5 +11309,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780513943218
+  "savedAt": 1780513945281
 }

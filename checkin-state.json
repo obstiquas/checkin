@@ -5195,7 +5195,7 @@
         "anzahl": 0,
         "retour": false
       },
-      "personStatus": "offen",
+      "personStatus": "abgereist",
       "_ts": {}
     },
     "108531_Elsässer_Stefanie": {
@@ -6396,6 +6396,15 @@
   },
   "changeLog": [
     {
+      "ts": 1780490319307,
+      "personId": "108531_Albrecht_Finn",
+      "name": "Finn Albrecht",
+      "vorgang": "108531",
+      "field": "Reisestatus",
+      "oldVal": "offen",
+      "newVal": "abgereist"
+    },
+    {
       "ts": 1780490309740,
       "personId": "105231_Andresen_Jane",
       "name": "Jane Andresen",
@@ -6468,5 +6477,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780490310561
+  "savedAt": 1780490320132
 }

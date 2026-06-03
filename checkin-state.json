@@ -5195,7 +5195,7 @@
         "anzahl": 0,
         "retour": false
       },
-      "personStatus": "abgereist",
+      "personStatus": "offen",
       "_ts": {}
     },
     "108531_Elsässer_Stefanie": {
@@ -6396,6 +6396,24 @@
   },
   "changeLog": [
     {
+      "ts": 1780490322122,
+      "personId": "108531_Albrecht_Finn",
+      "name": "Finn Albrecht",
+      "vorgang": "108531",
+      "field": "Reisestatus",
+      "oldVal": "zu_zahlen",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780490321575,
+      "personId": "108531_Albrecht_Finn",
+      "name": "Finn Albrecht",
+      "vorgang": "108531",
+      "field": "Reisestatus",
+      "oldVal": "abgereist",
+      "newVal": "zu_zahlen"
+    },
+    {
       "ts": 1780490319307,
       "personId": "108531_Albrecht_Finn",
       "name": "Finn Albrecht",
@@ -6477,5 +6495,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780490320132
+  "savedAt": 1780490322942
 }

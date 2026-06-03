@@ -2946,9 +2946,14 @@ async function connectGitHub() {
     document.getElementById('sp-setup').style.display = 'none';
     showLoadingScreen('Daten werden geladen…');
 
-    const loaded = await loadFromGitHub();
+    const result = await loadFromGitHub();
     hideLoadingScreen();
-    if (!loaded) {
+    if (result === true) {
+      // existing data loaded
+    } else if (result === 'notfound') {
+      document.getElementById('upload-screen').style.display = 'flex';
+      setSyncStatus('online', 'Verbunden — bitte Daten importieren');
+    } else {
       const localLoaded = loadFromStorage();
       if (!localLoaded) {
         document.getElementById('upload-screen').style.display = 'flex';
@@ -3099,11 +3104,11 @@ async function loadFromGitHub() {
     const resp = await fetch(GH_API + '?t=' + Date.now(), {
       headers: { 'Authorization': `token ${ghToken}`, 'Accept': 'application/vnd.github.v3+json' }
     });
-    if (resp.status === 404) return false;
-    if (!resp.ok) throw new Error(resp.status);
+    if (resp.status === 404) return 'notfound'; // file doesn't exist yet — first time
+    if (!resp.ok) throw new Error(resp.status + ': ' + (await resp.json().catch(()=>({}))).message);
 
     const meta = await resp.json();
-    if (meta.sha === lastSyncSha) return persons.length > 0; // no change
+    if (meta.sha === lastSyncSha) return persons.length > 0 ? true : 'notfound';
     lastSyncSha = meta.sha;
 
     const decoded = decodeURIComponent(escape(atob(meta.content.replace(/\n/g, ''))));
@@ -3118,40 +3123,25 @@ async function loadFromGitHub() {
       changeLog = data.changeLog || [];
 
       if (persons.length === 0) {
-        // First load — take everything from remote
         initApp(data.persons);
         checkins = data.checkins || {};
       } else {
-        // Field-level merge: for each person and each field,
-        // keep whichever version was modified more recently
         persons = data.persons;
         const remoteCheckins = data.checkins || {};
         const MERGE_FIELDS = ['zimmer', 'schluessel', 'schluessel_retour', 'notiz', 'notizColor', 'personStatus', 'stirnlampe'];
-
         Object.keys(remoteCheckins).forEach(id => {
-          if (!checkins[id]) {
-            // New person from remote
-            checkins[id] = remoteCheckins[id];
-            return;
-          }
+          if (!checkins[id]) { checkins[id] = remoteCheckins[id]; return; }
           const local = checkins[id];
           const remote = remoteCheckins[id];
           const localTs = local._ts || {};
           const remoteTs = remote._ts || {};
-
           MERGE_FIELDS.forEach(field => {
-            const lts = localTs[field] || 0;
-            const rts = remoteTs[field] || 0;
-            if (rts > lts) {
-              // Remote is newer → take remote value
+            if ((remoteTs[field] || 0) > (localTs[field] || 0)) {
               local[field] = remote[field];
               if (!local._ts) local._ts = {};
-              local._ts[field] = rts;
+              local._ts[field] = remoteTs[field];
             }
-            // else: keep local (already there)
           });
-
-          // Nachbuchungen: merge by timestamp — keep all unique entries
           const localNb = local.nachbuchungen || [];
           const remoteNb = remote.nachbuchungen || [];
           const nbMap = new Map();
@@ -3162,22 +3152,25 @@ async function loadFromGitHub() {
           local.nachbuchungen = [...nbMap.values()].sort((a, b) => a.ts - b.ts);
         });
       }
-
       renderCheckin();
       updateHeaderStats();
       setSyncStatus('online', `Sync ${new Date().toLocaleTimeString('de-DE', {hour:'2-digit',minute:'2-digit'})}`);
       return true;
     }
+    return 'notfound';
   } catch(e) {
     console.warn('loadFromGitHub error:', e.message);
+    return false; // false = real error, 'notfound' = file missing
   }
-  return false;
 }
 
 function startSyncPolling() {
   clearInterval(syncTimer);
   syncTimer = setInterval(async () => {
-    if (persons.length > 0) await loadFromGitHub();
+    if (persons.length > 0) {
+      const r = await loadFromGitHub();
+      if (r === false) setSyncStatus('syncing', 'Sync-Fehler…');
+    }
   }, SYNC_INTERVAL);
 }
 
@@ -3405,27 +3398,30 @@ async function continueStartup() {
     document.getElementById('sync-bar').classList.add('visible');
     showLoadingScreen('Verbinde mit GitHub…');
 
-    // Try up to 3 times in case of transient errors
-    let loaded = false;
+    let result = false;
     for (let attempt = 1; attempt <= 3; attempt++) {
       setSyncStatus('syncing', `Laden… (${attempt}/3)`);
-      loaded = await loadFromGitHub();
-      if (loaded) break;
+      result = await loadFromGitHub();
+      if (result !== false) break; // true or 'notfound' = stop retrying
       if (attempt < 3) await new Promise(r => setTimeout(r, 1500));
     }
 
     hideLoadingScreen();
 
-    if (loaded) {
+    if (result === true) {
+      // Data loaded successfully
       setSyncStatus('online', 'Verbunden');
+    } else if (result === 'notfound') {
+      // GitHub connected but no data file yet — show upload screen
+      setSyncStatus('online', 'Verbunden — bitte Daten importieren');
+      document.getElementById('upload-screen').style.display = 'flex';
     } else {
+      // Real error — try local cache, then show error
       const localLoaded = loadFromStorage();
       if (localLoaded) {
-        hideLoadingScreen();
         setSyncStatus('online', 'Verbunden (lokale Daten)');
       } else {
-        // Show error with options
-        showLoadingError('Keine Daten gefunden. Neu versuchen oder ohne Sync fortfahren.');
+        showLoadingError('GitHub nicht erreichbar. Bitte Verbindung prüfen.');
       }
     }
     startSyncPolling();

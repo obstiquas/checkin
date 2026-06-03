@@ -8901,8 +8901,8 @@
     },
     "109699_Zimmermann_Jakob": {
       "zimmer": "Nicht Teil der Schule",
-      "schluessel": 2,
-      "schluessel_retour": true,
+      "schluessel": 0,
+      "schluessel_retour": false,
       "nachbuchungen": [],
       "notiz": "",
       "notizColor": "",
@@ -9832,6 +9832,33 @@
     "110428": "aktiv"
   },
   "changeLog": [
+    {
+      "ts": 1780513936046,
+      "personId": "109699_Zimmermann_Jakob",
+      "name": "Jakob Zimmermann",
+      "vorgang": "109699",
+      "field": "Schlüssel retour",
+      "oldVal": "ja",
+      "newVal": "nein"
+    },
+    {
+      "ts": 1780513935572,
+      "personId": "109699_Zimmermann_Jakob",
+      "name": "Jakob Zimmermann",
+      "vorgang": "109699",
+      "field": "Schlüssel Anzahl",
+      "oldVal": "1",
+      "newVal": "0"
+    },
+    {
+      "ts": 1780513935371,
+      "personId": "109699_Zimmermann_Jakob",
+      "name": "Jakob Zimmermann",
+      "vorgang": "109699",
+      "field": "Schlüssel Anzahl",
+      "oldVal": "2",
+      "newVal": "1"
+    },
     {
       "ts": 1780513928557,
       "personId": "109699_Sönnichsen_Caspar",
@@ -11264,5 +11291,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780513932117
+  "savedAt": 1780513936859
 }

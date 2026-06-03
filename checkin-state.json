@@ -9833,6 +9833,24 @@
   },
   "changeLog": [
     {
+      "ts": 1780513946107,
+      "personId": "109699_Sönnichsen_Caspar",
+      "name": "Caspar Sönnichsen",
+      "vorgang": "109699",
+      "field": "Schlüssel Anzahl",
+      "oldVal": "1",
+      "newVal": "0"
+    },
+    {
+      "ts": 1780513945342,
+      "personId": "109699_Sönnichsen_Caspar",
+      "name": "Caspar Sönnichsen",
+      "vorgang": "109699",
+      "field": "Schlüssel Anzahl",
+      "oldVal": "0",
+      "newVal": "1"
+    },
+    {
       "ts": 1780513944477,
       "personId": "109699_Zimmermann_Jakob",
       "name": "Jakob Zimmermann",
@@ -11309,5 +11327,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780513945281
+  "savedAt": 1780513946911
 }

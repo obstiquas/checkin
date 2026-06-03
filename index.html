@@ -1886,7 +1886,8 @@ function isCheckedIn(p) {
 }
 
 function renderCheckin() {
-  if (viewMode === 'flat') { renderFlatView(); return; }
+  try {
+    if (viewMode === 'flat') { renderFlatView(); return; }
 
   const filtered = getFilteredPersons();
   const container = document.getElementById('main-content');
@@ -1930,6 +1931,11 @@ function renderCheckin() {
     t.id = t.id || 'ct_' + i;
     initResizableColumns(t);
   });
+  } catch(err) {
+    console.error('renderCheckin error:', err);
+    document.getElementById('main-content').innerHTML =
+      `<div style="padding:40px;color:#d63545;font-weight:700">⚠ Fehler beim Anzeigen: ${err.message}<br><small style="font-weight:400">(Bitte Seite neu laden)</small></div>`;
+  }
 }
 
 function renderFlatView() {
@@ -2218,7 +2224,13 @@ function renderVorgangBlock(g, filtered) {
 
 function renderRow(p, showVorgang = false) {
   const c = checkins[p.id];
-  if (!c.stirnlampe) c.stirnlampe = { anzahl: 0, retour: false };
+  // Guard: if checkin data missing, create default
+  if (!c) {
+    checkins[p.id] = { zimmer: p.zus || '', schluessel: 0, schluessel_retour: false,
+      nachbuchungen: [], notiz: '', notizColor: '', stirnlampe: { anzahl: 0, retour: false },
+      personStatus: 'offen', _ts: {} };
+  }
+  const ch = checkins[p.id];
   const checked = isCheckedIn(p);
 
   const activeCols = dynamicLeistungCols
@@ -2237,8 +2249,8 @@ function renderRow(p, showVorgang = false) {
     return `<span class="lpill" title="${lc.label}" style="display:inline-flex;align-items:center;background:${lc.color}33;color:#000;margin-bottom:2px;font-weight:600">${baseLabel}${suffixHtml}</span>`;
   }).join('<br>');
 
-  const nbCount = c.nachbuchungen.length;
-  const nbPills = c.nachbuchungen.map((nb, i) => {
+  const nbCount = ch.nachbuchungen.length;
+  const nbPills = ch.nachbuchungen.map((nb, i) => {
     const confirmed = nb.status === true;
     const bg = confirmed ? 'rgba(10,158,110,.12)' : 'rgba(214,53,69,.1)';
     const border = confirmed ? 'rgba(10,158,110,.4)' : 'rgba(214,53,69,.35)';
@@ -2252,23 +2264,23 @@ function renderRow(p, showVorgang = false) {
       title="${nb.leistung}${nb.betrag ? ' · CHF ' + nb.betrag.toFixed(2) : ''}${nb.notiz ? ' · ' + nb.notiz : ''}"
     >${label}</div>`;
   }).join('');
-  const safeNotiz = (c.notiz || '').replace(/"/g, '&quot;');
+  const safeNotiz = (ch.notiz || '').replace(/"/g, '&quot;');
 
   // Notiz color
   const NOTIZ_COLORS = ['', '#ffb84d', '#ff6b35', '#ff5566', '#4fffb0'];
   const NOTIZ_LABELS = ['–', '🟡', '🟠', '🔴', '🟢'];
-  const colorIdx = NOTIZ_COLORS.indexOf(c.notizColor || '');
-  const dotBg = c.notizColor || 'transparent';
-  const notizBg = c.notizColor ? c.notizColor + '55' : 'transparent';
-  const notizBorder = c.notizColor ? c.notizColor + 'aa' : '';
-  const notizTextColor = c.notizColor ? 'color:#000;font-weight:700;' : '';
+  const colorIdx = NOTIZ_COLORS.indexOf(ch.notizColor || '');
+  const dotBg = ch.notizColor || 'transparent';
+  const notizBg = ch.notizColor ? ch.notizColor + '55' : 'transparent';
+  const notizBorder = ch.notizColor ? ch.notizColor + 'aa' : '';
+  const notizTextColor = ch.notizColor ? 'color:#000;font-weight:700;' : '';
 
   const vorgangCell = showVorgang ? `<td class="mono hide-sm" style="font-size:.75rem">
     <span class="group-nr" style="font-size:.68rem">${p.vorgang}</span>
     ${vorgangNames[p.vorgang] ? `<span style="color:var(--muted);font-size:.7rem;margin-left:4px">${vorgangNames[p.vorgang]}</span>` : ''}
   </td>` : '';
 
-  const sl = c.stirnlampe;
+  const sl = ch.stirnlampe;
   const slCell = `<td>
     <div class="sl-wrap">
       <input class="room-input"
@@ -2286,9 +2298,9 @@ function renderRow(p, showVorgang = false) {
   </td>`;
 
   // Person status & row color
-  if (!c.personStatus) c.personStatus = 'offen';
+  if (!ch.personStatus) ch.personStatus = 'offen';
   const rowStatus = computeRowStatus(p);
-  const ps = c.personStatus || 'offen';
+  const ps = ch.personStatus || 'offen';
 
   const PS_LABELS = { offen: '○ Offen', abgereist: '✈ Abgereist', zu_zahlen: '💰 Zu zahlen', no_show: '✗ No-show' };
   const PS_COLORS = { offen: '#555', abgereist: '#1a4fa0', zu_zahlen: '#a52030', no_show: '#7a0000' };
@@ -2320,18 +2332,18 @@ function renderRow(p, showVorgang = false) {
   ${vorgangCell}
   <td class="mono hide-sm col-geb">${p.geb}</td>
   <td>
-    <input class="room-input ${c.zimmer ? 'filled' : ''}"
-      type="text" value="${c.zimmer}" placeholder="---"
+    <input class="room-input ${ch.zimmer ? 'filled' : ''}"
+      type="text" value="${ch.zimmer}" placeholder="---"
       onchange="setZimmer('${p.id}', this.value)" onclick="this.select()">
   </td>
   <td>
     <div class="sl-wrap">
       <input class="room-input"
-        style="width:52px;text-align:center;${c.schluessel_retour ? 'background:rgba(10,158,110,.15);border-color:rgba(10,158,110,.5);' : c.schluessel >= 1 ? 'background:rgba(212,144,10,.12);border-color:rgba(212,144,10,.5);' : ''}"
+        style="width:52px;text-align:center;${ch.schluessel_retour ? 'background:rgba(10,158,110,.15);border-color:rgba(10,158,110,.5);' : ch.schluessel >= 1 ? 'background:rgba(212,144,10,.12);border-color:rgba(212,144,10,.5);' : ''}"
         type="number" min="0"
-        value="${c.schluessel || ''}" placeholder="0"
+        value="${ch.schluessel || ''}" placeholder="0"
         onchange="setSchluessel('${p.id}', this.value)" onclick="this.select()">
-      <button class="sl-retour ${c.schluessel_retour ? 'checked' : ''}"
+      <button class="sl-retour ${ch.schluessel_retour ? 'checked' : ''}"
         onclick="toggleSchluesselRetour('${p.id}')"
         title="Schlüssel retour">
         <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
@@ -2346,7 +2358,7 @@ function renderRow(p, showVorgang = false) {
       <span class="notiz-color-dot" style="background:${dotBg}" title="Farbe ändern"
         onclick="cycleNotizColor('${p.id}')"></span>
       <input class="room-input"
-        style="width:110px;${c.notizColor ? `background:${notizBg};border-color:${notizBorder};${notizTextColor}` : ''}"
+        style="width:110px;${ch.notizColor ? `background:${notizBg};border-color:${notizBorder};${notizTextColor}` : ''}"
         type="text" value="${safeNotiz}" placeholder="Notiz…"
         onchange="setNotiz('${p.id}', this.value)" onclick="this.select()">
     </div>
@@ -2367,8 +2379,7 @@ function renderRow(p, showVorgang = false) {
 // ─────────────────────────────
 function hasOpenItems(p) {
   const c = checkins[p.id];
-  if (!c) return false;
-  const hasUnreturnedSchluessel = c.schluessel > 0 && !c.schluessel_retour;
+  if (!c) return false;  const hasUnreturnedSchluessel = c.schluessel > 0 && !c.schluessel_retour;
   const hasUnreturnedStirnlampe = c.stirnlampe?.anzahl > 0 && !c.stirnlampe?.retour;
   const hasRedNb = c.nachbuchungen?.some(nb => nb.status !== true);
   return hasUnreturnedSchluessel || hasUnreturnedStirnlampe || hasRedNb;

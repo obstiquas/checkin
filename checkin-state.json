@@ -4920,7 +4920,7 @@
     },
     "105231_Andresen_Jane": {
       "zimmer": "",
-      "schluessel": 0,
+      "schluessel": 1,
       "schluessel_retour": false,
       "nachbuchungen": [],
       "notiz": "",
@@ -6396,6 +6396,15 @@
   },
   "changeLog": [
     {
+      "ts": 1780490309740,
+      "personId": "105231_Andresen_Jane",
+      "name": "Jane Andresen",
+      "vorgang": "105231",
+      "field": "Schlüssel Anzahl",
+      "oldVal": "0",
+      "newVal": "1"
+    },
+    {
       "ts": 1780490307420,
       "personId": "105231_Andresen_Jane",
       "name": "Jane Andresen",
@@ -6459,5 +6468,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780490308244
+  "savedAt": 1780490310561
 }

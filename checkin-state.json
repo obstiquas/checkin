@@ -4927,7 +4927,7 @@
       "notizColor": "",
       "stirnlampe": {
         "anzahl": 1,
-        "retour": false
+        "retour": true
       },
       "personStatus": "offen",
       "_ts": {}
@@ -6549,5 +6549,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780492063929
+  "savedAt": 1780492067167
 }

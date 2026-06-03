@@ -8,18 +8,18 @@
   @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap');
 
   :root {
-    --bg: #0f1117;
-    --surface: #181c27;
-    --surface2: #1e2333;
-    --border: #2a3045;
-    --accent: #4fffb0;
-    --accent2: #ff6b35;
-    --accent3: #7b9fff;
-    --text: #e8eaf0;
-    --muted: #6b7290;
-    --warn: #ffb84d;
-    --danger: #ff5566;
-    --green: #4fffb0;
+    --bg: #f0f2f5;
+    --surface: #ffffff;
+    --surface2: #f5f6f8;
+    --border: #dde1e9;
+    --accent: #0a9e6e;
+    --accent2: #e05a1e;
+    --accent3: #3b6fd4;
+    --text: #1a1d2e;
+    --muted: #7a8099;
+    --warn: #d4900a;
+    --danger: #d63545;
+    --green: #0a9e6e;
     --radius: 8px;
   }
 
@@ -90,7 +90,7 @@
   }
   .upload-box:hover, .upload-box.drag-over {
     border-color: var(--accent);
-    background: rgba(79,255,176,.04);
+    background: rgba(10,158,110,.04);
   }
   .upload-box svg { color: var(--accent); margin-bottom: 12px; }
   .upload-box p { color: var(--muted); font-size: .9rem; margin-top: 8px; }
@@ -139,7 +139,7 @@
   }
   .btn-primary {
     background: var(--accent);
-    color: #0f1117;
+    color: #ffffff;
   }
   .btn-primary:hover { background: #6fffbf; transform: translateY(-1px); }
   .btn-secondary {
@@ -230,7 +230,7 @@
     transition: all .15s;
     letter-spacing: .04em;
   }
-  .tab-btn.active { background: var(--accent); color: #0f1117; }
+  .tab-btn.active { background: var(--accent); color: #ffffff; }
   .tab-btn:hover:not(.active) { color: var(--text); background: var(--surface2); }
 
   /* ── CONTENT ── */
@@ -256,7 +256,7 @@
     font-family: 'DM Mono', monospace;
     font-size: .8rem;
     background: var(--accent3);
-    color: #0f1117;
+    color: #ffffff;
     padding: 2px 8px;
     border-radius: 4px;
     font-weight: 500;
@@ -294,10 +294,10 @@
     border-radius: 4px;
     font-weight: 500;
   }
-  .badge-green { background: rgba(79,255,176,.15); color: var(--accent); }
-  .badge-orange { background: rgba(255,107,53,.15); color: var(--accent2); }
-  .badge-blue { background: rgba(123,159,255,.15); color: var(--accent3); }
-  .badge-warn { background: rgba(255,184,77,.15); color: var(--warn); }
+  .badge-green { background: rgba(10,158,110,.12); color: var(--accent); }
+  .badge-orange { background: rgba(224,90,30,.12); color: var(--accent2); }
+  .badge-blue { background: rgba(59,111,212,.12); color: var(--accent3); }
+  .badge-warn { background: rgba(212,144,10,.12); color: var(--warn); }
   .badge-muted { background: var(--surface); color: var(--muted); }
   .collapse-icon { color: var(--muted); transition: transform .2s; }
   .collapsed .collapse-icon { transform: rotate(-90deg); }
@@ -316,7 +316,7 @@
     align-items: center;
     gap: 8px;
     padding: 8px 12px;
-    background: rgba(123,159,255,.04);
+    background: rgba(59,111,212,.05);
     border-bottom: 1px solid var(--border);
     flex-wrap: wrap;
   }
@@ -327,6 +327,7 @@
     width: 100%;
     border-collapse: collapse;
     font-size: .82rem;
+    table-layout: fixed;
   }
   .checkin-table th {
     background: var(--surface2);
@@ -344,7 +345,7 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    padding: 8px 12px;
+    padding: 8px 16px;
     width: 100%;
     background: none;
     border: none;
@@ -363,14 +364,17 @@
   .sort-arrow { font-size: .7rem; opacity: 0.4; }
   .th-btn.sort-asc .sort-arrow, .th-btn.sort-desc .sort-arrow { opacity: 1; color: var(--accent3); }
   .checkin-table td {
-    padding: 8px 12px;
-    border-bottom: 1px solid rgba(42,48,69,.5);
+    padding: 8px 16px;
+    border-bottom: 1px solid rgba(180,185,200,.4);
     vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 0;
   }
   .checkin-table tr:last-child td { border-bottom: none; }
-  .checkin-table tr.checked-in { background: rgba(79,255,176,.03); }
+  .checkin-table tr.checked-in { background: rgba(10,158,110,.06); }
   .checkin-table tr.checked-in td:first-child { border-left: 2px solid var(--accent); }
-  .checkin-table tr:hover td { background: rgba(255,255,255,.02); }
+  .checkin-table tr:hover td { background: rgba(0,0,0,.02); }
 
   .name-cell { font-weight: 600; }
   .vorname-cell { color: var(--muted); }
@@ -402,7 +406,7 @@
     text-align: center;
   }
   .room-input:focus { outline: none; border-color: var(--accent); }
-  .room-input.filled { border-color: rgba(79,255,176,.4); background: rgba(79,255,176,.05); }
+  .room-input.filled { border-color: rgba(10,158,110,.5); background: rgba(10,158,110,.06); }
 
   /* ── CHECKBOXES ── */
   .check-wrap {
@@ -426,7 +430,7 @@
   .check-toggle.checked {
     background: var(--accent);
     border-color: var(--accent);
-    color: #0f1117;
+    color: #ffffff;
   }
   .check-toggle:hover:not(.checked) { border-color: var(--accent); }
   .check-toggle.warn-check.checked { background: var(--warn); border-color: var(--warn); }
@@ -603,7 +607,7 @@
     user-select: none;
   }
   .vorgang-pill:hover { border-color: var(--accent3); color: var(--accent3); }
-  .vorgang-pill.selected { background: rgba(123,159,255,.15); border-color: var(--accent3); color: var(--accent3); }
+  .vorgang-pill.selected { background: rgba(59,111,212,.1); border-color: var(--accent3); color: var(--accent3); }
   .vorgang-pill .pill-remove { color: var(--danger); font-size: .8rem; line-height: 1; }
   .group-list-item {
     display: flex;
@@ -624,7 +628,7 @@
     align-items: center;
     gap: 8px;
     padding: 5px 24px;
-    background: rgba(123,159,255,.05);
+    background: rgba(59,111,212,.05);
     border-bottom: 1px solid var(--border);
     font-size: .73rem;
     color: var(--muted);
@@ -649,12 +653,126 @@
   .setup-card h2{font-size:1.1rem;font-weight:800;margin-bottom:6px;}
   .setup-card p{color:var(--muted);font-size:.85rem;line-height:1.6;margin-bottom:16px;}
   .setup-step{display:flex;gap:12px;margin-bottom:10px;font-size:.82rem;align-items:flex-start;}
-  .step-nr{width:20px;height:20px;border-radius:50%;background:var(--accent3);color:#0f1117;
+  .step-nr{width:20px;height:20px;border-radius:50%;background:var(--accent3);color:#ffffff;
     font-weight:800;font-size:.68rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
   .sp-field{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:6px;
     color:var(--text);font-family:'DM Mono',monospace;font-size:.8rem;padding:8px 12px;margin-top:6px;}
   .sp-field:focus{outline:none;border-color:var(--accent3);}
   .sp-hint{font-size:.72rem;color:var(--muted);margin-top:4px;font-family:'DM Mono',monospace;}
+
+  .notiz-color-dot {
+    width:14px;height:14px;border-radius:50%;border:1.5px solid var(--border);
+    cursor:pointer;flex-shrink:0;transition:transform .15s;display:inline-block;
+  }
+  .notiz-color-dot:hover { transform: scale(1.3); }
+  .notiz-wrap { display:flex;align-items:center;gap:5px; }
+  .sl-wrap { display:flex;align-items:center;gap:5px; }
+  .sl-retour {
+    width:26px;height:26px;border-radius:5px;border:1.5px solid var(--border);
+    background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;
+    color:transparent;transition:all .15s;flex-shrink:0;
+  }
+  .sl-retour.checked { background:var(--accent);border-color:var(--accent);color:#ffffff; }
+  .sl-retour:hover:not(.checked) { border-color:var(--accent); }
+
+  /* ── PASSWORD SCREEN ── */
+  #pw-screen {
+    position: fixed; inset: 0; z-index: 999;
+    background: var(--bg);
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column; gap: 24px; padding: 40px;
+  }
+  #pw-screen.hidden { display: none; }
+  .pw-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 16px; padding: 36px 40px;
+    width: 100%; max-width: 380px; text-align: center;
+  }
+  .pw-logo {
+    width: 48px; height: 48px; background: var(--accent);
+    border-radius: 12px; display: flex; align-items: center;
+    justify-content: center; margin: 0 auto 20px;
+  }
+  .pw-card h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: 6px; }
+  .pw-card p { color: var(--muted); font-size: .85rem; margin-bottom: 24px; }
+  .pw-input {
+    width: 100%; background: var(--surface2); border: 1px solid var(--border);
+    border-radius: 8px; color: var(--text); font-family: 'Syne', sans-serif;
+    font-size: 1rem; padding: 12px 16px; text-align: center;
+    letter-spacing: .15em; margin-bottom: 12px;
+  }
+  .pw-input:focus { outline: none; border-color: var(--accent3); }
+  .pw-error { color: var(--danger); font-size: .8rem; min-height: 20px; margin-bottom: 8px; }
+  .pw-hint { font-size: .72rem; color: var(--muted); margin-top: 16px; }
+
+  .nb-autocomplete {
+    position: absolute; top: 100%; left: 0; right: 0; z-index: 600;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 0 0 8px 8px; box-shadow: 0 4px 12px rgba(0,0,0,.1);
+    max-height: 200px; overflow-y: auto;
+  }
+  .nb-ac-item {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 8px 12px; cursor: pointer; font-size: .83rem;
+    transition: background .1s;
+  }
+  .nb-ac-item:hover { background: var(--surface2); }
+  .nb-ac-item .ac-name { font-weight: 600; }
+  .nb-ac-item .ac-price { font-family: 'DM Mono', monospace; font-size: .75rem; color: var(--warn); }
+  .nb-ac-item .ac-count { font-size: .68rem; color: var(--muted); margin-left: 6px; }
+  .nb-input-wrap { position: relative; }
+
+  .col-geb-hidden .col-geb { display: none; }
+
+  /* ── EXPORT DROPDOWN ── */
+  .export-dropdown-wrap { position: relative; display: inline-block; }
+  .export-dropdown {
+    position: absolute; top: calc(100% + 4px); right: 0; z-index: 300;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,.12);
+    min-width: 170px; overflow: hidden;
+  }
+  .export-dd-item {
+    display: block; width: 100%; text-align: left;
+    padding: 9px 14px; background: none; border: none;
+    font-family: 'Syne', sans-serif; font-size: .82rem; font-weight: 600;
+    color: var(--text); cursor: pointer; transition: background .1s;
+  }
+  .export-dd-item:hover { background: var(--surface2); }
+  .export-dd-divider { height: 1px; background: var(--border); margin: 4px 0; }
+
+  /* ── LAYOUT EDITOR ── */
+  .layout-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 10px; background: var(--surface2);
+    border: 1px solid var(--border); border-radius: 6px;
+    margin-bottom: 6px; cursor: grab; user-select: none;
+    transition: box-shadow .15s, opacity .15s;
+  }
+  .layout-item:active { cursor: grabbing; }
+  .layout-item.drag-over { box-shadow: 0 0 0 2px var(--accent3); }
+  .layout-item.dragging { opacity: .4; }
+  .layout-item .drag-handle { color: var(--muted); font-size: 1rem; cursor: grab; }
+  .layout-item .item-label { flex: 1; font-size: .82rem; font-weight: 600; }
+  .layout-item .visibility-btn {
+    background: none; border: none; cursor: pointer;
+    font-size: .9rem; opacity: .9; padding: 2px 4px;
+    transition: opacity .15s;
+  }
+  .layout-item.hidden-item { opacity: .5; }
+  .layout-item.hidden-item .item-label { text-decoration: line-through; color: var(--muted); }
+
+  .toolbar-right { gap: 6px; flex-wrap: wrap; }
+
+  /* ── COLUMN RESIZE ── */
+  .resizable-th { position: relative; }
+  .col-resizer {
+    position: absolute; right: 0; top: 0; bottom: 0;
+    width: 5px; cursor: col-resize;
+    user-select: none;
+    z-index: 10;
+  }
+  .col-resizer:hover, .col-resizer.dragging { background: var(--accent3); opacity: .5; }
 
   ::-webkit-scrollbar { width: 6px; height: 6px; }
   ::-webkit-scrollbar-track { background: var(--bg); }
@@ -665,7 +783,7 @@
 
 <header>
   <div style="width:28px;height:28px;background:var(--accent);border-radius:6px;display:flex;align-items:center;justify-content:center;">
-    <svg width="16" height="16" fill="none" stroke="#0f1117" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+    <svg width="16" height="16" fill="none" stroke="#ffffff" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
   </div>
   <h1>CHECK<span>-IN</span></h1>
   <div class="header-stats" id="header-stats" style="display:none">
@@ -679,6 +797,25 @@
     <button class="btn btn-danger btn-sm" onclick="resetApp()">Neu laden</button>
   </div>
 </header>
+
+<!-- PASSWORD SCREEN -->
+<div id="pw-screen">
+  <div class="pw-card">
+    <div class="pw-logo">
+      <svg width="24" height="24" fill="none" stroke="#ffffff" stroke-width="2.5" viewBox="0 0 24 24">
+        <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+      </svg>
+    </div>
+    <h2>CHECK-IN</h2>
+    <p>Bitte Passwort eingeben</p>
+    <input class="pw-input" id="pw-input" type="password" placeholder="••••••••"
+      onkeydown="if(event.key==='Enter')checkPassword()"
+      autocomplete="current-password">
+    <div class="pw-error" id="pw-error"></div>
+    <button class="btn btn-primary" style="width:100%;padding:12px" onclick="checkPassword()">Anmelden</button>
+    <div class="pw-hint" id="pw-hint"></div>
+  </div>
+</div>
 
 <!-- SYNC STATUS BAR -->
 <div class="sync-bar" id="sync-bar">
@@ -753,21 +890,23 @@
         <option value="">Alle Gruppen</option>
       </select>
       <select id="status-filter" onchange="filterList()">
-        <option value="">Alle Status</option>
+        <option value="">Alle Check-In Status</option>
         <option value="checked">✓ Eingecheckt</option>
         <option value="pending">○ Ausstehend</option>
       </select>
+      <select id="abreise-filter" onchange="filterList()">
+        <option value="">Reisestatus: Alle</option>
+        <option value="aktiv">Nur aktuell anwesend</option>
+        <option value="abgereist">Nur abgereist</option>
+        <option value="zu_zahlen">Nur zu zahlen</option>
+      </select>
     </div>
-    <div class="toolbar-right">
-      <div class="tab-bar">
-        <button class="tab-btn active" id="tab-checkin" onclick="switchTab('checkin')">Check-In</button>
-        <button class="tab-btn" id="tab-stats" onclick="switchTab('stats')">Statistik</button>
-      </div>
-      <button class="btn btn-secondary btn-sm" onclick="exportSBB()">↓ SBB</button>
-      <button class="btn btn-secondary btn-sm" onclick="exportStats()">↓ Statistik</button>
-      <button class="btn btn-secondary btn-sm" onclick="openGroupModal()">⊞ Gruppen</button>
-      <button class="btn btn-danger btn-sm" onclick="resetApp()" title="Daten zurücksetzen">⟳</button>
-      <button class="btn btn-danger btn-sm" id="sp-disconnect-btn" onclick="disconnectSharePoint()" title="SharePoint trennen" style="display:none">⊗ SP</button>
+    <div class="toolbar-right" id="toolbar-right-items">
+      <!-- rendered dynamically by renderToolbar() -->
+    </div>
+    <button onclick="openLayoutEditor()" title="Layout bearbeiten"
+      style="background:none;border:none;cursor:pointer;color:var(--muted);font-size:1.1rem;padding:4px 6px;flex-shrink:0;transition:color .15s"
+      onmouseover="this.style.color='var(--accent3)'" onmouseout="this.style.color='var(--muted)'">⚙</button>
     </div>
   </div>
 
@@ -776,19 +915,33 @@
   </div>
 
   <div id="stats-view"></div>
+  <div id="history-view" style="display:none;padding:20px 24px"></div>
 </div>
 
 <!-- Nachbuchung Modal -->
 <div class="modal-overlay" id="nachbuchung-modal">
-  <div class="modal">
-    <h3>Nachbuchung hinzufügen</h3>
+  <div class="modal" style="max-width:460px">
+    <h3>Nachbuchungen</h3>
     <div id="nachbuchung-person" style="font-size:.85rem;color:var(--muted);margin-bottom:16px;"></div>
+
+    <!-- Existing entries -->
+    <div id="nb-list" style="margin-bottom:16px"></div>
+
+    <!-- Divider -->
+    <div style="font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700;margin-bottom:12px">Neue Nachbuchung</div>
+
     <div class="form-row">
       <label>Leistung / Artikel</label>
-      <input type="text" id="nb-leistung" placeholder="z.B. Skipass 1 Tag, Handschuhe...">
+      <div class="nb-input-wrap">
+        <input type="text" id="nb-leistung" placeholder="z.B. Skipass 1 Tag, Handschuhe..."
+          oninput="onNbLeistungInput(this.value)"
+          onkeydown="onNbLeistungKey(event)"
+          autocomplete="off">
+        <div class="nb-autocomplete" id="nb-ac" style="display:none"></div>
+      </div>
     </div>
     <div class="form-row">
-      <label>Betrag (€)</label>
+      <label>Betrag (CHF)</label>
       <input type="number" id="nb-betrag" placeholder="0.00" step="0.01">
     </div>
     <div class="form-row">
@@ -796,8 +949,80 @@
       <input type="text" id="nb-notiz" placeholder="">
     </div>
     <div class="modal-actions">
-      <button class="btn btn-secondary btn-sm" onclick="closeModal()">Abbrechen</button>
+      <button class="btn btn-secondary btn-sm" onclick="closeModal()">Schließen</button>
       <button class="btn btn-primary btn-sm" onclick="saveNachbuchung()">Hinzufügen</button>
+    </div>
+  </div>
+</div>
+
+<!-- Layout Editor Panel -->
+<div id="layout-overlay" style="display:none;position:fixed;inset:0;z-index:480;background:rgba(0,0,0,.3)" onclick="closeLayoutEditor()"></div>
+<div id="layout-panel" style="display:none;position:fixed;top:0;right:0;bottom:0;width:300px;z-index:490;background:var(--surface);border-left:1px solid var(--border);padding:20px;overflow-y:auto;box-shadow:-4px 0 20px rgba(0,0,0,.15)">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px">
+    <div style="font-weight:800;font-size:1rem">Layout bearbeiten</div>
+    <button onclick="closeLayoutEditor()" style="background:none;border:none;cursor:pointer;font-size:1.2rem;color:var(--muted)">✕</button>
+  </div>
+  <p style="font-size:.78rem;color:var(--muted);margin-bottom:16px;line-height:1.5">Elemente per Drag & Drop neu anordnen oder mit dem Auge ein-/ausblenden.</p>
+  <div id="layout-items"></div>
+  <div style="margin-top:20px;display:flex;gap:8px">
+    <button class="btn btn-secondary btn-sm" onclick="resetToolbarLayout()">Zurücksetzen</button>
+    <button class="btn btn-primary btn-sm" onclick="closeLayoutEditor()">Fertig</button>
+  </div>
+</div>
+
+<!-- Import Panel Modal -->
+<div class="modal-overlay" id="import-modal">
+  <div class="modal" style="max-width:560px">
+    <h3>Neue Daten importieren</h3>
+    <p style="font-size:.82rem;color:var(--muted);margin-bottom:16px">
+      Bestehende Check-In Daten (Zimmer, Schlüssel, Notizen etc.) bleiben erhalten. Neue Gäste werden ergänzt, bekannte Gäste werden aktualisiert.
+    </p>
+    <div class="paste-area" style="background:var(--surface2)">
+      <label>Daten einfügen (Tab-getrennt aus Excel)</label>
+      <textarea id="import-paste" placeholder="Vorgang&#9;Name&#9;Vorname&#9;E-Mail&#9;Geb.-Datum&#9;..." style="min-height:100px"></textarea>
+    </div>
+    <div style="margin-top:10px;text-align:center;font-size:.78rem;color:var(--muted)">— oder —</div>
+    <div style="margin-top:8px;text-align:center">
+      <label class="btn btn-secondary btn-sm" style="cursor:pointer">
+        📂 Datei hochladen
+        <input type="file" id="import-file" accept=".csv,.xlsx,.xls,.xlsm,.txt" style="display:none" onchange="handleImportFile(this)">
+      </label>
+    </div>
+    <p id="import-error" style="color:var(--danger);font-size:.78rem;margin-top:8px;display:none"></p>
+    <div class="modal-actions">
+      <button class="btn btn-secondary btn-sm" onclick="document.getElementById('import-modal').classList.remove('open')">Abbrechen</button>
+      <button class="btn btn-primary btn-sm" onclick="doImportFromModal()">Importieren</button>
+    </div>
+  </div>
+</div>
+
+<!-- Import Dates Modal -->
+<div class="modal-overlay" id="import-dates-modal">
+  <div class="modal" style="max-width:520px">
+    <h3>An- und Abreisedatum festlegen</h3>
+    <p style="font-size:.82rem;color:var(--muted);margin-bottom:16px">Optional. Kann auch später pro Gruppe geändert werden.</p>
+
+    <!-- Global apply section -->
+    <div style="background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:12px 14px;margin-bottom:16px">
+      <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:10px">Datum für mehrere Vorgänge setzen</div>
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px">
+        <label style="font-size:.75rem;color:var(--muted);min-width:52px">Anreise</label>
+        <input type="date" class="sp-field" style="padding:4px 8px;font-size:.78rem;flex:1;min-width:130px" id="imd-global-an">
+        <label style="font-size:.75rem;color:var(--muted);min-width:52px">Abreise</label>
+        <input type="date" class="sp-field" style="padding:4px 8px;font-size:.78rem;flex:1;min-width:130px" id="imd-global-ab">
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-primary btn-sm" onclick="applyGlobalDates('all')">Für alle übernehmen</button>
+        <button class="btn btn-secondary btn-sm" onclick="applyGlobalDates('selected')">Für Auswahl übernehmen</button>
+      </div>
+    </div>
+
+    <!-- Per-Vorgang list -->
+    <div id="import-dates-list"></div>
+
+    <div class="modal-actions">
+      <button class="btn btn-secondary btn-sm" onclick="skipImportDates()">Überspringen</button>
+      <button class="btn btn-primary btn-sm" onclick="confirmImportDates()">Übernehmen & Laden</button>
     </div>
   </div>
 </div>
@@ -832,8 +1057,169 @@
 
 <script>
 // ─────────────────────────────
-// DATA
+// TOOLBAR CONFIG
 // ─────────────────────────────
+const TOOLBAR_ITEMS_DEF = [
+  { id: 'tabs-main',  label: 'Tabs: Check-In / Statistik / Historie', visible: true,
+    html: () => `<div class="tab-bar">
+      <button class="tab-btn ${currentTab==='checkin'?'active':''}" id="tab-checkin" onclick="switchTab('checkin')">Check-In</button>
+      <button class="tab-btn ${currentTab==='stats'?'active':''}" id="tab-stats" onclick="switchTab('stats')">Statistik</button>
+      <button class="tab-btn ${currentTab==='history'?'active':''}" id="tab-history" onclick="switchTab('history')">📋 Historie</button>
+    </div>` },
+  { id: 'tabs-view',  label: 'Ansicht: Gruppen / Alle', visible: true,
+    html: () => `<div class="tab-bar">
+      <button class="tab-btn ${viewMode==='grouped'?'active':''}" id="view-grouped" onclick="switchView('grouped')">Gruppen</button>
+      <button class="tab-btn ${viewMode==='flat'?'active':''}" id="view-flat" onclick="switchView('flat')">Alle</button>
+    </div>` },
+  { id: 'btn-import', label: '↑ Import', visible: true,
+    html: () => `<button class="btn btn-primary btn-sm" onclick="openImportPanel()" style="font-size:.75rem">↑ Import</button>` },
+  { id: 'btn-geb',    label: '🎂 Geburtsdatum', visible: true,
+    html: () => `<button class="btn btn-secondary btn-sm" id="geb-toggle" onclick="toggleGeb()" style="font-size:.75rem;${!showGeb?'opacity:.5':''}">🎂 Geburtsdatum</button>` },
+  { id: 'btn-sbb',    label: '↓ Export (SBB / HC / Zu zahlen)', visible: true,
+    html: () => `<div class="export-dropdown-wrap" id="export-dd-wrap">
+      <button class="btn btn-secondary btn-sm" onclick="toggleExportDropdown(event)" style="font-size:.75rem">↓ Export ▾</button>
+      <div class="export-dropdown" id="export-dd" style="display:none">
+        <button class="export-dd-item" onclick="exportZuZahlen();closeExportDropdown()">💰 Zu zahlen</button>
+        <button class="export-dd-item" onclick="exportSBB();closeExportDropdown()">🚆 SBB Export</button>
+        <button class="export-dd-item" onclick="exportHC();closeExportDropdown()">🏨 HC Export</button>
+        <div class="export-dd-divider"></div>
+        <button class="export-dd-item" onclick="exportStats();closeExportDropdown()">📊 Statistik</button>
+      </div>
+    </div>` },
+  { id: 'btn-groups', label: '⊞ Gruppen', visible: true,
+    html: () => `<button class="btn btn-secondary btn-sm" onclick="openGroupModal()">⊞ Gruppen</button>` },
+  { id: 'btn-reset',  label: '⟳ Zurücksetzen', visible: true,
+    html: () => `<button class="btn btn-danger btn-sm" onclick="resetApp()" title="Daten zurücksetzen">⟳</button>` },
+  { id: 'btn-sp',     label: '⊗ Sync trennen', visible: true,
+    html: () => `<button class="btn btn-danger btn-sm" id="sp-disconnect-btn" onclick="disconnectSharePoint()" style="${ghConnected?'':'display:none'}">⊗ Sync</button>` },
+  { id: 'btn-syncreset', label: '⚙ Sync neu einrichten', visible: true,
+    html: () => `<button class="btn btn-secondary btn-sm" onclick="resetSync()" style="font-size:.7rem">⚙ Sync</button>` },
+  { id: 'btn-pw',     label: '🔒 Passwort ändern', visible: true,
+    html: () => `<button class="btn btn-secondary btn-sm" onclick="changePassword()" style="font-size:.7rem">🔒</button>` },
+];
+
+let toolbarConfig = null; // [{ id, visible }] — order + visibility, saved to localStorage
+let currentTab = 'checkin';
+
+function getToolbarConfig() {
+  if (toolbarConfig) return toolbarConfig;
+  try {
+    const saved = localStorage.getItem('toolbar_config');
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      // Merge with defaults (add any new items not in saved config)
+      const savedIds = new Set(parsed.map(x => x.id));
+      const merged = [...parsed];
+      TOOLBAR_ITEMS_DEF.forEach(def => {
+        if (!savedIds.has(def.id)) merged.push({ id: def.id, visible: def.visible });
+      });
+      toolbarConfig = merged;
+      return toolbarConfig;
+    }
+  } catch(e) {}
+  toolbarConfig = TOOLBAR_ITEMS_DEF.map(d => ({ id: d.id, visible: d.visible }));
+  return toolbarConfig;
+}
+
+function saveToolbarConfig() {
+  localStorage.setItem('toolbar_config', JSON.stringify(toolbarConfig));
+}
+
+function renderToolbar() {
+  const container = document.getElementById('toolbar-right-items');
+  if (!container) return;
+  const config = getToolbarConfig();
+  container.innerHTML = config
+    .filter(c => c.visible)
+    .map(c => {
+      const def = TOOLBAR_ITEMS_DEF.find(d => d.id === c.id);
+      return def ? def.html() : '';
+    }).join('');
+}
+
+// ─────────────────────────────
+// LAYOUT EDITOR
+// ─────────────────────────────
+let layoutDragSrc = null;
+
+function openLayoutEditor() {
+  renderLayoutItems();
+  document.getElementById('layout-panel').style.display = 'block';
+  document.getElementById('layout-overlay').style.display = 'block';
+}
+
+function closeLayoutEditor() {
+  document.getElementById('layout-panel').style.display = 'none';
+  document.getElementById('layout-overlay').style.display = 'none';
+}
+
+function renderLayoutItems() {
+  const config = getToolbarConfig();
+  const el = document.getElementById('layout-items');
+  el.innerHTML = config.map((c, i) => {
+    const def = TOOLBAR_ITEMS_DEF.find(d => d.id === c.id);
+    if (!def) return '';
+    return `<div class="layout-item ${!c.visible ? 'hidden-item' : ''}"
+      draggable="true"
+      data-idx="${i}"
+      ondragstart="layoutDragStart(event,${i})"
+      ondragover="layoutDragOver(event,${i})"
+      ondrop="layoutDrop(event,${i})"
+      ondragleave="this.classList.remove('drag-over')"
+      ondragend="layoutDragEnd()">
+      <span class="drag-handle">⠿</span>
+      <span class="item-label">${def.label}</span>
+      <button class="visibility-btn" onclick="toggleItemVisibility(${i})" title="${c.visible ? 'Ausblenden' : 'Einblenden'}">
+        ${c.visible ? '👁' : '🙈'}
+      </button>
+    </div>`;
+  }).join('');
+}
+
+function layoutDragStart(e, idx) {
+  layoutDragSrc = idx;
+  e.dataTransfer.effectAllowed = 'move';
+  setTimeout(() => document.querySelectorAll('.layout-item')[idx]?.classList.add('dragging'), 0);
+}
+
+function layoutDragOver(e, idx) {
+  e.preventDefault();
+  e.dataTransfer.dropEffect = 'move';
+  document.querySelectorAll('.layout-item').forEach((el, i) => el.classList.toggle('drag-over', i === idx && i !== layoutDragSrc));
+}
+
+function layoutDrop(e, idx) {
+  e.preventDefault();
+  if (layoutDragSrc === null || layoutDragSrc === idx) return;
+  const config = getToolbarConfig();
+  const [moved] = config.splice(layoutDragSrc, 1);
+  config.splice(idx, 0, moved);
+  toolbarConfig = config;
+  saveToolbarConfig();
+  renderLayoutItems();
+  renderToolbar();
+}
+
+function layoutDragEnd() {
+  document.querySelectorAll('.layout-item').forEach(el => el.classList.remove('dragging', 'drag-over'));
+  layoutDragSrc = null;
+}
+
+function toggleItemVisibility(idx) {
+  const config = getToolbarConfig();
+  config[idx].visible = !config[idx].visible;
+  saveToolbarConfig();
+  renderLayoutItems();
+  renderToolbar();
+}
+
+function resetToolbarLayout() {
+  toolbarConfig = TOOLBAR_ITEMS_DEF.map(d => ({ id: d.id, visible: d.visible }));
+  saveToolbarConfig();
+  renderLayoutItems();
+  renderToolbar();
+  toast('Layout zurückgesetzt');
+}
 let persons = [];       // parsed from upload
 let checkins = {};      // { id: { zimmer, schluessel, kaution, nachbuchungen:[], notes } }
 let currentNbPerson = null;
@@ -843,6 +1229,27 @@ let sortState = {};
 
 // Custom groups: { [groupId]: { name: string, vorgaenge: string[] } }
 let customGroups = {};
+
+// Names for individual Vorgänge: { [vorgang]: string }
+let vorgangNames = {};
+
+// Dates per Vorgang: { [vorgang]: { anreise: '', abreise: '' } }
+let vorgangDates = {};
+
+// Status per Vorgang: { [vorgang]: 'aktiv'|'abgereist' }  (auto or manual)
+let vorgangStatus = {};
+
+// Change log: [{ ts, personId, personName, vorgang, field, oldVal, newVal, user }]
+let changeLog = [];
+
+// UI prefs
+let showGeb = true;
+
+// Flat view sort state
+let flatSort = { col: 'name', dir: 1 };
+
+// View mode: 'grouped' | 'flat'
+let viewMode = 'grouped';
 
 const LEISTUNG_COLS = [
   { key: 'fruehstueck', label: 'Frühstück', short: 'F', color: '#ffb84d' },
@@ -927,12 +1334,97 @@ function parseData(raw) {
   return result;
 }
 
+let pendingImportData = null;
+
 function loadFromPaste() {
   const raw = document.getElementById('paste-input').value;
   if (!raw.trim()) { showError('Bitte Daten einfügen.'); return; }
   const data = parseData(raw);
   if (!data.length) { showError('Keine Daten erkannt. Bitte im Tab-Format aus Excel kopieren (inkl. Kopfzeile).'); return; }
-  initApp(data);
+  showImportDatesModal(data);
+}
+
+function showImportDatesModal(data, isMerge = false) {
+  pendingImportData = { data, isMerge };
+  // Clear global fields
+  document.getElementById('imd-global-an').value = '';
+  document.getElementById('imd-global-ab').value = '';
+
+  const vorgaenge = [...new Set(data.map(p => p.vorgang))].sort();
+  document.getElementById('import-dates-list').innerHTML =
+    // "Alle auswählen" header
+    `<div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border)">
+      <input type="checkbox" id="imd-check-all" onchange="toggleAllImportChecks(this.checked)" style="width:15px;height:15px;cursor:pointer">
+      <label for="imd-check-all" style="font-size:.78rem;font-weight:700;cursor:pointer">Alle auswählen</label>
+    </div>` +
+    vorgaenge.map(g => {
+      const existing = vorgangDates[g] || {};
+      const nameHint = data.filter(p => p.vorgang === g).length + ' Person(en)';
+      const vName = vorgangNames[g] ? ` — ${vorgangNames[g]}` : '';
+      return `
+<div style="margin-bottom:10px;padding:10px 12px;background:var(--surface2);border:1px solid var(--border);border-radius:6px">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+    <input type="checkbox" class="imd-vorgang-check" id="imd-check-${g}" style="width:15px;height:15px;cursor:pointer">
+    <label for="imd-check-${g}" style="cursor:pointer;font-weight:700;font-size:.85rem;flex:1">
+      <span class="group-nr" style="font-size:.72rem">${g}</span>${vName}
+      <span style="color:var(--muted);font-size:.72rem;font-weight:400;margin-left:8px">${nameHint}</span>
+    </label>
+  </div>
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+    <label style="font-size:.72rem;color:var(--muted);min-width:52px">Anreise</label>
+    <input type="date" class="sp-field" style="padding:4px 8px;font-size:.78rem;flex:1;min-width:130px"
+      id="imd-an-${g}" value="${existing.anreise || ''}">
+    <label style="font-size:.72rem;color:var(--muted);min-width:52px">Abreise</label>
+    <input type="date" class="sp-field" style="padding:4px 8px;font-size:.78rem;flex:1;min-width:130px"
+      id="imd-ab-${g}" value="${existing.abreise || ''}">
+  </div>
+</div>`;
+    }).join('');
+  document.getElementById('import-dates-modal').classList.add('open');
+}
+
+function toggleAllImportChecks(checked) {
+  document.querySelectorAll('.imd-vorgang-check').forEach(cb => cb.checked = checked);
+}
+
+function applyGlobalDates(target) {
+  const an = document.getElementById('imd-global-an').value;
+  const ab = document.getElementById('imd-global-ab').value;
+  if (!an && !ab) { toast('Bitte zuerst ein Datum eingeben.'); return; }
+
+  const checks = document.querySelectorAll('.imd-vorgang-check');
+  checks.forEach(cb => {
+    const g = cb.id.replace('imd-check-', '');
+    if (target === 'all' || (target === 'selected' && cb.checked)) {
+      if (an) document.getElementById(`imd-an-${g}`).value = an;
+      if (ab) document.getElementById(`imd-ab-${g}`).value = ab;
+    }
+  });
+  const count = target === 'all' ? checks.length : [...checks].filter(c => c.checked).length;
+  toast(`Datum für ${count} Vorgang${count !== 1 ? '…e' : ''} übernommen`);
+}
+
+function confirmImportDates() {
+  if (!pendingImportData) return;
+  const { data, isMerge } = pendingImportData;
+  const vorgaenge = [...new Set(data.map(p => p.vorgang))];
+  vorgaenge.forEach(g => {
+    const an = document.getElementById(`imd-an-${g}`)?.value || '';
+    const ab = document.getElementById(`imd-ab-${g}`)?.value || '';
+    if (an || ab) vorgangDates[g] = { anreise: an, abreise: ab };
+  });
+  document.getElementById('import-dates-modal').classList.remove('open');
+  initApp(data, isMerge);
+  pendingImportData = null;
+}
+
+function skipImportDates() {
+  document.getElementById('import-dates-modal').classList.remove('open');
+  if (pendingImportData) {
+    const { data, isMerge } = pendingImportData;
+    initApp(data, isMerge);
+    pendingImportData = null;
+  }
 }
 
 function showError(msg) {
@@ -956,39 +1448,214 @@ function handleFile(e) {
     // Try parse as TSV/CSV text
     const text = ev.target.result;
     const data = parseData(text);
-    if (data.length) { initApp(data); return; }
+    if (data.length) { showImportDatesModal(data); return; }
     showError('Datei konnte nicht gelesen werden. Bitte als CSV speichern oder Daten direkt einfügen.');
   };
   reader.readAsText(file, 'utf-8');
 }
 
 // ─────────────────────────────
-// INIT
+// INIT / MERGE
 // ─────────────────────────────
-function initApp(data) {
-  persons = data;
-  checkins = {};
-  persons.forEach(p => {
-    checkins[p.id] = { zimmer: '', schluessel: 0, nachbuchungen: [], notiz: '' };
-  });
+function initApp(data, isMerge = false) {
+  if (isMerge && persons.length > 0) {
+    // Merge: add new persons, keep existing checkin data
+    const existingIds = new Set(persons.map(p => p.id));
+    let added = 0, updated = 0;
+    data.forEach(p => {
+      if (existingIds.has(p.id)) {
+        // Update leistungen (import data might have changed) but keep checkin data
+        const idx = persons.findIndex(x => x.id === p.id);
+        persons[idx] = { ...persons[idx], leistungen: p.leistungen, geb: p.geb, email: p.email };
+        updated++;
+      } else {
+        persons.push(p);
+        checkins[p.id] = { zimmer: '', schluessel: 0, schluessel_retour: false, nachbuchungen: [], notiz: '', notizColor: '', stirnlampe: { anzahl: 0, retour: false }, personStatus: 'offen' };
+        added++;
+      }
+    });
+    toast(`Import: ${added} neue Gäste, ${updated} aktualisiert`);
+  } else {
+    // Fresh load
+    persons = data;
+    checkins = {};
+    persons.forEach(p => {
+      checkins[p.id] = { zimmer: '', schluessel: 0, schluessel_retour: false, nachbuchungen: [], notiz: '', notizColor: '', stirnlampe: { anzahl: 0, retour: false }, personStatus: 'offen' };
+    });
+  }
+
   document.getElementById('upload-screen').style.display = 'none';
   document.getElementById('app').style.display = 'block';
   document.getElementById('header-stats').style.display = 'flex';
   document.getElementById('header-actions').style.display = 'flex';
+  renderToolbar();
 
-  // Fill group filter
-  const groups = [...new Set(persons.map(p => p.vorgang))].sort();
+  // Rebuild group filter
   const gf = document.getElementById('group-filter');
+  const existing = new Set([...gf.options].map(o => o.value));
+  const groups = [...new Set(persons.map(p => p.vorgang))].sort();
   groups.forEach(g => {
-    const opt = document.createElement('option');
-    opt.value = g; opt.textContent = `Vorgang ${g}`;
-    gf.appendChild(opt);
+    if (!existing.has(g)) {
+      const opt = document.createElement('option');
+      opt.value = g;
+      const name = vorgangNames[g];
+      opt.textContent = name ? `${g} — ${name}` : `Vorgang ${g}`;
+      gf.appendChild(opt);
+    }
   });
+
+  // Auto-detect abgereist from dates
+  autoUpdateVorgangStatus();
 
   renderCheckin();
   updateHeaderStats();
 }
 
+// ─────────────────────────────
+// GROUP MODAL
+// ─────────────────────────────
+let selectedVorgaenge = new Set();
+let editingGroupId = null;
+
+function openGroupModal() {
+  editingGroupId = null;
+  selectedVorgaenge = new Set();
+  document.getElementById('new-group-name').value = '';
+  renderGroupList();
+  renderVorgangPicker();
+  document.getElementById('group-modal').classList.add('open');
+}
+
+function closeGroupModal() {
+  document.getElementById('group-modal').classList.remove('open');
+}
+
+function renderGroupList() {
+  const el = document.getElementById('group-list');
+  const entries = Object.entries(customGroups);
+  if (!entries.length) {
+    el.innerHTML = `<div style="font-size:.8rem;color:var(--muted);margin-bottom:12px">Noch keine Gruppen erstellt.</div>`;
+    return;
+  }
+  el.innerHTML = entries.map(([id, cg]) => `
+<div class="group-list-item">
+  <div class="gli-name">${cg.name}</div>
+  <div class="gli-vorgaenge">${cg.vorgaenge.join(', ')}</div>
+  <button class="btn btn-secondary btn-xs" onclick="editGroup('${id}')">✎</button>
+  <button class="btn btn-danger btn-xs" onclick="deleteGroup('${id}')">✕</button>
+</div>`).join('');
+}
+
+function renderVorgangPicker() {
+  const allV = [...new Set(persons.map(p => p.vorgang))].sort();
+  const el = document.getElementById('vorgang-picker');
+  el.innerHTML = allV.map(g => `
+<span class="vorgang-pill ${selectedVorgaenge.has(g) ? 'selected' : ''}" onclick="toggleVorgangPick('${g}')">
+  ${g}${vorgangNames[g] ? ' — ' + vorgangNames[g] : ''}
+</span>`).join('');
+}
+
+function toggleVorgangPick(g) {
+  if (selectedVorgaenge.has(g)) selectedVorgaenge.delete(g);
+  else selectedVorgaenge.add(g);
+  renderVorgangPicker();
+}
+
+function saveNewGroup() {
+  const name = document.getElementById('new-group-name').value.trim();
+  if (!name) { alert('Bitte Gruppenname eingeben.'); return; }
+  if (!selectedVorgaenge.size) { alert('Bitte mindestens einen Vorgang auswählen.'); return; }
+  const id = editingGroupId || 'grp_' + Date.now();
+  customGroups[id] = { name, vorgaenge: [...selectedVorgaenge] };
+  editingGroupId = null;
+  selectedVorgaenge = new Set();
+  document.getElementById('new-group-name').value = '';
+  renderGroupList();
+  renderVorgangPicker();
+  renderCheckin();
+  saveToStorage();
+  toast('Gruppe gespeichert');
+}
+
+function editGroup(id) {
+  const cg = customGroups[id];
+  if (!cg) return;
+  editingGroupId = id;
+  selectedVorgaenge = new Set(cg.vorgaenge);
+  document.getElementById('new-group-name').value = cg.name;
+  renderVorgangPicker();
+  document.getElementById('group-modal').classList.add('open');
+}
+
+function deleteGroup(id) {
+  if (!confirm('Gruppe löschen?')) return;
+  delete customGroups[id];
+  renderGroupList();
+  renderVorgangPicker();
+  renderCheckin();
+  saveToStorage();
+}
+
+function openImportPanel() {
+  document.getElementById('import-paste').value = '';
+  document.getElementById('import-error').style.display = 'none';
+  document.getElementById('import-modal').classList.add('open');
+}
+
+function handleImportFile(input) {
+  const file = input.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    const data = parseData(ev.target.result);
+    if (!data.length) {
+      document.getElementById('import-error').textContent = 'Keine Daten erkannt.';
+      document.getElementById('import-error').style.display = 'block';
+      return;
+    }
+    document.getElementById('import-modal').classList.remove('open');
+    showImportDatesModal(data, true);
+  };
+  reader.readAsText(file, 'utf-8');
+}
+
+function doImportFromModal() {
+  const raw = document.getElementById('import-paste').value.trim();
+  if (!raw) {
+    document.getElementById('import-error').textContent = 'Bitte Daten einfügen.';
+    document.getElementById('import-error').style.display = 'block';
+    return;
+  }
+  const data = parseData(raw);
+  if (!data.length) {
+    document.getElementById('import-error').textContent = 'Keine Daten erkannt.';
+    document.getElementById('import-error').style.display = 'block';
+    return;
+  }
+  document.getElementById('import-modal').classList.remove('open');
+  showImportDatesModal(data, true);
+}
+
+// ─────────────────────────────
+// VORGANG STATUS
+// ─────────────────────────────
+function autoUpdateVorgangStatus() {
+  const today = new Date(); today.setHours(0,0,0,0);
+  Object.entries(vorgangDates).forEach(([g, d]) => {
+    if (!vorgangStatus[g]) { // only auto-set if not manually overridden
+      if (d.abreise) {
+        const ab = new Date(d.abreise);
+        vorgangStatus[g] = ab < today ? 'abgereist' : 'aktiv';
+      }
+    }
+  });
+}
+
+function setVorgangStatus(g, status) {
+  vorgangStatus[g] = status;
+  renderCheckin();
+  saveToStorage();
+}
 // ─────────────────────────────
 // SORTING
 // ─────────────────────────────
@@ -1046,12 +1713,20 @@ function getFilteredPersons() {
   const search = document.getElementById('search-input').value.toLowerCase();
   const groupF = document.getElementById('group-filter').value;
   const statusF = document.getElementById('status-filter').value;
+  const abreiseF = document.getElementById('abreise-filter').value;
 
   return persons.filter(p => {
     if (groupF && p.vorgang !== groupF) return false;
     if (search && !`${p.name} ${p.vorname}`.toLowerCase().includes(search)) return false;
     if (statusF === 'checked' && !isCheckedIn(p)) return false;
     if (statusF === 'pending' && isCheckedIn(p)) return false;
+    // Abreise filter
+    if (abreiseF === 'aktiv' && vorgangStatus[p.vorgang] === 'abgereist') return false;
+    if (abreiseF === 'abgereist' && vorgangStatus[p.vorgang] !== 'abgereist') return false;
+    if (abreiseF === 'zu_zahlen') {
+      const c = checkins[p.id];
+      if (c?.personStatus !== 'zu_zahlen' && computeRowStatus(p) !== 'rot') return false;
+    }
     return true;
   });
 }
@@ -1062,6 +1737,8 @@ function isCheckedIn(p) {
 }
 
 function renderCheckin() {
+  if (viewMode === 'flat') { renderFlatView(); return; }
+
   const filtered = getFilteredPersons();
   const container = document.getElementById('main-content');
 
@@ -1070,20 +1747,14 @@ function renderCheckin() {
     return;
   }
 
-  // Build ordered list of render units:
-  // Each unit is either { type:'supergroup', id, name, vorgaenge[] } or { type:'vorgang', g }
   const allVorgaenge = [...new Set(filtered.map(p => p.vorgang))].sort();
-  const assignedVorgaenge = new Set(
-    Object.values(customGroups).flatMap(cg => cg.vorgaenge)
-  );
+  const assignedVorgaenge = new Set(Object.values(customGroups).flatMap(cg => cg.vorgaenge));
 
   const units = [];
-  // First: super-groups (in creation order)
   Object.entries(customGroups).forEach(([id, cg]) => {
     const vg = cg.vorgaenge.filter(v => allVorgaenge.includes(v));
     if (vg.length) units.push({ type: 'supergroup', id, name: cg.name, vorgaenge: vg });
   });
-  // Then: ungrouped vorgaenge
   allVorgaenge.filter(g => !assignedVorgaenge.has(g)).forEach(g => {
     units.push({ type: 'vorgang', g });
   });
@@ -1104,6 +1775,116 @@ function renderCheckin() {
       return renderVorgangBlock(unit.g, filtered);
     }
   }).join('');
+
+  // Init resize on all rendered tables
+  container.querySelectorAll('.checkin-table').forEach((t, i) => {
+    t.id = t.id || 'ct_' + i;
+    initResizableColumns(t);
+  });
+}
+
+function renderFlatView() {
+  const filtered = getFilteredPersons();
+  const container = document.getElementById('main-content');
+
+  if (!filtered.length) {
+    container.innerHTML = `<div style="text-align:center;padding:60px;color:var(--muted)">Keine Ergebnisse gefunden.</div>`;
+    return;
+  }
+
+  const sorted = [...filtered].sort((a, b) => {
+    let va, vb;
+    switch (flatSort.col) {
+      case 'name':    va = a.name.toLowerCase();    vb = b.name.toLowerCase();    break;
+      case 'vorname': va = a.vorname.toLowerCase();  vb = b.vorname.toLowerCase(); break;
+      case 'vorgang': va = a.vorgang;                vb = b.vorgang;               break;
+      case 'geb':
+        const td = d => { const p = d.split('.'); return p.length===3 ? `${p[2].padStart(4,'20')}${p[1]}${p[0]}` : d; };
+        va = td(a.geb); vb = td(b.geb); break;
+      case 'zimmer':
+        va = checkins[a.id]?.zimmer?.toLowerCase() || ''; vb = checkins[b.id]?.zimmer?.toLowerCase() || ''; break;
+      case 'status':
+        va = isCheckedIn(a) ? 1 : 0; vb = isCheckedIn(b) ? 1 : 0; break;
+      default: va = a.name.toLowerCase(); vb = b.name.toLowerCase();
+    }
+    if (va < vb) return -1 * flatSort.dir;
+    if (va > vb) return 1 * flatSort.dir;
+    return 0;
+  });
+
+  const fsc = col => flatSort.col === col ? (flatSort.dir === 1 ? 'sort-asc' : 'sort-desc') : '';
+  const fsa = col => flatSort.col === col ? (flatSort.dir === 1 ? '↑' : '↓') : '↕';
+
+  container.innerHTML = `<div style="padding:20px 24px">
+  <table class="checkin-table">
+    <thead><tr>
+      <th><button class="th-btn ${fsc('name')}" onclick="sortFlat('name')">Name <span class="sort-arrow">${fsa('name')}</span></button></th>
+      <th><button class="th-btn ${fsc('vorname')}" onclick="sortFlat('vorname')">Vorname <span class="sort-arrow">${fsa('vorname')}</span></button></th>
+      <th class="hide-sm"><button class="th-btn ${fsc('vorgang')}" onclick="sortFlat('vorgang')">Vorgang <span class="sort-arrow">${fsa('vorgang')}</span></button></th>
+      <th class="hide-sm col-geb"><button class="th-btn ${fsc('geb')}" onclick="sortFlat('geb')">Geburtsdatum <span class="sort-arrow">${fsa('geb')}</span></button></th>
+      <th><button class="th-btn ${fsc('zimmer')}" onclick="sortFlat('zimmer')">Zimmer <span class="sort-arrow">${fsa('zimmer')}</span></button></th>
+      <th style="padding:8px 16px">Schlüssel</th>
+      <th class="hide-sm" style="min-width:120px">Skipass / Leistungen</th>
+      <th style="padding:8px 16px;min-width:140px;text-align:center">Notiz</th>
+      <th style="padding:8px 16px;min-width:110px">🔦 Stirnlampe</th>
+      <th style="padding:8px 16px;min-width:100px">Nachbuchung</th>
+      <th><button class="th-btn ${fsc('status')}" onclick="sortFlat('status')">Status <span class="sort-arrow">${fsa('status')}</span></button></th>
+    </tr></thead>
+    <tbody>${sorted.map(p => renderRow(p, true)).join('')}</tbody>
+  </table>
+</div>`;
+  const flatTable = container.querySelector('.checkin-table');
+  if (flatTable) { flatTable.id = 'ct_flat'; initResizableColumns(flatTable); }
+}
+
+function sortFlat(col) {
+  if (flatSort.col === col) flatSort.dir *= -1;
+  else { flatSort.col = col; flatSort.dir = 1; }
+  renderFlatView();
+}
+
+function switchView(mode) {
+  viewMode = mode;
+  renderToolbar();
+  renderCheckin();
+}
+
+function toggleGeb() {
+  showGeb = !showGeb;
+  const mc = document.getElementById('main-content');
+  mc.classList.toggle('col-geb-hidden', !showGeb);
+  renderToolbar();
+}
+
+// ── Vorgang Namen ──
+function startEditVorgangName(g) {
+  const span = document.getElementById('vname-' + g);
+  if (!span) return;
+  const current = vorgangNames[g] || '';
+  span.innerHTML = `<input id="vname-input-${g}"
+    style="background:var(--surface2);border:1px solid var(--accent3);border-radius:4px;color:var(--text);font-family:'Syne',sans-serif;font-size:.85rem;font-weight:700;padding:2px 8px;width:180px"
+    value="${current.replace(/"/g,'&quot;')}"
+    placeholder="Name eingeben…"
+    onblur="saveVorgangName('${g}',this.value)"
+    onkeydown="if(event.key==='Enter')this.blur();if(event.key==='Escape'){this.blur();}">`;
+  document.getElementById(`vname-input-${g}`)?.focus();
+}
+
+function saveVorgangName(g, val) {
+  const name = val.trim();
+  if (name) vorgangNames[g] = name; else delete vorgangNames[g];
+  const gf = document.getElementById('group-filter');
+  [...gf.options].forEach(o => {
+    if (o.value === g) o.textContent = name ? `${g} — ${name}` : `Vorgang ${g}`;
+  });
+  renderCheckin();
+  saveToStorage();
+}
+
+function setVorgangDate(g, field, val) {
+  if (!vorgangDates[g]) vorgangDates[g] = { anreise: '', abreise: '' };
+  vorgangDates[g][field] = val;
+  saveToStorage();
 }
 
 function renderVorgangBlock(g, filtered) {
@@ -1124,11 +1905,19 @@ function renderVorgangBlock(g, filtered) {
     dynamicLeistungCols.filter(lc => /vegi/i.test(lc.label)).some(lc => p.leistungen[lc.key])
   ).length;
 
+  const isAbgereist = vorgangStatus[g] === 'abgereist';
+  const statusBadge = `<span onclick="event.stopPropagation();setVorgangStatus('${g}', '${isAbgereist ? 'aktiv' : 'abgereist'}')"
+    class="badge ${isAbgereist ? 'badge-muted' : 'badge-green'}"
+    style="cursor:pointer;title='Status wechseln'">${isAbgereist ? '✈ Abgereist' : '● Aktiv'}</span>`;
+
   return `
-<div class="group-section" id="grp-${g}">
+<div class="group-section" id="grp-${g}" ${isAbgereist ? 'style="opacity:.6"' : ''}>
   <div class="group-header" onclick="toggleGroup('${g}')">
     <span class="group-nr">${g}</span>
-    <span class="group-title">${allPersons.length} Person${allPersons.length !== 1 ? 'en' : ''}</span>
+    <span class="group-title" style="display:flex;align-items:center;gap:8px">
+      <span id="vname-${g}" style="cursor:text" onclick="event.stopPropagation();startEditVorgangName('${g}')">${vorgangNames[g] || '<span style=\'color:var(--muted);font-style:italic;font-weight:400;font-size:.8rem\'>Name hinzufügen…</span>'}</span>
+    </span>
+    ${statusBadge}
     <div class="group-badges">
       ${fruehCount ? `<span class="badge badge-warn">${fruehCount}× Frühstück</span>` : ''}
       ${skiCount ? `<span class="badge badge-blue">${skiCount}× Skipass</span>` : ''}
@@ -1144,18 +1933,29 @@ function renderVorgangBlock(g, filtered) {
     <div class="group-actions">
       <span>Gruppen-Aktionen:</span>
       <button class="btn btn-secondary btn-xs" onclick="markGroupFruehstueck('${g}')">☕ Frühstück für Gruppe</button>
+      <div style="display:flex;align-items:center;gap:6px;margin-left:auto">
+        <span style="font-size:.72rem;color:var(--muted)">Anreise</span>
+        <input type="date" class="sp-field" style="padding:3px 8px;font-size:.75rem;width:140px"
+          value="${(vorgangDates[g]||{}).anreise||''}"
+          onchange="setVorgangDate('${g}','anreise',this.value)">
+        <span style="font-size:.72rem;color:var(--muted)">Abreise</span>
+        <input type="date" class="sp-field" style="padding:3px 8px;font-size:.75rem;width:140px"
+          value="${(vorgangDates[g]||{}).abreise||''}"
+          onchange="setVorgangDate('${g}','abreise',this.value)">
+      </div>
     </div>
     <table class="checkin-table">
       <thead>
         <tr>
           <th><button class="th-btn ${sortClass(g,'name')}" onclick="sortGroup('${g}','name')">Name <span class="sort-arrow">${sortArrow(g,'name')}</span></button></th>
           <th><button class="th-btn ${sortClass(g,'vorname')}" onclick="sortGroup('${g}','vorname')">Vorname <span class="sort-arrow">${sortArrow(g,'vorname')}</span></button></th>
-          <th class="hide-sm"><button class="th-btn ${sortClass(g,'geb')}" onclick="sortGroup('${g}','geb')">Geburtsdatum <span class="sort-arrow">${sortArrow(g,'geb')}</span></button></th>
+          <th class="hide-sm col-geb"><button class="th-btn ${sortClass(g,'geb')}" onclick="sortGroup('${g}','geb')">Geburtsdatum <span class="sort-arrow">${sortArrow(g,'geb')}</span></button></th>
           <th><button class="th-btn ${sortClass(g,'zimmer')}" onclick="sortGroup('${g}','zimmer')">Zimmer <span class="sort-arrow">${sortArrow(g,'zimmer')}</span></button></th>
-          <th>Schlüssel</th>
-          <th class="hide-sm">Skipass / Leistungen</th>
-          <th>Notiz</th>
-          <th>Nachbuchung</th>
+          <th style="padding:8px 16px">Schlüssel</th>
+          <th class="hide-sm" style="min-width:120px">Skipass / Leistungen</th>
+          <th style="padding:8px 16px;min-width:140px;text-align:center">Notiz</th>
+          <th style="padding:8px 16px;min-width:110px">🔦 Stirnlampe</th>
+          <th style="padding:8px 16px;min-width:100px">Nachbuchung</th>
           <th><button class="th-btn ${sortClass(g,'status')}" onclick="sortGroup('${g}','status')">Status <span class="sort-arrow">${sortArrow(g,'status')}</span></button></th>
         </tr>
       </thead>
@@ -1167,88 +1967,366 @@ function renderVorgangBlock(g, filtered) {
 </div>`;
 }
 
-function renderRow(p) {
+function renderRow(p, showVorgang = false) {
   const c = checkins[p.id];
+  if (!c.stirnlampe) c.stirnlampe = { anzahl: 0, retour: false };
   const checked = isCheckedIn(p);
 
-  // Build leistung pills using dynamic columns
   const activeCols = dynamicLeistungCols.filter(lc => p.leistungen[lc.key]);
   const leistungPills = activeCols.map(lc => {
-    // Show full label for skipass columns, short for others
-    const display = lc.isSkipass ? lc.label : lc.short;
-    return `<span class="lpill" title="${lc.label}" style="background:${lc.color}22;color:${lc.color}">${display}</span>`;
+    if (lc.isSkipass) {
+      // Detect Anreisetag / Abreisetag suffix
+      const hasAnreise = /anreisetag/i.test(lc.label);
+      const hasAbreise = /abreisetag/i.test(lc.label);
+      // Base label without the suffix
+      const baseLabel = lc.label.replace(/\s*[\(\[]?inkl\.?\s*(an|ab)reisetag[\)\]]?/gi, '').trim();
+      const suffix = hasAnreise ? '＋AN' : hasAbreise ? '＋AB' : '';
+      const suffixHtml = suffix
+        ? `<span style="font-size:.6rem;font-weight:700;background:${lc.color};color:#fff;padding:1px 4px;border-radius:3px;margin-left:3px">${suffix}</span>`
+        : '';
+      return `<span class="lpill" title="${lc.label}" style="background:${lc.color}22;color:${lc.color};display:inline-flex;align-items:center;gap:2px">${baseLabel}${suffixHtml}</span>`;
+    }
+    return `<span class="lpill" title="${lc.label}" style="background:${lc.color}22;color:${lc.color}">${lc.short}</span>`;
   }).join('');
 
   const nbCount = c.nachbuchungen.length;
-  const nbLabel = nbCount ? `<span class="badge badge-orange" style="cursor:pointer" onclick="openModal('${p.id}')">${nbCount}× NB</span> ` : '';
+  const nbPills = c.nachbuchungen.map((nb, i) => {
+    const confirmed = nb.status === true;
+    const bg = confirmed ? 'rgba(10,158,110,.12)' : 'rgba(214,53,69,.1)';
+    const border = confirmed ? 'rgba(10,158,110,.4)' : 'rgba(214,53,69,.35)';
+    const textColor = confirmed ? '#0a6e4a' : '#a52030';
+    const label = nb.leistung + (nb.betrag ? ` · CHF ${nb.betrag.toFixed(2)}` : '');
+    return `<div onclick="openModal('${p.id}')"
+      style="cursor:pointer;background:${bg};border:1px solid ${border};color:${textColor};
+             border-radius:5px;padding:3px 8px;font-size:.72rem;font-weight:600;
+             white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:130px;
+             margin-bottom:3px;transition:all .15s"
+      title="${nb.leistung}${nb.betrag ? ' · CHF ' + nb.betrag.toFixed(2) : ''}${nb.notiz ? ' · ' + nb.notiz : ''}"
+    >${label}</div>`;
+  }).join('');
   const safeNotiz = (c.notiz || '').replace(/"/g, '&quot;');
 
+  // Notiz color
+  const NOTIZ_COLORS = ['', '#ffb84d', '#ff6b35', '#ff5566', '#4fffb0'];
+  const NOTIZ_LABELS = ['–', '🟡', '🟠', '🔴', '🟢'];
+  const colorIdx = NOTIZ_COLORS.indexOf(c.notizColor || '');
+  const dotBg = c.notizColor || 'transparent';
+  const notizBg = c.notizColor ? c.notizColor + '22' : 'transparent';
+  const notizBorder = c.notizColor ? c.notizColor + '88' : '';
+
+  const vorgangCell = showVorgang ? `<td class="mono hide-sm" style="font-size:.75rem">
+    <span class="group-nr" style="font-size:.68rem">${p.vorgang}</span>
+    ${vorgangNames[p.vorgang] ? `<span style="color:var(--muted);font-size:.7rem;margin-left:4px">${vorgangNames[p.vorgang]}</span>` : ''}
+  </td>` : '';
+
+  const sl = c.stirnlampe;
+  const slCell = `<td>
+    <div class="sl-wrap">
+      <input class="room-input"
+        style="width:46px;text-align:center;${sl.retour ? 'background:rgba(10,158,110,.15);border-color:rgba(10,158,110,.5);' : sl.anzahl >= 1 ? 'background:rgba(212,144,10,.12);border-color:rgba(212,144,10,.5);' : ''}"
+        type="number" min="0"
+        value="${sl.anzahl || ''}" placeholder="0"
+        onchange="setStirnlampe('${p.id}','anzahl',this.value)"
+        onclick="this.select()" title="Anzahl Stirnlampen">
+      <button class="sl-retour ${sl.retour ? 'checked' : ''}"
+        onclick="setStirnlampe('${p.id}','retour')"
+        title="Retour">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+      </button>
+    </div>
+  </td>`;
+
+  // Person status & row color
+  if (!c.personStatus) c.personStatus = 'offen';
+  const rowStatus = computeRowStatus(p);
+  const rowBg = rowStatus === 'gruen' ? 'background:rgba(10,158,110,.07);'
+              : rowStatus === 'rot'   ? 'background:rgba(214,53,69,.07);'
+              : '';
+
+  const PS_LABELS = { offen: '○ Offen', abgereist: '✈ Abgereist', zu_zahlen: '💰 Zu zahlen' };
+  const PS_COLORS = { offen: 'var(--muted)', abgereist: 'var(--accent3)', zu_zahlen: 'var(--danger)' };
+  const ps = c.personStatus || 'offen';
+  const statusCell = `<td>
+    <span onclick="cyclePersonStatus('${p.id}')" style="cursor:pointer;font-size:.75rem;font-weight:700;color:${PS_COLORS[ps]};white-space:nowrap"
+      title="Klicken zum Wechseln">${PS_LABELS[ps]}</span>
+    ${checked ? '<br><span style="color:var(--accent);font-size:.68rem">✓ eingecheckt</span>' : ''}
+  </td>`;
+
   return `
-<tr class="${checked ? 'checked-in' : ''}" id="row-${CSS.escape(p.id)}">
+<tr class="${checked ? 'checked-in' : ''}" id="row-${CSS.escape(p.id)}" style="${rowBg}">
   <td class="name-cell">${p.name}</td>
   <td class="vorname-cell">${p.vorname}</td>
-  <td class="mono hide-sm">${p.geb}</td>
+  ${vorgangCell}
+  <td class="mono hide-sm col-geb">${p.geb}</td>
   <td>
     <input class="room-input ${c.zimmer ? 'filled' : ''}"
-      type="text"
-      value="${c.zimmer}"
-      placeholder="---"
-      onchange="setZimmer('${p.id}', this.value)"
-      onclick="this.select()">
+      type="text" value="${c.zimmer}" placeholder="---"
+      onchange="setZimmer('${p.id}', this.value)" onclick="this.select()">
   </td>
-  <td class="check-wrap">
-    <input class="room-input ${c.schluessel ? 'filled' : ''}"
-      style="width:52px;text-align:center"
-      type="number"
-      min="0"
-      value="${c.schluessel || ''}"
-      placeholder="0"
-      onchange="setSchluessel('${p.id}', this.value)"
-      onclick="this.select()">
+  <td>
+    <div class="sl-wrap">
+      <input class="room-input"
+        style="width:52px;text-align:center;${c.schluessel_retour ? 'background:rgba(10,158,110,.15);border-color:rgba(10,158,110,.5);' : c.schluessel >= 1 ? 'background:rgba(212,144,10,.12);border-color:rgba(212,144,10,.5);' : ''}"
+        type="number" min="0"
+        value="${c.schluessel || ''}" placeholder="0"
+        onchange="setSchluessel('${p.id}', this.value)" onclick="this.select()">
+      <button class="sl-retour ${c.schluessel_retour ? 'checked' : ''}"
+        onclick="toggleSchluesselRetour('${p.id}')"
+        title="Schlüssel retour">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+      </button>
+    </div>
   </td>
   <td class="hide-sm">
     <div class="leistung-pills">${leistungPills || '<span style="color:var(--muted);font-size:.7rem">–</span>'}</div>
   </td>
   <td>
-    <input class="room-input ${c.notiz ? 'filled' : ''}"
-      style="width:120px"
-      type="text"
-      value="${safeNotiz}"
-      placeholder="Notiz…"
-      onchange="setNotiz('${p.id}', this.value)"
-      onclick="this.select()">
+    <div class="notiz-wrap">
+      <span class="notiz-color-dot" style="background:${dotBg}" title="Farbe ändern"
+        onclick="cycleNotizColor('${p.id}')"></span>
+      <input class="room-input"
+        style="width:110px;${c.notizColor ? `background:${notizBg};border-color:${notizBorder}` : ''}"
+        type="text" value="${safeNotiz}" placeholder="Notiz…"
+        onchange="setNotiz('${p.id}', this.value)" onclick="this.select()">
+    </div>
   </td>
-  <td>
-    ${nbLabel}<button class="btn btn-secondary btn-xs" onclick="openModal('${p.id}')">+ NB</button>
+  ${slCell}
+  <td style="min-width:120px">
+    <div style="display:flex;flex-direction:column;align-items:flex-start">
+      ${nbPills}
+      <button class="btn btn-secondary btn-xs" style="margin-top:${nbCount ? '2px' : '0'}" onclick="openModal('${p.id}')">+ NB</button>
+    </div>
   </td>
-  <td>
-    ${checked
-      ? '<span style="color:var(--accent);font-size:.75rem;font-weight:700">✓ OK</span>'
-      : '<span style="color:var(--muted);font-size:.75rem">○ Offen</span>'}
-  </td>
+  ${statusCell}
 </tr>`;
+}
+
+// ─────────────────────────────
+// PERSON STATUS & ROW COLOR
+// ─────────────────────────────
+function hasOpenItems(p) {
+  const c = checkins[p.id];
+  if (!c) return false;
+  const hasUnreturnedSchluessel = c.schluessel > 0 && !c.schluessel_retour;
+  const hasUnreturnedStirnlampe = c.stirnlampe?.anzahl > 0 && !c.stirnlampe?.retour;
+  const hasRedNb = c.nachbuchungen?.some(nb => nb.status !== true);
+  return hasUnreturnedSchluessel || hasUnreturnedStirnlampe || hasRedNb;
+}
+
+function computeRowStatus(p) {
+  const c = checkins[p.id];
+  if (!c) return 'normal';
+
+  // Check if 1+ day past Abreise
+  const dates = vorgangDates[p.vorgang];
+  let pastAbreise = false;
+  if (dates?.abreise) {
+    const ab = new Date(dates.abreise);
+    ab.setDate(ab.getDate() + 1); ab.setHours(0,0,0,0);
+    pastAbreise = new Date() >= ab;
+  }
+
+  // Auto-set status based on date
+  if (pastAbreise) {
+    if (hasOpenItems(p)) {
+      if (c.personStatus !== 'zu_zahlen') {
+        c.personStatus = 'zu_zahlen';
+      }
+      return 'rot';
+    } else {
+      if (c.personStatus === 'offen') c.personStatus = 'abgereist';
+      return 'gruen';
+    }
+  }
+
+  // Manual status
+  if (c.personStatus === 'zu_zahlen') return 'rot';
+  if (c.personStatus === 'abgereist') {
+    return hasOpenItems(p) ? 'rot' : 'gruen';
+  }
+  // 'offen': green if all returned and no red NB
+  if (!hasOpenItems(p) && c.zimmer && c.schluessel > 0) return 'gruen';
+  return 'normal';
+}
+
+function cyclePersonStatus(id) {
+  const c = checkins[id];
+  if (!c) return;
+  const order = ['offen', 'abgereist', 'zu_zahlen'];
+  const cur = c.personStatus || 'offen';
+  const next = order[(order.indexOf(cur) + 1) % order.length];
+  const old = cur;
+  c.personStatus = next;
+  logChange(id, 'Reisestatus', old, next);
+  renderCheckin();
+  saveToStorage();
+}
+
+function exportZuZahlen() {
+  const zuZahlen = persons.filter(p => {
+    const c = checkins[p.id];
+    return c?.personStatus === 'zu_zahlen' || computeRowStatus(p) === 'rot';
+  });
+  if (!zuZahlen.length) { toast('Keine Personen mit Status „Zu zahlen" gefunden.'); return; }
+
+  const rows = [['Vorname', 'Nachname', 'Vorgangsnummer', 'Offener Posten', 'Betrag CHF']];
+
+  zuZahlen.forEach(p => {
+    const c = checkins[p.id];
+    const posten = [];
+
+    // Unreturned Schlüssel → CHF 120 per key
+    if (c.schluessel > 0 && !c.schluessel_retour) {
+      const anzahl = c.schluessel;
+      const betrag = anzahl * 120;
+      posten.push({ label: `Schlüsselverlust (${anzahl}×)`, betrag });
+    }
+
+    // Unreturned Stirnlampe → CHF 50 per lamp
+    if (c.stirnlampe?.anzahl > 0 && !c.stirnlampe?.retour) {
+      const anzahl = c.stirnlampe.anzahl;
+      const betrag = anzahl * 50;
+      posten.push({ label: `Stirnlampe nicht retour (${anzahl}×)`, betrag });
+    }
+
+    // Open (red) Nachbuchungen → use stored price
+    const offeneNb = c.nachbuchungen?.filter(nb => nb.status !== true) || [];
+    offeneNb.forEach(nb => {
+      posten.push({ label: nb.leistung + (nb.notiz ? ` (${nb.notiz})` : ''), betrag: nb.betrag || 0 });
+    });
+
+    if (!posten.length) return; // nothing to export
+
+    // One row per open item
+    posten.forEach((pos, i) => {
+      rows.push([
+        i === 0 ? p.vorname : '',
+        i === 0 ? p.name    : '',
+        i === 0 ? p.vorgang : '',
+        pos.label,
+        pos.betrag.toFixed(2)
+      ]);
+    });
+
+    // Subtotal row per person
+    const total = posten.reduce((s, x) => s + x.betrag, 0);
+    rows.push(['', '', '', 'Total', total.toFixed(2)]);
+    rows.push(['', '', '', '', '']); // empty separator row
+  });
+
+  downloadCSV(rows, 'ZuZahlen_Export.csv');
+  toast(`${zuZahlen.length} Person(en) exportiert`);
 }
 
 // ─────────────────────────────
 // INTERACTIONS
 // ─────────────────────────────
 function setZimmer(id, val) {
+  const old = checkins[id].zimmer;
   checkins[id].zimmer = val.trim();
+  logChange(id, 'Zimmer', old, checkins[id].zimmer);
   refreshRow(id);
   updateHeaderStats();
   saveToStorage();
 }
 
 function setNotiz(id, val) {
+  const old = checkins[id].notiz;
   checkins[id].notiz = val.trim();
+  logChange(id, 'Notiz', old, checkins[id].notiz);
+  saveToStorage();
+}
+
+function cycleNotizColor(id) {
+  const COLORS = ['', '#ffb84d', '#ff6b35', '#ff5566', '#4fffb0'];
+  const cur = checkins[id].notizColor || '';
+  const idx = COLORS.indexOf(cur);
+  checkins[id].notizColor = COLORS[(idx + 1) % COLORS.length];
+  // Update just the dot and input without full re-render
+  const row = document.getElementById('row-' + CSS.escape(id));
+  if (row) {
+    const dot = row.querySelector('.notiz-color-dot');
+    const input = row.querySelector('.notiz-wrap .room-input');
+    const nc = checkins[id].notizColor;
+    if (dot) dot.style.background = nc || 'transparent';
+    if (input) {
+      input.style.background = nc ? nc + '22' : '';
+      input.style.borderColor = nc ? nc + '88' : '';
+    }
+  }
+  saveToStorage();
+}
+
+function setStirnlampe(id, field, val) {
+  if (!checkins[id].stirnlampe) checkins[id].stirnlampe = { anzahl: 0, retour: false };
+  if (field === 'anzahl') checkins[id].stirnlampe.anzahl = Math.max(0, parseInt(val) || 0);
+  if (field === 'retour') checkins[id].stirnlampe.retour = !checkins[id].stirnlampe.retour;
+  const row = document.getElementById('row-' + CSS.escape(id));
+  if (row) {
+    const slWraps = row.querySelectorAll('.sl-wrap');
+    const input = slWraps[1]?.querySelector('input[type="number"]');
+    const sl = checkins[id].stirnlampe;
+    if (input) {
+      if (sl.retour) {
+        input.style.background = 'rgba(10,158,110,.15)';
+        input.style.borderColor = 'rgba(10,158,110,.5)';
+      } else if (sl.anzahl >= 1) {
+        input.style.background = 'rgba(212,144,10,.12)';
+        input.style.borderColor = 'rgba(212,144,10,.5)';
+      } else {
+        input.style.background = '';
+        input.style.borderColor = '';
+      }
+    }
+    if (field === 'retour') {
+      const btn = slWraps[1]?.querySelector('.sl-retour');
+      if (btn) btn.classList.toggle('checked', sl.retour);
+    }
+  }
   saveToStorage();
 }
 
 function setSchluessel(id, val) {
+  const old = checkins[id].schluessel;
   checkins[id].schluessel = Math.max(0, parseInt(val) || 0);
+  logChange(id, 'Schlüssel Anzahl', old, checkins[id].schluessel);
+  updateSchluesselColor(id);
   refreshRow(id);
   updateHeaderStats();
   saveToStorage();
+}
+
+function toggleSchluesselRetour(id) {
+  const old = checkins[id].schluessel_retour;
+  checkins[id].schluessel_retour = !checkins[id].schluessel_retour;
+  logChange(id, 'Schlüssel retour', old ? 'ja' : 'nein', checkins[id].schluessel_retour ? 'ja' : 'nein');
+  updateSchluesselColor(id);
+  const row = document.getElementById('row-' + CSS.escape(id));
+  if (row) {
+    const btn = row.querySelector('.sl-wrap .sl-retour');
+    if (btn) btn.classList.toggle('checked', checkins[id].schluessel_retour);
+  }
+  saveToStorage();
+}
+
+function updateSchluesselColor(id) {
+  const row = document.getElementById('row-' + CSS.escape(id));
+  if (!row) return;
+  // Find the first sl-wrap (schluessel) input — it's the one before stirnlampe
+  const slWraps = row.querySelectorAll('.sl-wrap');
+  const input = slWraps[0]?.querySelector('input[type="number"]');
+  if (!input) return;
+  const c = checkins[id];
+  if (c.schluessel_retour) {
+    input.style.background = 'rgba(10,158,110,.15)';
+    input.style.borderColor = 'rgba(10,158,110,.5)';
+  } else if (c.schluessel >= 1) {
+    input.style.background = 'rgba(212,144,10,.12)';
+    input.style.borderColor = 'rgba(212,144,10,.5)';
+  } else {
+    input.style.background = '';
+    input.style.borderColor = '';
+  }
 }
 
 function toggleField(id, field, btn) {
@@ -1307,24 +2385,196 @@ function openModal(id) {
   document.getElementById('nachbuchung-person').textContent = `${p.vorname} ${p.name} — Vorgang ${p.vorgang}`;
   document.getElementById('nb-leistung').value = '';
   document.getElementById('nb-betrag').value = '';
+  document.getElementById('nb-betrag').style.borderColor = '';
   document.getElementById('nb-notiz').value = '';
+  const ac = document.getElementById('nb-ac');
+  if (ac) { ac.style.display = 'none'; acSelectedIdx = -1; }
+  renderNbList();
   document.getElementById('nachbuchung-modal').classList.add('open');
+  setTimeout(() => document.getElementById('nb-leistung').focus(), 100);
 }
-function closeModal() {
-  document.getElementById('nachbuchung-modal').classList.remove('open');
-  currentNbPerson = null;
+
+function renderNbList() {
+  const id = currentNbPerson;
+  if (!id) return;
+  const nbs = checkins[id]?.nachbuchungen || [];
+  const el = document.getElementById('nb-list');
+  if (!nbs.length) {
+    el.innerHTML = `<div style="font-size:.8rem;color:var(--muted);padding:8px 0">Noch keine Nachbuchungen.</div>`;
+    return;
+  }
+  const total = nbs.reduce((s, n) => s + (n.betrag || 0), 0);
+  el.innerHTML = `<div style="font-size:.7rem;color:var(--muted);margin-bottom:8px">Klicken zum Farbe wechseln &nbsp;·&nbsp; ✕ zum Löschen</div>` +
+  nbs.map((nb, i) => {
+    const confirmed = nb.status === true;
+    const bg = confirmed ? 'rgba(10,158,110,.1)' : 'rgba(214,53,69,.08)';
+    const border = confirmed ? 'rgba(10,158,110,.35)' : 'rgba(214,53,69,.3)';
+    return `
+<div onclick="toggleNbStatus('${id}',${i})"
+  style="display:flex;align-items:flex-start;gap:10px;padding:8px 10px;background:${bg};border:1px solid ${border};border-radius:6px;margin-bottom:6px;cursor:pointer;transition:all .15s">
+  <div style="flex:1;min-width:0">
+    <div style="font-weight:700;font-size:.85rem">${nb.leistung}</div>
+    <div style="display:flex;gap:10px;margin-top:2px;font-size:.75rem;color:var(--muted)">
+      ${nb.betrag ? `<span style="color:var(--warn);font-family:'DM Mono',monospace">CHF ${nb.betrag.toFixed(2)}</span>` : ''}
+      ${nb.notiz ? `<span>${nb.notiz}</span>` : ''}
+      <span style="margin-left:auto;font-style:italic">${confirmed ? '✓ erledigt' : '○ offen'}</span>
+    </div>
+  </div>
+  <button onclick="event.stopPropagation();deleteNachbuchung(${i})" title="Löschen"
+    style="background:none;border:none;cursor:pointer;color:var(--danger);font-size:1rem;padding:0 2px;flex-shrink:0">✕</button>
+</div>`}).join('') +
+  `<div style="text-align:right;font-size:.78rem;font-family:'DM Mono',monospace;color:var(--muted);margin-top:4px">
+    Gesamt: <strong style="color:var(--warn)">CHF ${total.toFixed(2)}</strong>
+  </div>`;
 }
-function saveNachbuchung() {
+
+// ─────────────────────────────
+// NACHBUCHUNG AUTOCOMPLETE
+// ─────────────────────────────
+// Fixed entries with auto-price
+const NB_PREISE = [
+  { label: 'Skipass 1 Tag',   match: /ski/i,    preis: 45  },
+  { label: 'Schlüsselverlust', match: /schl[üu]/i, preis: 120 },
+];
+
+// Usage tracking: { [leistung]: count }
+function getNbHistory() {
+  try { return JSON.parse(localStorage.getItem('nb_history') || '{}'); } catch(e) { return {}; }
+}
+function trackNbUsage(leistung) {
+  const h = getNbHistory();
+  h[leistung] = (h[leistung] || 0) + 1;
+  localStorage.setItem('nb_history', JSON.stringify(h));
+}
+
+let acSelectedIdx = -1;
+
+function onNbLeistungInput(val) {
+  autoFillNbPrice(val);
+  showAcDropdown(val);
+}
+
+function autoFillNbPrice(val) {
+  const betragField = document.getElementById('nb-betrag');
+  const match = NB_PREISE.find(p => p.match.test(val));
+  if (match && !betragField.value) {
+    betragField.value = match.preis.toFixed(2);
+    betragField.style.borderColor = 'rgba(10,158,110,.5)';
+  } else if (!match) {
+    betragField.style.borderColor = '';
+  }
+}
+
+function getSuggestions(val) {
+  if (!val || val.length < 2) return [];
+  const lower = val.toLowerCase();
+  const history = getNbHistory();
+
+  // Fixed suggestions that match
+  const fixed = NB_PREISE
+    .filter(p => p.label.toLowerCase().includes(lower))
+    .map(p => ({ label: p.label, preis: p.preis, count: null, fixed: true }));
+
+  // History-based suggestions
+  const hist = Object.entries(history)
+    .filter(([k]) => k.toLowerCase().includes(lower) && !fixed.find(f => f.label === k))
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 5)
+    .map(([k, count]) => {
+      const fp = NB_PREISE.find(p => p.match.test(k));
+      return { label: k, preis: fp ? fp.preis : null, count, fixed: false };
+    });
+
+  return [...fixed, ...hist].slice(0, 8);
+}
+
+function showAcDropdown(val) {
+  const ac = document.getElementById('nb-ac');
+  const suggestions = getSuggestions(val);
+  acSelectedIdx = -1;
+  if (!suggestions.length) { ac.style.display = 'none'; return; }
+
+  ac.innerHTML = suggestions.map((s, i) => `
+<div class="nb-ac-item" onmousedown="selectAcItem(${i})" id="nb-ac-${i}">
+  <span>
+    <span class="ac-name">${s.label}</span>
+    ${s.count ? `<span class="ac-count">${s.count}×</span>` : ''}
+  </span>
+  ${s.preis ? `<span class="ac-price">CHF ${s.preis.toFixed(2)}</span>` : ''}
+</div>`).join('');
+  ac.style.display = 'block';
+  ac._suggestions = suggestions;
+}
+
+function selectAcItem(idx) {
+  const ac = document.getElementById('nb-ac');
+  const s = ac._suggestions?.[idx];
+  if (!s) return;
+  const input = document.getElementById('nb-leistung');
+  const betrag = document.getElementById('nb-betrag');
+  input.value = s.label;
+  if (s.preis) {
+    betrag.value = s.preis.toFixed(2);
+    betrag.style.borderColor = 'rgba(10,158,110,.5)';
+  }
+  ac.style.display = 'none';
+  acSelectedIdx = -1;
+}
+
+function onNbLeistungKey(e) {
+  const ac = document.getElementById('nb-ac');
+  const items = ac.querySelectorAll('.nb-ac-item');
+  if (ac.style.display === 'none' || !items.length) return;
+
+  if (e.key === 'ArrowDown') {
+    e.preventDefault();
+    acSelectedIdx = Math.min(acSelectedIdx + 1, items.length - 1);
+  } else if (e.key === 'ArrowUp') {
+    e.preventDefault();
+    acSelectedIdx = Math.max(acSelectedIdx - 1, -1);
+  } else if (e.key === 'Enter' && acSelectedIdx >= 0) {
+    e.preventDefault();
+    selectAcItem(acSelectedIdx);
+    return;
+  } else if (e.key === 'Escape') {
+    ac.style.display = 'none'; acSelectedIdx = -1; return;
+  } else { return; }
+
+  items.forEach((el, i) => el.style.background = i === acSelectedIdx ? 'var(--surface2)' : '');
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', e => {
+  if (!e.target.closest('.nb-input-wrap')) {
+    const ac = document.getElementById('nb-ac');
+    if (ac) ac.style.display = 'none';
+  }
+  if (!e.target.closest('.export-dropdown-wrap')) {
+    closeExportDropdown();
+  }
+});
+
+function deleteNachbuchung(idx) {
   if (!currentNbPerson) return;
-  const leistung = document.getElementById('nb-leistung').value.trim();
-  const betrag = parseFloat(document.getElementById('nb-betrag').value) || 0;
-  const notiz = document.getElementById('nb-notiz').value.trim();
-  if (!leistung) { alert('Bitte Leistung eingeben.'); return; }
-  checkins[currentNbPerson].nachbuchungen.push({ leistung, betrag, notiz, ts: Date.now() });
-  closeModal();
+  const nb = checkins[currentNbPerson].nachbuchungen[idx];
+  logChange(currentNbPerson, 'Nachbuchung gelöscht', `${nb.leistung}${nb.betrag ? ' CHF ' + nb.betrag.toFixed(2) : ''}`, '—');
+  checkins[currentNbPerson].nachbuchungen.splice(idx, 1);
+  renderNbList();
   renderCheckin();
   saveToStorage();
-  toast('Nachbuchung gespeichert');
+}
+
+function toggleNbStatus(id, idx) {
+  if (!checkins[id]?.nachbuchungen[idx]) return;
+  const nb = checkins[id].nachbuchungen[idx];
+  const p = persons.find(x => x.id === id);
+  const oldStatus = nb.status ? 'erledigt' : 'offen';
+  nb.status = !nb.status;
+  const newStatus = nb.status ? 'erledigt' : 'offen';
+  logChange(id, `Nachbuchung "${nb.leistung}"`, oldStatus, newStatus);
+  renderNbList();
+  renderCheckin();
+  saveToStorage();
 }
 
 // ─────────────────────────────
@@ -1333,14 +2583,153 @@ function saveNachbuchung() {
 function filterList() { renderCheckin(); }
 
 // ─────────────────────────────
+// COLUMN RESIZE
+// ─────────────────────────────
+let colWidths = {}; // { tableId_colIndex: widthPx }
+
+function initResizableColumns(table) {
+  if (!table) return;
+  const ths = table.querySelectorAll('th');
+  ths.forEach((th, i) => {
+    th.classList.add('resizable-th');
+    // Apply saved width
+    const key = `${table.id || 'tbl'}_${i}`;
+    if (colWidths[key]) th.style.width = colWidths[key] + 'px';
+
+    // Add resizer handle if not already there
+    if (th.querySelector('.col-resizer')) return;
+    const handle = document.createElement('div');
+    handle.className = 'col-resizer';
+    th.appendChild(handle);
+
+    let startX, startW;
+    handle.addEventListener('mousedown', e => {
+      e.preventDefault();
+      startX = e.clientX;
+      startW = th.offsetWidth;
+      handle.classList.add('dragging');
+      document.body.style.cursor = 'col-resize';
+      document.body.style.userSelect = 'none';
+
+      const onMove = e => {
+        const newW = Math.max(40, startW + e.clientX - startX);
+        th.style.width = newW + 'px';
+        colWidths[key] = newW;
+      };
+      const onUp = () => {
+        handle.classList.remove('dragging');
+        document.body.style.cursor = '';
+        document.body.style.userSelect = '';
+        document.removeEventListener('mousemove', onMove);
+        document.removeEventListener('mouseup', onUp);
+      };
+      document.addEventListener('mousemove', onMove);
+      document.addEventListener('mouseup', onUp);
+    });
+  });
+}
+
+function closeModal() {
+  document.getElementById('nachbuchung-modal').classList.remove('open');
+  currentNbPerson = null;
+}
+
+function saveNachbuchung() {
+  if (!currentNbPerson) return;
+  const leistung = document.getElementById('nb-leistung').value.trim();
+  const betrag = parseFloat(document.getElementById('nb-betrag').value) || 0;
+  const notiz = document.getElementById('nb-notiz').value.trim();
+  if (!leistung) { alert('Bitte Leistung eingeben.'); return; }
+  checkins[currentNbPerson].nachbuchungen.push({ leistung, betrag, notiz, ts: Date.now() });
+  trackNbUsage(leistung);
+  logChange(currentNbPerson, 'Nachbuchung hinzugefügt', '—', `${leistung}${betrag ? ' CHF ' + betrag.toFixed(2) : ''}`);
+  document.getElementById('nb-leistung').value = '';
+  document.getElementById('nb-betrag').value = '';
+  document.getElementById('nb-notiz').value = '';
+  renderNbList();
+  renderCheckin();
+  saveToStorage();
+  toast('Nachbuchung gespeichert');
+  document.getElementById('nb-leistung').focus();
+}
+
+function logChange(personId, field, oldVal, newVal) {
+  if (String(oldVal) === String(newVal)) return;
+  const p = persons.find(x => x.id === personId);
+  if (!p) return;
+  changeLog.unshift({
+    ts: Date.now(),
+    personId,
+    name: `${p.vorname} ${p.name}`,
+    vorgang: p.vorgang,
+    field,
+    oldVal: String(oldVal ?? ''),
+    newVal: String(newVal ?? ''),
+  });
+  // Keep last 500 entries
+  if (changeLog.length > 500) changeLog.length = 500;
+}
+
+function renderHistoryView() {
+  const el = document.getElementById('history-view');
+  if (!changeLog.length) {
+    el.innerHTML = `<div style="text-align:center;padding:60px;color:var(--muted)">Noch keine Änderungen aufgezeichnet.</div>`;
+    return;
+  }
+
+  const fmt = ts => new Date(ts).toLocaleString('de-DE', { day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit' });
+
+  // Group by day
+  const byDay = {};
+  changeLog.forEach(e => {
+    const day = new Date(e.ts).toLocaleDateString('de-DE', { weekday:'long', day:'2-digit', month:'2-digit', year:'numeric' });
+    if (!byDay[day]) byDay[day] = [];
+    byDay[day].push(e);
+  });
+
+  el.innerHTML = `
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px">
+  <div style="font-size:1rem;font-weight:800">Änderungshistorie <span style="color:var(--muted);font-weight:400;font-size:.8rem">(${changeLog.length} Einträge)</span></div>
+  <button class="btn btn-danger btn-sm" onclick="clearHistory()">Historie löschen</button>
+</div>` +
+  Object.entries(byDay).map(([day, entries]) => `
+<div style="margin-bottom:24px">
+  <div style="font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border)">${day}</div>
+  ${entries.map(e => `
+<div style="display:flex;gap:12px;padding:8px 12px;background:var(--surface);border:1px solid var(--border);border-radius:6px;margin-bottom:5px;font-size:.8rem">
+  <div style="font-family:'DM Mono',monospace;color:var(--muted);font-size:.7rem;white-space:nowrap;padding-top:1px">${new Date(e.ts).toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'})}</div>
+  <div style="flex:1;min-width:0">
+    <span style="font-weight:700">${e.name}</span>
+    <span style="color:var(--muted);font-size:.75rem"> · Vorgang ${e.vorgang}</span>
+    <div style="margin-top:3px;color:var(--text)">
+      <span style="color:var(--muted)">${e.field}:</span>
+      <span style="background:rgba(214,53,69,.1);color:#a52030;padding:1px 5px;border-radius:3px;font-family:'DM Mono',monospace;font-size:.72rem;margin:0 4px">${e.oldVal || '—'}</span>
+      <span style="color:var(--muted)">→</span>
+      <span style="background:rgba(10,158,110,.1);color:#0a6e4a;padding:1px 5px;border-radius:3px;font-family:'DM Mono',monospace;font-size:.72rem;margin-left:4px">${e.newVal || '—'}</span>
+    </div>
+  </div>
+</div>`).join('')}
+</div>`).join('');
+}
+
+function clearHistory() {
+  if (!confirm('Gesamte Änderungshistorie löschen?')) return;
+  changeLog = [];
+  saveToStorage();
+  renderHistoryView();
+}
+
+// ─────────────────────────────
 // TABS
 // ─────────────────────────────
 function switchTab(tab) {
+  currentTab = tab;
   document.getElementById('checkin-view').style.display = tab === 'checkin' ? 'block' : 'none';
   document.getElementById('stats-view').style.display = tab === 'stats' ? 'block' : 'none';
-  document.getElementById('tab-checkin').classList.toggle('active', tab === 'checkin');
-  document.getElementById('tab-stats').classList.toggle('active', tab === 'stats');
+  document.getElementById('history-view').style.display = tab === 'history' ? 'block' : 'none';
+  renderToolbar();
   if (tab === 'stats') renderStats();
+  if (tab === 'history') renderHistoryView();
 }
 
 // ─────────────────────────────
@@ -1366,7 +2755,7 @@ function renderStats() {
   <div class="stat-card"><div class="big">${total}</div><div class="lbl">Teilnehmer gesamt</div></div>
   <div class="stat-card"><div class="big" style="color:var(--accent)">${checked}</div><div class="lbl">Eingecheckt</div><div class="sub">${total - checked} noch ausstehend</div></div>
   <div class="stat-card"><div class="big" style="color:var(--accent3)">${groups}</div><div class="lbl">Gruppen / Vorgänge</div></div>
-  <div class="stat-card"><div class="big" style="color:var(--accent2)">${nbTotal}</div><div class="lbl">Nachbuchungen</div><div class="sub">${nbBetrag.toFixed(2)} € gesamt</div></div>
+  <div class="stat-card"><div class="big" style="color:var(--accent2)">${nbTotal}</div><div class="lbl">Nachbuchungen</div><div class="sub">CHF ${nbBetrag.toFixed(2)} gesamt</div></div>
 </div>
 
 <div class="section-title">Gebuchte Leistungen</div>
@@ -1385,7 +2774,7 @@ ${persons.filter(p => checkins[p.id].nachbuchungen.length).map(p => `
   ${checkins[p.id].nachbuchungen.map(nb => `
   <div style="display:flex;gap:10px;font-size:.78rem">
     <span style="color:var(--accent2)">${nb.leistung}</span>
-    ${nb.betrag ? `<span class="mono" style="color:var(--warn)">${nb.betrag.toFixed(2)} €</span>` : ''}
+    ${nb.betrag ? `<span class="mono" style="color:var(--warn)">CHF ${nb.betrag.toFixed(2)}</span>` : ''}
     ${nb.notiz ? `<span style="color:var(--muted)">${nb.notiz}</span>` : ''}
   </div>`).join('')}
 </div>`).join('')}` : ''}
@@ -1415,12 +2804,54 @@ function updateHeaderStats() {
 // EXPORTS
 // ─────────────────────────────
 function exportSBB() {
-  const rows = [['Vorname', 'Name', 'E-Mail', 'Strasse', 'PLZ', 'Ort', 'Zimmer', 'Vorgang']];
-  persons.forEach(p => {
-    rows.push([p.vorname, p.name, p.email, '', '', '', checkins[p.id].zimmer, p.vorgang]);
+  const filtered = getPersonsInCurrentPeriod();
+  if (!filtered.length) { toast('Keine Personen im aktuellen Reisezeitraum.'); return; }
+  const rows = [['Vorname', 'Name', 'Email', 'Strasse', 'PLZ', 'Ort']];
+  filtered.forEach(p => {
+    rows.push([p.vorname, p.name, p.email, 'Muster1', '11111', 'Musterstadt']);
   });
   downloadCSV(rows, 'SBB_Export.csv');
-  toast('SBB Liste exportiert');
+  toast(`SBB Export: ${filtered.length} Personen`);
+}
+
+function exportHC() {
+  const filtered = getPersonsInCurrentPeriod();
+  if (!filtered.length) { toast('Keine Personen im aktuellen Reisezeitraum.'); return; }
+  const rows = [['ID', 'Anreise', 'Vorname', 'Nachname', 'Email']];
+  filtered.forEach(p => {
+    rows.push(['', '', p.vorname, p.name, p.email]);
+  });
+  downloadCSV(rows, 'HC_Export.csv');
+  toast(`HC Export: ${filtered.length} Personen`);
+}
+
+function toggleExportDropdown(e) {
+  e.stopPropagation();
+  const dd = document.getElementById('export-dd');
+  if (!dd) return;
+  dd.style.display = dd.style.display === 'none' ? 'block' : 'none';
+}
+function closeExportDropdown() {
+  const dd = document.getElementById('export-dd');
+  if (dd) dd.style.display = 'none';
+}
+
+// Returns persons within current travel period for a given export date
+// Includes person if:
+//   - their Vorgang has no dates set (fallback: include all), OR
+//   - today falls within anreise..abreise (inclusive)
+function getPersonsInCurrentPeriod() {
+  const today = new Date(); today.setHours(0,0,0,0);
+  return persons.filter(p => {
+    const d = vorgangDates[p.vorgang];
+    if (!d || (!d.anreise && !d.abreise)) return true; // no dates → include
+    const an = d.anreise ? new Date(d.anreise) : null;
+    const ab = d.abreise ? new Date(d.abreise) : null;
+    if (an && ab) return today >= an && today <= ab;
+    if (an) return today >= an;
+    if (ab) return today <= ab;
+    return true;
+  });
 }
 
 function exportStats() {
@@ -1433,7 +2864,7 @@ function exportStats() {
       p.vorgang, p.name, p.vorname, p.geb, p.email,
       c.zimmer, c.schluessel || 0, c.notiz || '',
       ...leistungVals,
-      c.nachbuchungen.map(n => `${n.leistung}(${n.betrag}€)`).join('; ')
+      c.nachbuchungen.map(n => `${n.leistung}(CHF ${n.betrag})`).join('; ')
     ]);
   });
   downloadCSV(rows, 'CheckIn_Export.csv');
@@ -1442,11 +2873,13 @@ function exportStats() {
 
 function downloadCSV(rows, filename) {
   const csv = rows.map(r => r.map(c => `"${String(c).replace(/"/g,'""')}"`).join(',')).join('\n');
-  const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8;' });
+  const encoded = 'data:text/csv;charset=utf-8,\uFEFF' + encodeURIComponent(csv);
   const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
+  a.href = encoded;
   a.download = filename;
+  document.body.appendChild(a);
   a.click();
+  document.body.removeChild(a);
 }
 
 // ─────────────────────────────
@@ -1489,7 +2922,6 @@ async function connectGitHub() {
     ghConnected = true;
 
     setSyncStatus('online', 'Verbunden mit GitHub');
-    document.getElementById('sp-disconnect-btn').style.display = 'inline-flex';
     document.getElementById('sp-setup').style.display = 'none';
     document.getElementById('upload-screen').style.display = 'flex';
 
@@ -1511,7 +2943,7 @@ function spErr(msg) {
 async function saveToGitHub() {
   if (!ghConnected || !ghToken) return;
 
-  const payload = JSON.stringify({ persons, checkins, dynamicLeistungCols, customGroups, savedAt: Date.now() }, null, 2);
+  const payload = JSON.stringify({ persons, checkins, dynamicLeistungCols, customGroups, vorgangNames, vorgangDates, vorgangStatus, changeLog, savedAt: Date.now() }, null, 2);
   const encoded = btoa(unescape(encodeURIComponent(payload)));
 
   setSyncStatus('syncing', 'Speichern…');
@@ -1588,6 +3020,10 @@ async function loadFromGitHub() {
     if (data.persons && data.persons.length) {
       dynamicLeistungCols = data.dynamicLeistungCols || [];
       customGroups = data.customGroups || {};
+      vorgangNames = data.vorgangNames || {};
+      vorgangDates = data.vorgangDates || {};
+      vorgangStatus = data.vorgangStatus || {};
+      changeLog = data.changeLog || [];
       if (persons.length === 0) {
         initApp(data.persons);
         checkins = data.checkins || {};
@@ -1618,6 +3054,8 @@ function setSyncStatus(state, label) {
   lbl.textContent = label;
 }
 
+function disconnectSharePoint() { resetSync(); }
+
 function skipSharePoint() {
   localStorage.setItem('sp_skip', '1');
   document.getElementById('sp-setup').style.display = 'none';
@@ -1625,10 +3063,12 @@ function skipSharePoint() {
   loadFromStorage();
 }
 
-function disconnectSharePoint() {
-  if (!confirm('GitHub Sync trennen?')) return;
+function resetSync() {
+  if (!confirm('GitHub Sync-Einstellungen zurücksetzen und neu einrichten?')) return;
   localStorage.removeItem('gh_token');
   localStorage.removeItem('sp_skip');
+  localStorage.removeItem('sp_config');
+  localStorage.removeItem('sp_config_v2');
   location.reload();
 }
 
@@ -1637,9 +3077,8 @@ function disconnectSharePoint() {
 // ─────────────────────────────
 function saveToStorage() {
   try {
-    const payload = { persons, checkins, dynamicLeistungCols, customGroups };
+    const payload = { persons, checkins, dynamicLeistungCols, customGroups, vorgangNames, vorgangDates, vorgangStatus, changeLog };
     sessionStorage.setItem('checkin_data', JSON.stringify(payload));
-    // If GitHub connected, also sync there (debounced)
     if (ghConnected) {
       clearTimeout(saveToStorage._debounce);
       saveToStorage._debounce = setTimeout(saveToGitHub, 800);
@@ -1655,6 +3094,10 @@ function loadFromStorage() {
     if (data.persons && data.persons.length) {
       dynamicLeistungCols = data.dynamicLeistungCols || [];
       customGroups = data.customGroups || {};
+      vorgangNames = data.vorgangNames || {};
+      vorgangDates = data.vorgangDates || {};
+      vorgangStatus = data.vorgangStatus || {};
+      changeLog = data.changeLog || [];
       initApp(data.persons);
       checkins = data.checkins;
       renderCheckin();
@@ -1708,20 +3151,85 @@ function loadDemo() {
 // ─────────────────────────────
 // STARTUP
 // ─────────────────────────────
+// ─────────────────────────────
+// PASSWORD
+// ─────────────────────────────
+// SHA-256 hash of the password is stored — never the plaintext
+// Default password: "DPW2025" — change via ⚙ Passwort button
+const DEFAULT_PW_HASH = '7f8e9d2c1a3b4f5e6d7c8b9a0e1f2d3c4b5a6e7f8d9c0b1a2e3f4d5c6b7a8e9'; // placeholder
+
+async function sha256(str) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+}
+
+function getStoredPwHash() {
+  return localStorage.getItem('pw_hash') || null;
+}
+
+async function checkPassword() {
+  const val = document.getElementById('pw-input').value;
+  if (!val) { document.getElementById('pw-error').textContent = 'Bitte Passwort eingeben.'; return; }
+  const hash = await sha256(val);
+  const stored = getStoredPwHash();
+
+  if (!stored) {
+    // First time — set this as the password
+    localStorage.setItem('pw_hash', hash);
+    unlockApp();
+    return;
+  }
+  if (hash === stored) {
+    unlockApp();
+  } else {
+    document.getElementById('pw-error').textContent = 'Falsches Passwort.';
+    document.getElementById('pw-input').value = '';
+    document.getElementById('pw-input').focus();
+  }
+}
+
+function unlockApp() {
+  sessionStorage.setItem('pw_ok', '1');
+  document.getElementById('pw-screen').classList.add('hidden');
+  continueStartup();
+}
+
+async function changePassword() {
+  const newPw = prompt('Neues Passwort eingeben:');
+  if (!newPw) return;
+  const confirm = prompt('Passwort bestätigen:');
+  if (newPw !== confirm) { alert('Passwörter stimmen nicht überein.'); return; }
+  const hash = await sha256(newPw);
+  localStorage.setItem('pw_hash', hash);
+  alert('Passwort geändert.');
+}
+
 async function startup() {
   // Aufräumen: alte SharePoint-Einträge aus früheren Versionen entfernen
   localStorage.removeItem('sp_config');
   localStorage.removeItem('sp_config_v2');
 
+  // Password check
+  if (!sessionStorage.getItem('pw_ok')) {
+    // Show password screen
+    const stored = getStoredPwHash();
+    if (!stored) {
+      document.getElementById('pw-hint').textContent = 'Erstes Mal: Beliebiges Passwort eingeben — wird als neues Passwort gesetzt.';
+    }
+    document.getElementById('pw-input').focus();
+    return; // wait for checkPassword() → unlockApp() → continueStartup()
+  }
+  continueStartup();
+}
+
+async function continueStartup() {
   const skipped = localStorage.getItem('sp_skip');
   const hasToken = loadGhToken();
 
   if (hasToken) {
-    // Token saved — reconnect silently
     setSyncStatus('syncing', 'Verbinde…');
     document.getElementById('sync-bar').classList.add('visible');
     ghConnected = true;
-    document.getElementById('sp-disconnect-btn').style.display = 'inline-flex';
     document.getElementById('sp-setup').style.display = 'none';
     document.getElementById('upload-screen').style.display = 'flex';
     const loaded = await loadFromGitHub();

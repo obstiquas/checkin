@@ -4927,9 +4927,9 @@
       "notizColor": "",
       "stirnlampe": {
         "anzahl": 1,
-        "retour": false
+        "retour": true
       },
-      "personStatus": "offen",
+      "personStatus": "abgereist",
       "_ts": {}
     },
     "105233_Dörr_Carolina": {
@@ -6396,15 +6396,6 @@
   },
   "changeLog": [
     {
-      "ts": 1780490331521,
-      "personId": "105231_Andresen_Jane",
-      "name": "Jane Andresen",
-      "vorgang": "105231",
-      "field": "Schlüssel retour",
-      "oldVal": "nein",
-      "newVal": "ja"
-    },
-    {
       "ts": 1780490328201,
       "personId": "105231_Andresen_Jane",
       "name": "Jane Andresen",
@@ -6522,5 +6513,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780490332338
+  "savedAt": 1780490333965
 }

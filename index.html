@@ -1300,18 +1300,48 @@ function colShort(label) {
   return num ? `S${num}` : 'S';
 }
 
+function detectSeparator(lines) {
+  // Count occurrences of each separator in the header line
+  const header = lines[0] || '';
+  const tabs = (header.match(/\t/g) || []).length;
+  const semicolons = (header.match(/;/g) || []).length;
+  const commas = (header.match(/,/g) || []).length;
+  if (tabs >= semicolons && tabs >= commas) return '\t';
+  if (semicolons >= commas) return ';';
+  return ',';
+}
+
+function splitCsvLine(line, sep) {
+  // Handle quoted fields (e.g. "value, with comma")
+  if (sep === '\t' && !line.includes('"')) return line.split('\t');
+  const result = [];
+  let cur = '', inQ = false;
+  for (let i = 0; i < line.length; i++) {
+    const c = line[i];
+    if (c === '"') { inQ = !inQ; continue; }
+    if (c === sep && !inQ) { result.push(cur.trim()); cur = ''; continue; }
+    cur += c;
+  }
+  result.push(cur.trim());
+  return result;
+}
+
 function parseData(raw) {
-  const lines = raw.split('\n').map(l => l.trim()).filter(l => l);
+  // Normalize line endings
+  const lines = raw.replace(/\r\n/g, '\n').replace(/\r/g, '\n')
+    .split('\n').map(l => l.trim()).filter(l => l);
+
   let headerIdx = lines.findIndex(l => /vorgang/i.test(l));
   if (headerIdx === -1) headerIdx = 0;
 
+  const sep = detectSeparator(lines.slice(headerIdx));
+
   // Parse header to find leistung columns dynamically (cols 6+)
-  const headerCols = lines[headerIdx].split('\t');
+  const headerCols = splitCsvLine(lines[headerIdx], sep);
   dynamicLeistungCols = [];
   for (let i = 6; i < headerCols.length; i++) {
     const h = headerCols[i].trim();
     if (!h) continue;
-    // Skip "Summe", empty, or non-leistung cols
     if (/^summe|^zus_|^zimmer|^schlüssel/i.test(h)) continue;
     dynamicLeistungCols.push({
       colIdx: i,
@@ -1323,17 +1353,28 @@ function parseData(raw) {
     });
   }
 
+  // Find column indices dynamically from header
+  const idxVorgang = headerCols.findIndex(h => /vorgang/i.test(h));
+  const idxName    = headerCols.findIndex(h => /^name$/i.test(h) || /^nachname$/i.test(h));
+  const idxVorname = headerCols.findIndex(h => /vorname/i.test(h));
+  const idxEmail   = headerCols.findIndex(h => /mail|email/i.test(h));
+  const idxGeb     = headerCols.findIndex(h => /geb|geburt|birthday/i.test(h));
+  const idxZus     = headerCols.findIndex(h => /zus|zimmer|wunsch|room/i.test(h));
+
+  // Fallback to fixed positions if headers not found
+  const ci = (idx, fallback) => idx >= 0 ? idx : fallback;
+
   const result = [];
   for (let i = headerIdx + 1; i < lines.length; i++) {
-    const cols = lines[i].split('\t');
+    const cols = splitCsvLine(lines[i], sep);
     if (!cols[0] || !/^\d+$/.test(cols[0].trim())) continue;
-    const vorgang = cols[0].trim();
-    const name = (cols[1] || '').trim();
-    const vorname = (cols[2] || '').trim();
-    const email = (cols[3] || '').trim();
-    const geb = (cols[4] || '').trim();
-    const zus = (cols[5] || '').trim();
-    if (!name && !vorname) continue;
+    const vorgang = (cols[ci(idxVorgang, 0)] || '').trim();
+    const name    = (cols[ci(idxName,    1)] || '').trim();
+    const vorname = (cols[ci(idxVorname, 2)] || '').trim();
+    const email   = (cols[ci(idxEmail,   3)] || '').trim();
+    const geb     = (cols[ci(idxGeb,     4)] || '').trim();
+    const zus     = (cols[ci(idxZus,     5)] || '').trim();
+    if (!vorgang || !name && !vorname) continue;
 
     const leistungen = {};
     dynamicLeistungCols.forEach(lc => {
@@ -1462,8 +1503,8 @@ function handleFile(e) {
     // Try parse as TSV/CSV text
     const text = ev.target.result;
     const data = parseData(text);
-    if (data.length) { showImportDatesModal(data); return; }
-    showError('Datei konnte nicht gelesen werden. Bitte als CSV speichern oder Daten direkt einfügen.');
+    if (data.length) { showImportDatesModal(data, true); return; }
+    showError('Datei konnte nicht gelesen werden. Unterstützte Formate: CSV (Tab/Semikolon/Komma getrennt). Excel-Dateien bitte als CSV speichern (Datei → Speichern unter → CSV).');
   };
   reader.readAsText(file, 'utf-8');
 }
@@ -1484,7 +1525,7 @@ function initApp(data, isMerge = false) {
         updated++;
       } else {
         persons.push(p);
-        checkins[p.id] = { zimmer: '', schluessel: 0, schluessel_retour: false, nachbuchungen: [], notiz: '', notizColor: '', stirnlampe: { anzahl: 0, retour: false }, personStatus: 'offen', _ts: {} };
+        checkins[p.id] = { zimmer: p.zus || '', schluessel: 0, schluessel_retour: false, nachbuchungen: [], notiz: '', notizColor: '', stirnlampe: { anzahl: 0, retour: false }, personStatus: 'offen', _ts: {} };
         added++;
       }
     });
@@ -1494,7 +1535,7 @@ function initApp(data, isMerge = false) {
     persons = data;
     checkins = {};
     persons.forEach(p => {
-      checkins[p.id] = { zimmer: '', schluessel: 0, schluessel_retour: false, nachbuchungen: [], notiz: '', notizColor: '', stirnlampe: { anzahl: 0, retour: false }, personStatus: 'offen', _ts: {} };
+      checkins[p.id] = { zimmer: p.zus || '', schluessel: 0, schluessel_retour: false, nachbuchungen: [], notiz: '', notizColor: '', stirnlampe: { anzahl: 0, retour: false }, personStatus: 'offen', _ts: {} };
     });
   }
 
@@ -1523,6 +1564,9 @@ function initApp(data, isMerge = false) {
 
   renderCheckin();
   updateHeaderStats();
+
+  // Save to GitHub after import (creates the file if it doesn't exist yet)
+  if (ghConnected) setTimeout(() => saveToStorage(), 600);
 }
 
 // ─────────────────────────────

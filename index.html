@@ -817,6 +817,13 @@
   </div>
 </div>
 
+<!-- Loading Screen -->
+<div id="loading-screen" style="display:none;position:fixed;inset:0;z-index:998;background:var(--bg);align-items:center;justify-content:center;flex-direction:column;gap:16px">
+  <div style="width:40px;height:40px;border:3px solid var(--border);border-top-color:var(--accent3);border-radius:50%;animation:spin .8s linear infinite"></div>
+  <div id="loading-msg" style="font-size:.9rem;color:var(--muted)">Verbinde…</div>
+</div>
+<style>@keyframes spin{to{transform:rotate(360deg)}}</style>
+
 <!-- SYNC STATUS BAR -->
 <div class="sync-bar" id="sync-bar">
   <div class="sync-dot" id="sync-dot"></div>
@@ -949,7 +956,7 @@
       <input type="text" id="nb-notiz" placeholder="">
     </div>
     <div class="modal-actions">
-      <button class="btn btn-secondary btn-sm" onclick="closeModal()">Schließen</button>
+      <button class="btn btn-secondary btn-sm" onclick="closeModal()">Schliessen</button>
       <button class="btn btn-primary btn-sm" onclick="saveNachbuchung()">Hinzufügen</button>
     </div>
   </div>
@@ -1470,7 +1477,7 @@ function initApp(data, isMerge = false) {
         updated++;
       } else {
         persons.push(p);
-        checkins[p.id] = { zimmer: '', schluessel: 0, schluessel_retour: false, nachbuchungen: [], notiz: '', notizColor: '', stirnlampe: { anzahl: 0, retour: false }, personStatus: 'offen' };
+        checkins[p.id] = { zimmer: '', schluessel: 0, schluessel_retour: false, nachbuchungen: [], notiz: '', notizColor: '', stirnlampe: { anzahl: 0, retour: false }, personStatus: 'offen', _ts: {} };
         added++;
       }
     });
@@ -1480,7 +1487,7 @@ function initApp(data, isMerge = false) {
     persons = data;
     checkins = {};
     persons.forEach(p => {
-      checkins[p.id] = { zimmer: '', schluessel: 0, schluessel_retour: false, nachbuchungen: [], notiz: '', notizColor: '', stirnlampe: { anzahl: 0, retour: false }, personStatus: 'offen' };
+      checkins[p.id] = { zimmer: '', schluessel: 0, schluessel_retour: false, nachbuchungen: [], notiz: '', notizColor: '', stirnlampe: { anzahl: 0, retour: false }, personStatus: 'offen', _ts: {} };
     });
   }
 
@@ -1972,22 +1979,21 @@ function renderRow(p, showVorgang = false) {
   if (!c.stirnlampe) c.stirnlampe = { anzahl: 0, retour: false };
   const checked = isCheckedIn(p);
 
-  const activeCols = dynamicLeistungCols.filter(lc => p.leistungen[lc.key]);
+  const activeCols = dynamicLeistungCols
+    .filter(lc => p.leistungen[lc.key])
+    .sort((a, b) => a.label.localeCompare(b.label, 'de'));
+
   const leistungPills = activeCols.map(lc => {
-    if (lc.isSkipass) {
-      // Detect Anreisetag / Abreisetag suffix
-      const hasAnreise = /anreisetag/i.test(lc.label);
-      const hasAbreise = /abreisetag/i.test(lc.label);
-      // Base label without the suffix
-      const baseLabel = lc.label.replace(/\s*[\(\[]?inkl\.?\s*(an|ab)reisetag[\)\]]?/gi, '').trim();
-      const suffix = hasAnreise ? '＋AN' : hasAbreise ? '＋AB' : '';
-      const suffixHtml = suffix
-        ? `<span style="font-size:.6rem;font-weight:700;background:${lc.color};color:#fff;padding:1px 4px;border-radius:3px;margin-left:3px">${suffix}</span>`
-        : '';
-      return `<span class="lpill" title="${lc.label}" style="background:${lc.color}22;color:${lc.color};display:inline-flex;align-items:center;gap:2px">${baseLabel}${suffixHtml}</span>`;
-    }
-    return `<span class="lpill" title="${lc.label}" style="background:${lc.color}22;color:${lc.color}">${lc.short}</span>`;
-  }).join('');
+    // Detect Anreisetag / Abreisetag suffix for all leistungen
+    const hasAnreise = /anreisetag/i.test(lc.label);
+    const hasAbreise = /abreisetag/i.test(lc.label);
+    const baseLabel = lc.label.replace(/\s*[\(\[]?inkl\.?\s*(an|ab)reisetag[\)\]]?/gi, '').trim();
+    const suffix = hasAnreise ? '＋AN' : hasAbreise ? '＋AB' : '';
+    const suffixHtml = suffix
+      ? `<span style="font-size:.6rem;font-weight:700;background:${lc.color};color:#fff;padding:1px 4px;border-radius:3px;margin-left:3px">${suffix}</span>`
+      : '';
+    return `<span class="lpill" title="${lc.label}" style="display:inline-flex;align-items:center;background:${lc.color}22;color:${lc.color};margin-bottom:2px">${baseLabel}${suffixHtml}</span>`;
+  }).join('<br>');
 
   const nbCount = c.nachbuchungen.length;
   const nbPills = c.nachbuchungen.map((nb, i) => {
@@ -2218,12 +2224,19 @@ function exportZuZahlen() {
   toast(`${zuZahlen.length} Person(en) exportiert`);
 }
 
+function touchField(id, field) {
+  if (!checkins[id]) return;
+  if (!checkins[id]._ts) checkins[id]._ts = {};
+  checkins[id]._ts[field] = Date.now();
+}
+
 // ─────────────────────────────
 // INTERACTIONS
 // ─────────────────────────────
 function setZimmer(id, val) {
   const old = checkins[id].zimmer;
   checkins[id].zimmer = val.trim();
+  touchField(id, 'zimmer');
   logChange(id, 'Zimmer', old, checkins[id].zimmer);
   refreshRow(id);
   updateHeaderStats();
@@ -2233,6 +2246,7 @@ function setZimmer(id, val) {
 function setNotiz(id, val) {
   const old = checkins[id].notiz;
   checkins[id].notiz = val.trim();
+  touchField(id, 'notiz');
   logChange(id, 'Notiz', old, checkins[id].notiz);
   saveToStorage();
 }
@@ -2888,7 +2902,7 @@ function downloadCSV(rows, filename) {
 const GH_REPO  = 'obstiquas/checkin';
 const GH_FILE  = 'checkin-state.json';
 const GH_API   = `https://api.github.com/repos/${GH_REPO}/contents/${GH_FILE}`;
-const SYNC_INTERVAL = 15000;
+const SYNC_INTERVAL = 3000;
 
 let ghToken     = '';
 let ghConnected = false;
@@ -3013,7 +3027,6 @@ async function loadFromGitHub() {
     if (meta.sha === lastSyncSha) return persons.length > 0; // no change
     lastSyncSha = meta.sha;
 
-    // Decode base64 content
     const decoded = decodeURIComponent(escape(atob(meta.content.replace(/\n/g, ''))));
     const data = JSON.parse(decoded);
 
@@ -3024,13 +3037,53 @@ async function loadFromGitHub() {
       vorgangDates = data.vorgangDates || {};
       vorgangStatus = data.vorgangStatus || {};
       changeLog = data.changeLog || [];
+
       if (persons.length === 0) {
+        // First load — take everything from remote
         initApp(data.persons);
         checkins = data.checkins || {};
       } else {
-        checkins = data.checkins || checkins;
+        // Field-level merge: for each person and each field,
+        // keep whichever version was modified more recently
         persons = data.persons;
+        const remoteCheckins = data.checkins || {};
+        const MERGE_FIELDS = ['zimmer', 'schluessel', 'schluessel_retour', 'notiz', 'notizColor', 'personStatus', 'stirnlampe'];
+
+        Object.keys(remoteCheckins).forEach(id => {
+          if (!checkins[id]) {
+            // New person from remote
+            checkins[id] = remoteCheckins[id];
+            return;
+          }
+          const local = checkins[id];
+          const remote = remoteCheckins[id];
+          const localTs = local._ts || {};
+          const remoteTs = remote._ts || {};
+
+          MERGE_FIELDS.forEach(field => {
+            const lts = localTs[field] || 0;
+            const rts = remoteTs[field] || 0;
+            if (rts > lts) {
+              // Remote is newer → take remote value
+              local[field] = remote[field];
+              if (!local._ts) local._ts = {};
+              local._ts[field] = rts;
+            }
+            // else: keep local (already there)
+          });
+
+          // Nachbuchungen: merge by timestamp — keep all unique entries
+          const localNb = local.nachbuchungen || [];
+          const remoteNb = remote.nachbuchungen || [];
+          const nbMap = new Map();
+          [...localNb, ...remoteNb].forEach(nb => {
+            const key = `${nb.ts}_${nb.leistung}`;
+            if (!nbMap.has(key) || nb.ts > nbMap.get(key).ts) nbMap.set(key, nb);
+          });
+          local.nachbuchungen = [...nbMap.values()].sort((a, b) => a.ts - b.ts);
+        });
       }
+
       renderCheckin();
       updateHeaderStats();
       setSyncStatus('online', `Sync ${new Date().toLocaleTimeString('de-DE', {hour:'2-digit',minute:'2-digit'})}`);
@@ -3204,6 +3257,15 @@ async function changePassword() {
   alert('Passwort geändert.');
 }
 
+function showLoadingScreen(msg) {
+  const el = document.getElementById('loading-screen');
+  document.getElementById('loading-msg').textContent = msg || 'Laden…';
+  el.style.display = 'flex';
+}
+function hideLoadingScreen() {
+  document.getElementById('loading-screen').style.display = 'none';
+}
+
 async function startup() {
   // Aufräumen: alte SharePoint-Einträge aus früheren Versionen entfernen
   localStorage.removeItem('sp_config');
@@ -3227,17 +3289,29 @@ async function continueStartup() {
   const hasToken = loadGhToken();
 
   if (hasToken) {
-    setSyncStatus('syncing', 'Verbinde…');
+    // Show loading state — NOT the upload screen
+    setSyncStatus('syncing', 'Daten werden geladen…');
     document.getElementById('sync-bar').classList.add('visible');
+    showLoadingScreen('Verbinde mit GitHub…');
     ghConnected = true;
     document.getElementById('sp-setup').style.display = 'none';
-    document.getElementById('upload-screen').style.display = 'flex';
+
     const loaded = await loadFromGitHub();
-    if (!loaded) loadFromStorage();
+    hideLoadingScreen();
+
+    if (!loaded) {
+      // No data on GitHub yet — try local, then show upload
+      const localLoaded = loadFromStorage();
+      if (!localLoaded) {
+        document.getElementById('upload-screen').style.display = 'flex';
+      }
+    }
     startSyncPolling();
   } else if (skipped) {
-    document.getElementById('upload-screen').style.display = 'flex';
-    loadFromStorage();
+    const localLoaded = loadFromStorage();
+    if (!localLoaded) {
+      document.getElementById('upload-screen').style.display = 'flex';
+    }
   } else {
     document.getElementById('sp-setup').style.display = 'flex';
   }

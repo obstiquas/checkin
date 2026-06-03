@@ -819,8 +819,12 @@
 
 <!-- Loading Screen -->
 <div id="loading-screen" style="display:none;position:fixed;inset:0;z-index:998;background:var(--bg);align-items:center;justify-content:center;flex-direction:column;gap:16px">
-  <div style="width:40px;height:40px;border:3px solid var(--border);border-top-color:var(--accent3);border-radius:50%;animation:spin .8s linear infinite"></div>
+  <div style="width:40px;height:40px;border:3px solid var(--border);border-top-color:var(--accent3);border-radius:50%;animation:spin .8s linear infinite" id="loading-spinner"></div>
   <div id="loading-msg" style="font-size:.9rem;color:var(--muted)">Verbinde…</div>
+  <div id="loading-actions" style="display:none;gap:10px;flex-direction:column;align-items:center">
+    <button class="btn btn-primary btn-sm" onclick="location.reload()">Erneut versuchen</button>
+    <button class="btn btn-secondary btn-sm" onclick="hideLoadingScreen();document.getElementById('upload-screen').style.display='flex'">Ohne Sync fortfahren</button>
+  </div>
 </div>
 <style>@keyframes spin{to{transform:rotate(360deg)}}</style>
 
@@ -2937,10 +2941,16 @@ async function connectGitHub() {
 
     setSyncStatus('online', 'Verbunden mit GitHub');
     document.getElementById('sp-setup').style.display = 'none';
-    document.getElementById('upload-screen').style.display = 'flex';
+    showLoadingScreen('Daten werden geladen…');
 
     const loaded = await loadFromGitHub();
-    if (!loaded) loadFromStorage();
+    hideLoadingScreen();
+    if (!loaded) {
+      const localLoaded = loadFromStorage();
+      if (!localLoaded) {
+        document.getElementById('upload-screen').style.display = 'flex';
+      }
+    }
     startSyncPolling();
     toast('✓ GitHub Sync aktiv');
   } catch(e) {
@@ -3089,7 +3099,9 @@ async function loadFromGitHub() {
       setSyncStatus('online', `Sync ${new Date().toLocaleTimeString('de-DE', {hour:'2-digit',minute:'2-digit'})}`);
       return true;
     }
-  } catch(e) { /* silent on poll errors */ }
+  } catch(e) {
+    console.warn('loadFromGitHub error:', e.message);
+  }
   return false;
 }
 
@@ -3260,10 +3272,19 @@ async function changePassword() {
 function showLoadingScreen(msg) {
   const el = document.getElementById('loading-screen');
   document.getElementById('loading-msg').textContent = msg || 'Laden…';
+  document.getElementById('loading-spinner').style.display = 'block';
+  document.getElementById('loading-actions').style.display = 'none';
   el.style.display = 'flex';
 }
 function hideLoadingScreen() {
   document.getElementById('loading-screen').style.display = 'none';
+}
+function showLoadingError(msg) {
+  const el = document.getElementById('loading-screen');
+  el.style.display = 'flex'; // ensure visible
+  document.getElementById('loading-msg').textContent = msg;
+  document.getElementById('loading-spinner').style.display = 'none';
+  document.getElementById('loading-actions').style.display = 'flex';
 }
 
 async function startup() {
@@ -3289,24 +3310,36 @@ async function continueStartup() {
   const hasToken = loadGhToken();
 
   if (hasToken) {
-    // Show loading state — NOT the upload screen
-    setSyncStatus('syncing', 'Daten werden geladen…');
-    document.getElementById('sync-bar').classList.add('visible');
-    showLoadingScreen('Verbinde mit GitHub…');
     ghConnected = true;
     document.getElementById('sp-setup').style.display = 'none';
+    document.getElementById('sync-bar').classList.add('visible');
+    showLoadingScreen('Verbinde mit GitHub…');
 
-    const loaded = await loadFromGitHub();
+    // Try up to 3 times in case of transient errors
+    let loaded = false;
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      setSyncStatus('syncing', `Laden… (${attempt}/3)`);
+      loaded = await loadFromGitHub();
+      if (loaded) break;
+      if (attempt < 3) await new Promise(r => setTimeout(r, 1500));
+    }
+
     hideLoadingScreen();
 
-    if (!loaded) {
-      // No data on GitHub yet — try local, then show upload
+    if (loaded) {
+      setSyncStatus('online', 'Verbunden');
+    } else {
       const localLoaded = loadFromStorage();
-      if (!localLoaded) {
-        document.getElementById('upload-screen').style.display = 'flex';
+      if (localLoaded) {
+        hideLoadingScreen();
+        setSyncStatus('online', 'Verbunden (lokale Daten)');
+      } else {
+        // Show error with options
+        showLoadingError('Keine Daten gefunden. Neu versuchen oder ohne Sync fortfahren.');
       }
     }
     startSyncPolling();
+
   } else if (skipped) {
     const localLoaded = loadFromStorage();
     if (!localLoaded) {

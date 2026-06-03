@@ -236,7 +236,52 @@
   .tab-btn:hover:not(.active) { color: var(--text); background: var(--surface2); }
 
   /* ── CONTENT ── */
-  #main-content { padding: 20px 24px; }
+  #checkin-view {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #main-content {
+    flex: 1;
+    overflow: scroll;  /* always show both scrollbars */
+    padding: 0;
+    position: relative;
+  }
+
+  /* Sticky table headers */
+  .checkin-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--surface2);
+    box-shadow: 0 1px 0 var(--border);
+  }
+
+  /* Always-visible prominent scrollbars */
+  #main-content::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+  }
+  #main-content::-webkit-scrollbar-track {
+    background: #e8eaef;
+    border-radius: 2px;
+  }
+  #main-content::-webkit-scrollbar-thumb {
+    background: #8892aa;
+    border-radius: 3px;
+    border: 2px solid #e8eaef;
+  }
+  #main-content::-webkit-scrollbar-thumb:hover {
+    background: #5a6380;
+  }
+  #main-content::-webkit-scrollbar-corner {
+    background: #e8eaef;
+  }
+  /* Firefox */
+  #main-content {
+    scrollbar-width: auto;
+    scrollbar-color: #8892aa #e8eaef;
+  }
 
   /* ── GROUP CARDS ── */
   .group-section { margin-bottom: 24px; }
@@ -326,11 +371,22 @@
 
   /* ── TABLE ── */
   .checkin-table {
-    width: 100%;
     border-collapse: collapse;
     font-size: .82rem;
-    table-layout: fixed;
+    table-layout: auto;
+    width: max-content;
+    min-width: 100%;
   }
+  .checkin-table th, .checkin-table td {
+    white-space: nowrap;
+  }
+  /* Allow certain cells to wrap if very long */
+  .checkin-table td .leistung-pills { white-space: normal; min-width: 100px; }
+  .checkin-table td .notiz-wrap input { white-space: normal; }
+  .checkin-table td .sl-wrap { white-space: nowrap; }
+  .group-body { overflow: visible; }
+
+  /* Table padding is on the wrapper, not main-content */
   .checkin-table th {
     background: var(--surface2);
     color: #222;
@@ -369,8 +425,6 @@
     padding: 8px 16px;
     border-bottom: 1px solid rgba(180,185,200,.4);
     vertical-align: middle;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
   .checkin-table tr:last-child td { border-bottom: none; }
   .checkin-table tr.checked-in { background: rgba(10,158,110,.06); }
@@ -724,6 +778,29 @@
   .nb-input-wrap { position: relative; }
 
   .col-geb-hidden .col-geb { display: none; }
+
+  /* ── LEISTUNG COLUMN FILTER ── */
+  .leistung-col-wrap { position: relative; display: inline-flex; align-items: center; gap: 4px; width: 100%; }
+  .leistung-filter-btn {
+    background: none; border: 1px solid transparent; border-radius: 4px;
+    cursor: pointer; font-size: .7rem; padding: 2px 5px; color: var(--muted);
+    transition: all .15s; white-space: nowrap; flex-shrink: 0;
+  }
+  .leistung-filter-btn:hover, .leistung-filter-btn.active { border-color: var(--accent3); color: var(--accent3); background: rgba(59,111,212,.08); }
+  .leistung-filter-dropdown {
+    position: absolute; top: calc(100% + 4px); left: 0; z-index: 300;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,.12);
+    min-width: 220px; padding: 8px 0; display: none;
+  }
+  .leistung-filter-dropdown.open { display: block; }
+  .lf-item {
+    display: flex; align-items: center; gap: 8px;
+    padding: 6px 12px; cursor: pointer; font-size: .8rem; font-weight: 600;
+  }
+  .lf-item:hover { background: var(--surface2); }
+  .lf-item input { width: 14px; height: 14px; cursor: pointer; accent-color: var(--accent3); }
+  .lf-actions { display: flex; gap: 6px; padding: 6px 12px; border-top: 1px solid var(--border); margin-top: 4px; }
 
   /* ── EXPORT DROPDOWN ── */
   .export-dropdown-wrap { position: relative; display: inline-block; }
@@ -1311,6 +1388,9 @@ let flatSort = { col: 'name', dir: 1 };
 // Leistung sort key (populated after import)
 let leistungSortKey = '';
 
+// Which leistungen to show in the column (null = all)
+let visibleLeistungenKeys = null; // null means "all"
+
 // View mode: 'grouped' | 'flat'
 let viewMode = 'grouped';
 
@@ -1389,18 +1469,30 @@ function parseData(raw) {
   // Parse header to find leistung columns dynamically (cols 6+)
   const headerCols = splitCsvLine(lines[headerIdx], sep);
   dynamicLeistungCols = [];
+  const labelMap = new Map(); // label → index in dynamicLeistungCols
+
   for (let i = 6; i < headerCols.length; i++) {
     const h = headerCols[i].trim();
     if (!h) continue;
     if (/^summe|^zus_|^zimmer|^schlüssel/i.test(h)) continue;
-    dynamicLeistungCols.push({
-      colIdx: i,
-      key: `col_${i}`,
-      label: h,
-      short: colShort(h),
-      color: colColor(h),
-      isSkipass: /skipass|ski.?pass|pass/i.test(h),
-    });
+
+    const normalizedLabel = h; // keep original label
+    if (labelMap.has(normalizedLabel)) {
+      // Duplicate label → add this column index to existing entry
+      const existingIdx = labelMap.get(normalizedLabel);
+      dynamicLeistungCols[existingIdx].colIndices.push(i);
+    } else {
+      labelMap.set(normalizedLabel, dynamicLeistungCols.length);
+      dynamicLeistungCols.push({
+        colIdx: i,           // primary column (for backwards compat)
+        colIndices: [i],     // all columns with this label
+        key: `col_${i}`,
+        label: h,
+        short: colShort(h),
+        color: colColor(h),
+        isSkipass: /skipass|ski.?pass|pass/i.test(h),
+      });
+    }
   }
 
   // Find column indices dynamically from header
@@ -1428,7 +1520,8 @@ function parseData(raw) {
 
     const leistungen = {};
     dynamicLeistungCols.forEach(lc => {
-      leistungen[lc.key] = (cols[lc.colIdx] || '').trim().toUpperCase() === 'F';
+      // Person has leistung if ANY of the merged columns has 'F'
+      leistungen[lc.key] = lc.colIndices.some(ci => (cols[ci] || '').trim().toUpperCase() === 'F');
     });
 
     result.push({
@@ -1657,6 +1750,7 @@ function initApp(data, isMerge = false) {
   // Save to GitHub after import (creates the file if it doesn't exist yet)
   if (ghConnected) setTimeout(() => saveToStorage(), 600);
   renderLeistungBar();
+  setTimeout(updateMainContentHeight, 50);
 }
 
 // ─────────────────────────────
@@ -1925,7 +2019,7 @@ function renderCheckin() {
     units.push({ type: 'vorgang', g });
   });
 
-  container.innerHTML = units.map(unit => {
+  container.innerHTML = '<div style="padding:20px 24px">' + units.map(unit => {
     if (unit.type === 'supergroup') {
       const innerHtml = unit.vorgaenge.map(g => renderVorgangBlock(g, filtered)).join('');
       return `
@@ -1940,7 +2034,7 @@ function renderCheckin() {
     } else {
       return renderVorgangBlock(unit.g, filtered);
     }
-  }).join('');
+  }).join('') + '</div>';
 
   // Init resize on all rendered tables
   container.querySelectorAll('.checkin-table').forEach((t, i) => {
@@ -2013,7 +2107,13 @@ function renderFlatView() {
       <th class="hide-sm col-geb"><button class="th-btn ${fsc('geb')}" onclick="sortFlat('geb')">Geburtsdatum <span class="sort-arrow">${fsa('geb')}</span></button></th>
       <th><button class="th-btn ${fsc('zimmer')}" onclick="sortFlat('zimmer')">Zimmer <span class="sort-arrow">${fsa('zimmer')}</span></button></th>
       <th style="padding:8px 16px">Schlüssel</th>
-      <th class="hide-sm" style="min-width:120px">Skipass / Leistungen</th>
+      <th class="hide-sm" style="min-width:140px;padding:4px 8px;position:relative">
+        <div class="leistung-col-wrap">
+          <span style="font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#222">Skipass / Leistungen</span>
+          <button class="leistung-filter-btn ${visibleLeistungenKeys ? 'active' : ''}" onclick="toggleLeistungFilter(event)" title="Spalte filtern">▾</button>
+        </div>
+        <div class="leistung-filter-dropdown" id="leistung-filter-dd-flat"></div>
+      </th>
       <th style="padding:8px 16px;min-width:140px;text-align:center">Notiz</th>
       <th style="padding:8px 16px;min-width:110px">🔦 Stirnlampe</th>
       <th style="padding:8px 16px;min-width:100px">Nachbuchung</th>
@@ -2239,7 +2339,13 @@ function renderVorgangBlock(g, filtered) {
           <th class="hide-sm col-geb"><button class="th-btn ${sortClass(g,'geb')}" onclick="sortGroup('${g}','geb')">Geburtsdatum <span class="sort-arrow">${sortArrow(g,'geb')}</span></button></th>
           <th><button class="th-btn ${sortClass(g,'zimmer')}" onclick="sortGroup('${g}','zimmer')">Zimmer <span class="sort-arrow">${sortArrow(g,'zimmer')}</span></button></th>
           <th style="padding:8px 16px">Schlüssel</th>
-          <th class="hide-sm" style="min-width:120px">Skipass / Leistungen</th>
+          <th class="hide-sm" style="min-width:140px;padding:4px 8px;position:relative">
+            <div class="leistung-col-wrap">
+              <span style="font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#222">Skipass / Leistungen</span>
+              <button class="leistung-filter-btn ${visibleLeistungenKeys ? 'active' : ''}" onclick="toggleLeistungFilter(event)" title="Spalte filtern">▾</button>
+            </div>
+            <div class="leistung-filter-dropdown" id="leistung-filter-dd-${g}"></div>
+          </th>
           <th style="padding:8px 16px;min-width:140px;text-align:center">Notiz</th>
           <th style="padding:8px 16px;min-width:110px">🔦 Stirnlampe</th>
           <th style="padding:8px 16px;min-width:100px">Nachbuchung</th>
@@ -2267,6 +2373,7 @@ function renderRow(p, showVorgang = false) {
 
   const activeCols = dynamicLeistungCols
     .filter(lc => p.leistungen[lc.key])
+    .filter(lc => !visibleLeistungenKeys || visibleLeistungenKeys.has(lc.key))
     .sort((a, b) => a.label.localeCompare(b.label, 'de'));
 
   const leistungPills = activeCols.map(lc => {
@@ -2653,13 +2760,15 @@ function refreshRow(id) {
   const row = document.getElementById('row-' + CSS.escape(id));
   if (!row) return;
   const checked = isCheckedIn(p);
+  const rowStatus = computeRowStatus(p);
+  const isNoShow = checkins[p.id]?.personStatus === 'no_show';
+  const rowBg = isNoShow ? 'background:rgba(214,53,69,.12);'
+              : rowStatus === 'gruen' ? 'background:rgba(10,158,110,.07);'
+              : rowStatus === 'rot'   ? 'background:rgba(214,53,69,.07);'
+              : '';
+  const rowStrike = isNoShow ? 'text-decoration:line-through;opacity:.7;' : '';
+  row.style.cssText = rowBg + rowStrike;
   row.className = checked ? 'checked-in' : '';
-  // update status cell
-  const cells = row.querySelectorAll('td');
-  const statusCell = cells[cells.length - 1];
-  statusCell.innerHTML = checked
-    ? '<span style="color:var(--accent);font-size:.75rem;font-weight:700">✓ OK</span>'
-    : '<span style="color:var(--muted);font-size:.75rem">○ Offen</span>';
 
   // update group progress
   const g = p.vorgang;
@@ -2862,6 +2971,9 @@ document.addEventListener('click', e => {
   if (!e.target.closest('.export-dropdown-wrap')) {
     closeExportDropdown();
   }
+  if (!e.target.closest('th')) {
+    document.querySelectorAll('.leistung-filter-dropdown.open').forEach(el => el.classList.remove('open'));
+  }
 });
 
 function deleteNachbuchung(idx) {
@@ -2890,7 +3002,16 @@ function toggleNbStatus(id, idx) {
 // ─────────────────────────────
 // FILTER
 // ─────────────────────────────
-function filterList() { renderCheckin(); renderLeistungBar(); }
+function updateMainContentHeight() {
+  const mc = document.getElementById('main-content');
+  if (!mc) return;
+  const top = mc.getBoundingClientRect().top;
+  mc.style.height = (window.innerHeight - top - 4) + 'px';
+}
+
+function filterList() { renderCheckin(); renderLeistungBar(); updateMainContentHeight(); }
+
+window.addEventListener('resize', updateMainContentHeight);
 
 // ─────────────────────────────
 // COLUMN RESIZE
@@ -2902,11 +3023,13 @@ function initResizableColumns(table) {
   const ths = table.querySelectorAll('th');
   ths.forEach((th, i) => {
     th.classList.add('resizable-th');
-    // Apply saved width
+    // Apply saved manual width only if user previously set it
     const key = `${table.id || 'tbl'}_${i}`;
-    if (colWidths[key]) th.style.width = colWidths[key] + 'px';
+    if (colWidths[key]) {
+      th.style.width = colWidths[key] + 'px';
+      th.style.minWidth = colWidths[key] + 'px';
+    }
 
-    // Add resizer handle if not already there
     if (th.querySelector('.col-resizer')) return;
     const handle = document.createElement('div');
     handle.className = 'col-resizer';
@@ -2924,7 +3047,10 @@ function initResizableColumns(table) {
       const onMove = e => {
         const newW = Math.max(40, startW + e.clientX - startX);
         th.style.width = newW + 'px';
+        th.style.minWidth = newW + 'px';
         colWidths[key] = newW;
+        const t = th.closest('table');
+        if (t) t.style.width = 'max-content';
       };
       const onUp = () => {
         handle.classList.remove('dragging');
@@ -3133,6 +3259,83 @@ function exportHC() {
   });
   downloadCSV(rows, 'HC_Export.csv');
   toast(`HC Export: ${filtered.length} Personen`);
+}
+
+function toggleLeistungFilter(e) {
+  e.stopPropagation();
+  // Find the dropdown within the same th
+  const th = e.target.closest('th');
+  if (!th) return;
+  const dd = th.querySelector('.leistung-filter-dropdown');
+  if (!dd) return;
+
+  const isOpen = dd.classList.contains('open');
+  // Close all other open dropdowns first
+  document.querySelectorAll('.leistung-filter-dropdown.open').forEach(el => el.classList.remove('open'));
+  if (isOpen) return;
+
+  // Build dropdown content
+  const allKeys = dynamicLeistungCols.map(lc => lc.key);
+  dd.innerHTML =
+    `<div class="lf-item" onclick="selectAllLeistungen(true,this)">
+      <input type="checkbox" ${!visibleLeistungenKeys ? 'checked' : ''} readonly> <strong>Alle anzeigen</strong>
+    </div>` +
+    dynamicLeistungCols.map(lc => {
+      const checked = !visibleLeistungenKeys || visibleLeistungenKeys.has(lc.key);
+      return `<div class="lf-item" onclick="toggleLeistungKey('${lc.key}',this)">
+        <input type="checkbox" ${checked ? 'checked' : ''} readonly>
+        <span style="border-left:3px solid ${lc.color};padding-left:6px">${lc.label}</span>
+      </div>`;
+    }).join('') +
+    `<div class="lf-actions">
+      <button class="btn btn-primary btn-xs" onclick="applyLeistungFilter(event)">Anwenden</button>
+      <button class="btn btn-secondary btn-xs" onclick="resetLeistungFilter(event)">Alle</button>
+    </div>`;
+  dd.classList.add('open');
+}
+
+let _pendingLeistungKeys = null;
+
+function toggleLeistungKey(key, item) {
+  if (!_pendingLeistungKeys) {
+    _pendingLeistungKeys = new Set(visibleLeistungenKeys || dynamicLeistungCols.map(lc => lc.key));
+  }
+  const cb = item.querySelector('input');
+  if (_pendingLeistungKeys.has(key)) {
+    _pendingLeistungKeys.delete(key);
+    if (cb) cb.checked = false;
+  } else {
+    _pendingLeistungKeys.add(key);
+    if (cb) cb.checked = true;
+  }
+  // Update "Alle" checkbox
+  const allCb = item.closest('.leistung-filter-dropdown')?.querySelector('.lf-item:first-child input');
+  if (allCb) allCb.checked = (_pendingLeistungKeys.size === dynamicLeistungCols.length);
+}
+
+function selectAllLeistungen(checked, item) {
+  const dd = item.closest('.leistung-filter-dropdown');
+  if (!dd) return;
+  _pendingLeistungKeys = checked ? new Set(dynamicLeistungCols.map(lc => lc.key)) : new Set();
+  dd.querySelectorAll('.lf-item input').forEach(cb => cb.checked = checked);
+}
+
+function applyLeistungFilter(e) {
+  e.stopPropagation();
+  if (_pendingLeistungKeys !== null) {
+    visibleLeistungenKeys = _pendingLeistungKeys.size === dynamicLeistungCols.length ? null : _pendingLeistungKeys;
+    _pendingLeistungKeys = null;
+  }
+  document.querySelectorAll('.leistung-filter-dropdown.open').forEach(el => el.classList.remove('open'));
+  renderCheckin();
+}
+
+function resetLeistungFilter(e) {
+  e.stopPropagation();
+  visibleLeistungenKeys = null;
+  _pendingLeistungKeys = null;
+  document.querySelectorAll('.leistung-filter-dropdown.open').forEach(el => el.classList.remove('open'));
+  renderCheckin();
 }
 
 function toggleExportDropdown(e) {

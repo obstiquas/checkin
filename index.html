@@ -2469,52 +2469,50 @@ function exportZuZahlen() {
   });
   if (!zuZahlen.length) { toast('Keine Personen mit Status „Zu zahlen" gefunden.'); return; }
 
-  const rows = [['Vorname', 'Nachname', 'Vorgangsnummer', 'Offener Posten', 'Betrag CHF']];
+  const wsData = [['Vorname', 'Nachname', 'Vorgangsnummer', 'Offener Posten', 'Betrag CHF']];
 
   zuZahlen.forEach(p => {
     const c = checkins[p.id];
     const posten = [];
 
-    // Unreturned Schlüssel → CHF 120 per key
-    if (c.schluessel > 0 && !c.schluessel_retour) {
-      const anzahl = c.schluessel;
-      const betrag = anzahl * 120;
-      posten.push({ label: `Schlüsselverlust (${anzahl}×)`, betrag });
-    }
+    if (c.schluessel > 0 && !c.schluessel_retour)
+      posten.push({ label: `Schlüsselverlust (${c.schluessel}×)`, betrag: c.schluessel * 120 });
 
-    // Unreturned Stirnlampe → CHF 50 per lamp
-    if (c.stirnlampe?.anzahl > 0 && !c.stirnlampe?.retour) {
-      const anzahl = c.stirnlampe.anzahl;
-      const betrag = anzahl * 50;
-      posten.push({ label: `Stirnlampe nicht retour (${anzahl}×)`, betrag });
-    }
+    if (c.stirnlampe?.anzahl > 0 && !c.stirnlampe?.retour)
+      posten.push({ label: `Stirnlampe nicht retour (${c.stirnlampe.anzahl}×)`, betrag: c.stirnlampe.anzahl * 50 });
 
-    // Open (red) Nachbuchungen → use stored price
-    const offeneNb = c.nachbuchungen?.filter(nb => nb.status !== true) || [];
-    offeneNb.forEach(nb => {
-      posten.push({ label: nb.leistung + (nb.notiz ? ` (${nb.notiz})` : ''), betrag: nb.betrag || 0 });
-    });
+    (c.nachbuchungen?.filter(nb => nb.status !== true) || []).forEach(nb =>
+      posten.push({ label: nb.leistung + (nb.notiz ? ` (${nb.notiz})` : ''), betrag: nb.betrag || 0 })
+    );
 
-    if (!posten.length) return; // nothing to export
+    if (!posten.length) return;
 
-    // One row per open item
-    posten.forEach((pos, i) => {
-      rows.push([
-        i === 0 ? p.vorname : '',
-        i === 0 ? p.name    : '',
-        i === 0 ? p.vorgang : '',
-        pos.label,
-        pos.betrag.toFixed(2)
-      ]);
-    });
+    posten.forEach((pos, i) => wsData.push([
+      i === 0 ? p.vorname : '',
+      i === 0 ? p.name    : '',
+      i === 0 ? p.vorgang : '',
+      pos.label,
+      pos.betrag
+    ]));
 
-    // Subtotal row per person
     const total = posten.reduce((s, x) => s + x.betrag, 0);
-    rows.push(['', '', '', 'Total', total.toFixed(2)]);
-    rows.push(['', '', '', '', '']); // empty separator row
+    wsData.push(['', '', '', 'Total', total]);
+    wsData.push(['', '', '', '', '']);
   });
 
-  downloadCSV(rows, 'ZuZahlen_Export.csv');
+  // Build xlsx with SheetJS
+  const ws = XLSX.utils.aoa_to_sheet(wsData);
+  ws['!cols'] = [{ wch: 15 }, { wch: 20 }, { wch: 16 }, { wch: 38 }, { wch: 14 }];
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, 'Zu zahlen');
+
+  const wbOut = XLSX.write(wb, { bookType: 'xlsx', type: 'base64' });
+  const a = document.createElement('a');
+  a.href = 'data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,' + wbOut;
+  a.download = 'ZuZahlen_Export.xlsx';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
   toast(`${zuZahlen.length} Person(en) exportiert`);
 }
 

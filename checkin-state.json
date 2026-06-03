@@ -4929,7 +4929,7 @@
         "anzahl": 0,
         "retour": false
       },
-      "personStatus": "zu_zahlen",
+      "personStatus": "offen",
       "_ts": {}
     },
     "105233_Dörr_Carolina": {
@@ -6396,6 +6396,15 @@
   },
   "changeLog": [
     {
+      "ts": 1780490306164,
+      "personId": "105231_Andresen_Jane",
+      "name": "Jane Andresen",
+      "vorgang": "105231",
+      "field": "Reisestatus",
+      "oldVal": "zu_zahlen",
+      "newVal": "offen"
+    },
+    {
       "ts": 1780490305214,
       "personId": "105231_Andresen_Jane",
       "name": "Jane Andresen",
@@ -6441,5 +6450,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780490306042
+  "savedAt": 1780490306982
 }

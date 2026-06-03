@@ -9833,6 +9833,24 @@
   },
   "changeLog": [
     {
+      "ts": 1780513928557,
+      "personId": "109699_Sönnichsen_Caspar",
+      "name": "Caspar Sönnichsen",
+      "vorgang": "109699",
+      "field": "Schlüssel retour",
+      "oldVal": "ja",
+      "newVal": "nein"
+    },
+    {
+      "ts": 1780513927865,
+      "personId": "109699_Sönnichsen_Caspar",
+      "name": "Caspar Sönnichsen",
+      "vorgang": "109699",
+      "field": "Schlüssel retour",
+      "oldVal": "nein",
+      "newVal": "ja"
+    },
+    {
       "ts": 1780513924728,
       "personId": "109699_Zimmermann_Jakob",
       "name": "Jakob Zimmermann",
@@ -11246,5 +11264,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780513925558
+  "savedAt": 1780513929363
 }

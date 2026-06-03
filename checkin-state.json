@@ -7944,7 +7944,7 @@
         "anzahl": 0,
         "retour": false
       },
-      "personStatus": "offen",
+      "personStatus": "no_show",
       "_ts": {}
     },
     "102799_Hellmann_Max": {
@@ -9833,6 +9833,15 @@
   },
   "changeLog": [
     {
+      "ts": 1780512949345,
+      "personId": "102799_Stelzer_Simon",
+      "name": "Simon Stelzer",
+      "vorgang": "102799",
+      "field": "Reisestatus",
+      "oldVal": "offen",
+      "newVal": "no_show"
+    },
+    {
       "ts": 1780492162793,
       "personId": "109979_Aistov_Vladislav",
       "name": "Vladislav Aistov",
@@ -11210,5 +11219,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780512872831
+  "savedAt": 1780512950179
 }

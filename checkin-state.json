@@ -4929,7 +4929,7 @@
         "anzahl": 0,
         "retour": false
       },
-      "personStatus": "offen",
+      "personStatus": "zu_zahlen",
       "_ts": {}
     },
     "105233_Dörr_Carolina": {
@@ -6396,6 +6396,24 @@
   },
   "changeLog": [
     {
+      "ts": 1780490305214,
+      "personId": "105231_Andresen_Jane",
+      "name": "Jane Andresen",
+      "vorgang": "105231",
+      "field": "Reisestatus",
+      "oldVal": "abgereist",
+      "newVal": "zu_zahlen"
+    },
+    {
+      "ts": 1780490304551,
+      "personId": "105231_Andresen_Jane",
+      "name": "Jane Andresen",
+      "vorgang": "105231",
+      "field": "Reisestatus",
+      "oldVal": "offen",
+      "newVal": "abgereist"
+    },
+    {
       "ts": 1780490178985,
       "personId": "110115_Adler_Kevin",
       "name": "Kevin Adler",
@@ -6423,5 +6441,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780490179787
+  "savedAt": 1780490306042
 }

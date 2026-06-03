@@ -5497,7 +5497,7 @@
       "schluessel": 0,
       "schluessel_retour": false,
       "nachbuchungen": [],
-      "notiz": "raus",
+      "notiz": "",
       "notizColor": "",
       "stirnlampe": {
         "anzahl": 0,
@@ -5505,7 +5505,7 @@
       },
       "personStatus": "offen",
       "_ts": {
-        "notiz": 1780490174744
+        "notiz": 1780490178985
       }
     },
     "110131_Egbert_Peter": {
@@ -6396,6 +6396,15 @@
   },
   "changeLog": [
     {
+      "ts": 1780490178985,
+      "personId": "110115_Adler_Kevin",
+      "name": "Kevin Adler",
+      "vorgang": "110115",
+      "field": "Notiz",
+      "oldVal": "raus",
+      "newVal": ""
+    },
+    {
       "ts": 1780490174744,
       "personId": "110115_Adler_Kevin",
       "name": "Kevin Adler",
@@ -6414,5 +6423,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780490175548
+  "savedAt": 1780490179787
 }

@@ -5419,7 +5419,7 @@
         "anzahl": 0,
         "retour": false
       },
-      "personStatus": "abgereist",
+      "personStatus": "zu_zahlen",
       "_ts": {}
     },
     "109979_Kachalova_Maria": {
@@ -6395,6 +6395,15 @@
     "110428": "aktiv"
   },
   "changeLog": [
+    {
+      "ts": 1780492162793,
+      "personId": "109979_Aistov_Vladislav",
+      "name": "Vladislav Aistov",
+      "vorgang": "109979",
+      "field": "Reisestatus",
+      "oldVal": "abgereist",
+      "newVal": "zu_zahlen"
+    },
     {
       "ts": 1780492122628,
       "personId": "110428_Birwe_Annika",
@@ -7764,5 +7773,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780492123456
+  "savedAt": 1780492163630
 }

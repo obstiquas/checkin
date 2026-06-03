@@ -15,8 +15,8 @@
     --accent: #0a9e6e;
     --accent2: #e05a1e;
     --accent3: #3b6fd4;
-    --text: #1a1d2e;
-    --muted: #7a8099;
+    --text: #0a0c14;
+    --muted: #555870;
     --warn: #d4900a;
     --danger: #d63545;
     --green: #0a9e6e;
@@ -30,6 +30,7 @@
     background: var(--bg);
     color: var(--text);
     min-height: 100vh;
+    font-weight: 500;
   }
 
   /* ── HEADER ── */
@@ -294,11 +295,11 @@
     border-radius: 4px;
     font-weight: 500;
   }
-  .badge-green { background: rgba(10,158,110,.12); color: var(--accent); }
-  .badge-orange { background: rgba(224,90,30,.12); color: var(--accent2); }
-  .badge-blue { background: rgba(59,111,212,.12); color: var(--accent3); }
-  .badge-warn { background: rgba(212,144,10,.12); color: var(--warn); }
-  .badge-muted { background: var(--surface); color: var(--muted); }
+  .badge-green { background: rgba(10,158,110,.2); color: #000; font-weight:700; }
+  .badge-orange { background: rgba(224,90,30,.2); color: #000; font-weight:700; }
+  .badge-blue { background: rgba(59,111,212,.2); color: #000; font-weight:700; }
+  .badge-warn { background: rgba(212,144,10,.25); color: #000; font-weight:700; }
+  .badge-muted { background: var(--surface); color: #333; font-weight:700; }
   .collapse-icon { color: var(--muted); transition: transform .2s; }
   .collapsed .collapse-icon { transform: rotate(-90deg); }
 
@@ -331,11 +332,11 @@
   }
   .checkin-table th {
     background: var(--surface2);
-    color: var(--muted);
-    font-size: .68rem;
+    color: #222;
+    font-size: .72rem;
     text-transform: uppercase;
     letter-spacing: .08em;
-    font-weight: 700;
+    font-weight: 800;
     padding: 0;
     text-align: left;
     border-bottom: 1px solid var(--border);
@@ -349,12 +350,12 @@
     width: 100%;
     background: none;
     border: none;
-    color: var(--muted);
+    color: #222;
     font-family: 'Syne', sans-serif;
-    font-size: .68rem;
+    font-size: .72rem;
     text-transform: uppercase;
     letter-spacing: .08em;
-    font-weight: 700;
+    font-weight: 800;
     cursor: pointer;
     white-space: nowrap;
     transition: color .15s;
@@ -376,9 +377,9 @@
   .checkin-table tr.checked-in td:first-child { border-left: 2px solid var(--accent); }
   .checkin-table tr:hover td { background: rgba(0,0,0,.02); }
 
-  .name-cell { font-weight: 600; }
-  .vorname-cell { color: var(--muted); }
-  .mono { font-family: 'DM Mono', monospace; font-size: .78rem; }
+  .name-cell { font-weight: 700; color: #000; }
+  .vorname-cell { color: #222; font-weight: 600; }
+  .mono { font-family: 'DM Mono', monospace; font-size: .78rem; color: #000; font-weight: 600; }
   .text-muted { color: var(--muted); }
 
   /* ── STATUS INDICATORS ── */
@@ -764,6 +765,37 @@
 
   .toolbar-right { gap: 6px; flex-wrap: wrap; }
 
+  /* ── STATUS SELECT ── */
+  .status-select {
+    background: var(--surface2); border: 1px solid var(--border);
+    border-radius: 5px; color: var(--text); font-family: 'Syne', sans-serif;
+    font-size: .75rem; font-weight: 700; padding: 4px 8px; cursor: pointer;
+    min-width: 110px;
+  }
+  .status-select:focus { outline: none; border-color: var(--accent3); }
+  .status-select.ps-offen     { color: #555; }
+  .status-select.ps-abgereist { color: #1a4fa0; background: rgba(59,111,212,.08); }
+  .status-select.ps-zu_zahlen { color: #a52030; background: rgba(214,53,69,.08); }
+  .status-select.ps-no_show   { color: #7a0000; background: rgba(214,53,69,.12); }
+
+  /* ── ROW CHECKBOX ── */
+  .row-check { width:16px;height:16px;cursor:pointer;accent-color:var(--accent3); }
+
+  /* ── LEISTUNG COUNT BAR ── */
+  #leistung-bar {
+    display: none; flex-wrap: wrap; gap: 8px;
+    padding: 8px 24px; background: var(--surface);
+    border-bottom: 1px solid var(--border); font-size: .78rem;
+  }
+  #leistung-bar.visible { display: flex; }
+  .lcount-item {
+    display: flex; align-items: center; gap: 5px;
+    background: var(--surface2); border: 1px solid var(--border);
+    border-radius: 5px; padding: 3px 10px; white-space: nowrap;
+  }
+  .lcount-item .lcount-n { font-weight: 800; color: #000; font-family: 'DM Mono', monospace; }
+  .lcount-item .lcount-l { color: #333; }
+
   /* ── COLUMN RESIZE ── */
   .resizable-th { position: relative; }
   .col-resizer {
@@ -837,6 +869,9 @@
   <span class="sync-user" id="sync-user"></span>
   <button onclick="testGitHubConnection()" style="margin-left:auto;background:none;border:none;cursor:pointer;font-size:.7rem;color:var(--muted);padding:2px 6px;border-radius:3px" title="GitHub Verbindung testen">🔧 Diagnose</button>
 </div>
+
+<!-- LEISTUNG COUNT BAR -->
+<div id="leistung-bar"></div>
 
 <!-- SP SETUP SCREEN -->
 <div id="sp-setup">
@@ -913,6 +948,9 @@
         <option value="aktiv">Nur aktuell anwesend</option>
         <option value="abgereist">Nur abgereist</option>
         <option value="zu_zahlen">Nur zu zahlen</option>
+      </select>
+      <select id="leistung-sort" onchange="filterList()">
+        <option value="">Sortieren nach Leistung…</option>
       </select>
     </div>
     <div class="toolbar-right" id="toolbar-right-items">
@@ -1262,6 +1300,9 @@ let showGeb = true;
 // Flat view sort state
 let flatSort = { col: 'name', dir: 1 };
 
+// Leistung sort key (populated after import)
+let leistungSortKey = '';
+
 // View mode: 'grouped' | 'flat'
 let viewMode = 'grouped';
 
@@ -1545,8 +1586,17 @@ function initApp(data, isMerge = false) {
   document.getElementById('header-actions').style.display = 'flex';
   renderToolbar();
 
-  // Rebuild group filter
-  const gf = document.getElementById('group-filter');
+  // Populate leistung sort dropdown
+  const ls = document.getElementById('leistung-sort');
+  if (ls) {
+    ls.innerHTML = '<option value="">Sortieren nach Leistung…</option>';
+    dynamicLeistungCols.forEach(lc => {
+      const opt = document.createElement('option');
+      opt.value = lc.key; opt.textContent = lc.label;
+      ls.appendChild(opt);
+    });
+    ls.onchange = () => { leistungSortKey = ls.value; filterList(); };
+  }
   const existing = new Set([...gf.options].map(o => o.value));
   const groups = [...new Set(persons.map(p => p.vorgang))].sort();
   groups.forEach(g => {
@@ -1567,6 +1617,7 @@ function initApp(data, isMerge = false) {
 
   // Save to GitHub after import (creates the file if it doesn't exist yet)
   if (ghConnected) setTimeout(() => saveToStorage(), 600);
+  renderLeistungBar();
 }
 
 // ─────────────────────────────
@@ -1742,18 +1793,29 @@ function sortArrow(g, col) {
 
 function sortPersons(list, g) {
   const s = sortState[g];
-  if (!s || !s.col) return list;
-  return [...list].sort((a, b) => {
+  let sorted = [...list];
+
+  // Apply leistung sort first if selected
+  if (leistungSortKey) {
+    sorted.sort((a, b) => {
+      const av = a.leistungen[leistungSortKey] ? 1 : 0;
+      const bv = b.leistungen[leistungSortKey] ? 1 : 0;
+      return bv - av; // those WITH leistung come first
+    });
+    if (!s || !s.col) return sorted;
+  }
+
+  if (!s || !s.col) return sorted;
+  return sorted.sort((a, b) => {
     let va, vb;
     switch (s.col) {
       case 'name':    va = a.name.toLowerCase();    vb = b.name.toLowerCase();    break;
       case 'vorname': va = a.vorname.toLowerCase();  vb = b.vorname.toLowerCase(); break;
       case 'geb':
-        // parse dd.mm.yy → sortable: convert to yyyymmdd
         const toDate = d => { const p = d.split('.'); return p.length===3 ? `${p[2].padStart(4,'20')}${p[1]}${p[0]}` : d; };
         va = toDate(a.geb); vb = toDate(b.geb); break;
       case 'zimmer':
-        va = checkins[a.id].zimmer.toLowerCase(); vb = checkins[b.id].zimmer.toLowerCase(); break;
+        va = checkins[a.id]?.zimmer?.toLowerCase() || ''; vb = checkins[b.id]?.zimmer?.toLowerCase() || ''; break;
       case 'status':
         va = isCheckedIn(a) ? 1 : 0; vb = isCheckedIn(b) ? 1 : 0; break;
       default: return 0;
@@ -1850,7 +1912,13 @@ function renderFlatView() {
     return;
   }
 
-  const sorted = [...filtered].sort((a, b) => {
+  let sorted = [...filtered].sort((a, b) => {
+    // Apply leistung sort first
+    if (leistungSortKey) {
+      const av = a.leistungen[leistungSortKey] ? 1 : 0;
+      const bv = b.leistungen[leistungSortKey] ? 1 : 0;
+      if (av !== bv) return bv - av;
+    }
     let va, vb;
     switch (flatSort.col) {
       case 'name':    va = a.name.toLowerCase();    vb = b.name.toLowerCase();    break;
@@ -1874,8 +1942,20 @@ function renderFlatView() {
   const fsa = col => flatSort.col === col ? (flatSort.dir === 1 ? '↑' : '↓') : '↕';
 
   container.innerHTML = `<div style="padding:20px 24px">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+    <input type="checkbox" class="row-check" onchange="toggleSelectAll(this.checked)" title="Alle auswählen">
+    <select id="bulk-status-flat" style="background:var(--surface);border:1px solid var(--border);border-radius:4px;font-size:.75rem;padding:3px 8px;font-family:'Syne',sans-serif;font-weight:600">
+      <option value="offen">○ Offen</option>
+      <option value="abgereist">✈ Abgereist</option>
+      <option value="zu_zahlen">💰 Zu zahlen</option>
+      <option value="no_show">✗ No-show</option>
+    </select>
+    <button class="btn btn-secondary btn-xs" onclick="applyBulkStatus('flat','all')">Für alle</button>
+    <button class="btn btn-secondary btn-xs" onclick="applyBulkStatus('flat','selected')">Für Auswahl</button>
+  </div>
   <table class="checkin-table">
     <thead><tr>
+      <th style="width:32px;padding:8px 10px"></th>
       <th><button class="th-btn ${fsc('name')}" onclick="sortFlat('name')">Name <span class="sort-arrow">${fsa('name')}</span></button></th>
       <th><button class="th-btn ${fsc('vorname')}" onclick="sortFlat('vorname')">Vorname <span class="sort-arrow">${fsa('vorname')}</span></button></th>
       <th class="hide-sm"><button class="th-btn ${fsc('vorgang')}" onclick="sortFlat('vorgang')">Vorgang <span class="sort-arrow">${fsa('vorgang')}</span></button></th>
@@ -1939,6 +2019,79 @@ function saveVorgangName(g, val) {
   saveToStorage();
 }
 
+function setPersonStatus(id, status) {
+  const c = checkins[id];
+  if (!c) return;
+  const old = c.personStatus || 'offen';
+  c.personStatus = status;
+  logChange(id, 'Reisestatus', old, status);
+  renderCheckin();
+  saveToStorage();
+}
+
+function toggleSelectGroup(g, checked) {
+  document.querySelectorAll(`#body-${g} .row-check`).forEach(cb => cb.checked = checked);
+}
+
+function toggleSelectAll(checked) {
+  document.querySelectorAll('.row-check').forEach(cb => cb.checked = checked);
+}
+
+function applyBulkStatus(scope, target) {
+  const selectId = scope === 'flat' ? 'bulk-status-flat' : `bulk-status-${scope}`;
+  const status = document.getElementById(selectId)?.value;
+  if (!status) return;
+
+  let ids = [];
+  if (target === 'all') {
+    // All visible persons in scope
+    if (scope === 'flat') {
+      ids = getFilteredPersons().map(p => p.id);
+    } else {
+      ids = getFilteredPersons().filter(p => p.vorgang === scope).map(p => p.id);
+    }
+  } else {
+    // Only checked rows
+    const checkboxes = scope === 'flat'
+      ? document.querySelectorAll('#main-content .row-check:checked')
+      : document.querySelectorAll(`#body-${scope} .row-check:checked`);
+    ids = [...checkboxes].map(cb => cb.dataset.id).filter(Boolean);
+  }
+
+  if (!ids.length) { toast('Keine Zeilen ausgewählt.'); return; }
+  ids.forEach(id => {
+    if (checkins[id]) {
+      logChange(id, 'Reisestatus (Bulk)', checkins[id].personStatus || 'offen', status);
+      checkins[id].personStatus = status;
+    }
+  });
+  renderCheckin();
+  saveToStorage();
+  toast(`Status "${status}" für ${ids.length} Person(en) gesetzt`);
+}
+
+function renderLeistungBar() {
+  const bar = document.getElementById('leistung-bar');
+  if (!bar || !persons.length || !dynamicLeistungCols.length) {
+    if (bar) bar.classList.remove('visible');
+    return;
+  }
+  const inPeriod = getPersonsInCurrentPeriod();
+  const items = dynamicLeistungCols
+    .map(lc => ({ label: lc.label, count: inPeriod.filter(p => p.leistungen[lc.key]).length, color: lc.color }))
+    .filter(x => x.count > 0)
+    .sort((a, b) => b.count - a.count);
+
+  if (!items.length) { bar.classList.remove('visible'); return; }
+
+  bar.innerHTML = `<span style="font-size:.72rem;font-weight:700;color:#555;margin-right:4px">Leistungen im Reisezeitraum:</span>` +
+    items.map(x => `<div class="lcount-item" style="border-left:3px solid ${x.color}">
+      <span class="lcount-n">${x.count}×</span>
+      <span class="lcount-l">${x.label}</span>
+    </div>`).join('');
+  bar.classList.add('visible');
+}
+
 function setVorgangDate(g, field, val) {
   if (!vorgangDates[g]) vorgangDates[g] = { anreise: '', abreise: '' };
   vorgangDates[g][field] = val;
@@ -1989,8 +2142,16 @@ function renderVorgangBlock(g, filtered) {
   </div>
   <div class="group-body" id="body-${g}">
     <div class="group-actions">
-      <span>Gruppen-Aktionen:</span>
-      <button class="btn btn-secondary btn-xs" onclick="markGroupFruehstueck('${g}')">☕ Frühstück für Gruppe</button>
+      <input type="checkbox" class="row-check" title="Alle auswählen" onchange="toggleSelectGroup('${g}',this.checked)" style="margin-right:2px">
+      <select id="bulk-status-${g}" style="background:var(--surface);border:1px solid var(--border);border-radius:4px;font-size:.75rem;padding:3px 8px;font-family:'Syne',sans-serif;font-weight:600">
+        <option value="offen">○ Offen</option>
+        <option value="abgereist">✈ Abgereist</option>
+        <option value="zu_zahlen">💰 Zu zahlen</option>
+        <option value="no_show">✗ No-show</option>
+      </select>
+      <button class="btn btn-secondary btn-xs" onclick="applyBulkStatus('${g}','all')">Für alle</button>
+      <button class="btn btn-secondary btn-xs" onclick="applyBulkStatus('${g}','selected')">Für Auswahl</button>
+      <button class="btn btn-secondary btn-xs" style="margin-left:8px" onclick="markGroupFruehstueck('${g}')">☕ Frühstück</button>
       <div style="display:flex;align-items:center;gap:6px;margin-left:auto">
         <span style="font-size:.72rem;color:var(--muted)">Anreise</span>
         <input type="date" class="sp-field" style="padding:3px 8px;font-size:.75rem;width:140px"
@@ -2005,6 +2166,7 @@ function renderVorgangBlock(g, filtered) {
     <table class="checkin-table">
       <thead>
         <tr>
+          <th style="width:32px;padding:8px 10px"></th>
           <th><button class="th-btn ${sortClass(g,'name')}" onclick="sortGroup('${g}','name')">Name <span class="sort-arrow">${sortArrow(g,'name')}</span></button></th>
           <th><button class="th-btn ${sortClass(g,'vorname')}" onclick="sortGroup('${g}','vorname')">Vorname <span class="sort-arrow">${sortArrow(g,'vorname')}</span></button></th>
           <th class="hide-sm col-geb"><button class="th-btn ${sortClass(g,'geb')}" onclick="sortGroup('${g}','geb')">Geburtsdatum <span class="sort-arrow">${sortArrow(g,'geb')}</span></button></th>
@@ -2043,7 +2205,7 @@ function renderRow(p, showVorgang = false) {
     const suffixHtml = suffix
       ? `<span style="font-size:.6rem;font-weight:700;background:${lc.color};color:#fff;padding:1px 4px;border-radius:3px;margin-left:3px">${suffix}</span>`
       : '';
-    return `<span class="lpill" title="${lc.label}" style="display:inline-flex;align-items:center;background:${lc.color}22;color:${lc.color};margin-bottom:2px">${baseLabel}${suffixHtml}</span>`;
+    return `<span class="lpill" title="${lc.label}" style="display:inline-flex;align-items:center;background:${lc.color}33;color:#000;margin-bottom:2px;font-weight:600">${baseLabel}${suffixHtml}</span>`;
   }).join('<br>');
 
   const nbCount = c.nachbuchungen.length;
@@ -2051,11 +2213,11 @@ function renderRow(p, showVorgang = false) {
     const confirmed = nb.status === true;
     const bg = confirmed ? 'rgba(10,158,110,.12)' : 'rgba(214,53,69,.1)';
     const border = confirmed ? 'rgba(10,158,110,.4)' : 'rgba(214,53,69,.35)';
-    const textColor = confirmed ? '#0a6e4a' : '#a52030';
+    const textColor = confirmed ? '#004d30' : '#7a0010';
     const label = nb.leistung + (nb.betrag ? ` · CHF ${nb.betrag.toFixed(2)}` : '');
     return `<div onclick="openModal('${p.id}')"
       style="cursor:pointer;background:${bg};border:1px solid ${border};color:${textColor};
-             border-radius:5px;padding:3px 8px;font-size:.72rem;font-weight:600;
+             border-radius:5px;padding:3px 8px;font-size:.72rem;font-weight:700;
              white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:130px;
              margin-bottom:3px;transition:all .15s"
       title="${nb.leistung}${nb.betrag ? ' · CHF ' + nb.betrag.toFixed(2) : ''}${nb.notiz ? ' · ' + nb.notiz : ''}"
@@ -2068,8 +2230,9 @@ function renderRow(p, showVorgang = false) {
   const NOTIZ_LABELS = ['–', '🟡', '🟠', '🔴', '🟢'];
   const colorIdx = NOTIZ_COLORS.indexOf(c.notizColor || '');
   const dotBg = c.notizColor || 'transparent';
-  const notizBg = c.notizColor ? c.notizColor + '22' : 'transparent';
-  const notizBorder = c.notizColor ? c.notizColor + '88' : '';
+  const notizBg = c.notizColor ? c.notizColor + '55' : 'transparent';
+  const notizBorder = c.notizColor ? c.notizColor + 'aa' : '';
+  const notizTextColor = c.notizColor ? 'color:#000;font-weight:700;' : '';
 
   const vorgangCell = showVorgang ? `<td class="mono hide-sm" style="font-size:.75rem">
     <span class="group-nr" style="font-size:.68rem">${p.vorgang}</span>
@@ -2096,22 +2259,33 @@ function renderRow(p, showVorgang = false) {
   // Person status & row color
   if (!c.personStatus) c.personStatus = 'offen';
   const rowStatus = computeRowStatus(p);
-  const rowBg = rowStatus === 'gruen' ? 'background:rgba(10,158,110,.07);'
+  const ps = c.personStatus || 'offen';
+
+  const PS_LABELS = { offen: '○ Offen', abgereist: '✈ Abgereist', zu_zahlen: '💰 Zu zahlen', no_show: '✗ No-show' };
+  const PS_COLORS = { offen: '#555', abgereist: '#1a4fa0', zu_zahlen: '#a52030', no_show: '#7a0000' };
+
+  const isNoShow = ps === 'no_show';
+  const rowBg = isNoShow          ? 'background:rgba(214,53,69,.12);'
+              : rowStatus === 'gruen' ? 'background:rgba(10,158,110,.07);'
               : rowStatus === 'rot'   ? 'background:rgba(214,53,69,.07);'
               : '';
+  const rowStrike = isNoShow ? 'text-decoration:line-through;opacity:.7;' : '';
 
-  const PS_LABELS = { offen: '○ Offen', abgereist: '✈ Abgereist', zu_zahlen: '💰 Zu zahlen' };
-  const PS_COLORS = { offen: 'var(--muted)', abgereist: 'var(--accent3)', zu_zahlen: 'var(--danger)' };
-  const ps = c.personStatus || 'offen';
   const statusCell = `<td>
-    <span onclick="cyclePersonStatus('${p.id}')" style="cursor:pointer;font-size:.75rem;font-weight:700;color:${PS_COLORS[ps]};white-space:nowrap"
-      title="Klicken zum Wechseln">${PS_LABELS[ps]}</span>
-    ${checked ? '<br><span style="color:var(--accent);font-size:.68rem">✓ eingecheckt</span>' : ''}
+    <select class="status-select ps-${ps}" onchange="setPersonStatus('${p.id}',this.value)" onclick="event.stopPropagation()">
+      <option value="offen"     ${ps==='offen'     ?'selected':''}>○ Offen</option>
+      <option value="abgereist" ${ps==='abgereist' ?'selected':''}>✈ Abgereist</option>
+      <option value="zu_zahlen" ${ps==='zu_zahlen' ?'selected':''}>💰 Zu zahlen</option>
+      <option value="no_show"   ${ps==='no_show'   ?'selected':''}>✗ No-show</option>
+    </select>
+    ${checked ? '<div style="color:var(--accent);font-size:.68rem;margin-top:2px">✓ eingecheckt</div>' : ''}
   </td>`;
 
   return `
-<tr class="${checked ? 'checked-in' : ''}" id="row-${CSS.escape(p.id)}" style="${rowBg}">
-  <td class="name-cell">${p.name}</td>
+<tr class="${checked ? 'checked-in' : ''}" id="row-${CSS.escape(p.id)}" style="${rowBg}${rowStrike}">
+  <td style="padding:8px 10px;width:32px">
+    <input type="checkbox" class="row-check" data-id="${p.id}" title="Auswählen">
+  </td>
   <td class="vorname-cell">${p.vorname}</td>
   ${vorgangCell}
   <td class="mono hide-sm col-geb">${p.geb}</td>
@@ -2142,7 +2316,7 @@ function renderRow(p, showVorgang = false) {
       <span class="notiz-color-dot" style="background:${dotBg}" title="Farbe ändern"
         onclick="cycleNotizColor('${p.id}')"></span>
       <input class="room-input"
-        style="width:110px;${c.notizColor ? `background:${notizBg};border-color:${notizBorder}` : ''}"
+        style="width:110px;${c.notizColor ? `background:${notizBg};border-color:${notizBorder};${notizTextColor}` : ''}"
         type="text" value="${safeNotiz}" placeholder="Notiz…"
         onchange="setNotiz('${p.id}', this.value)" onclick="this.select()">
     </div>
@@ -2174,6 +2348,9 @@ function computeRowStatus(p) {
   const c = checkins[p.id];
   if (!c) return 'normal';
 
+  // No-show always red + strikethrough regardless of anything else
+  if (c.personStatus === 'no_show') return 'no_show';
+
   // Check if 1+ day past Abreise
   const dates = vorgangDates[p.vorgang];
   let pastAbreise = false;
@@ -2183,38 +2360,31 @@ function computeRowStatus(p) {
     pastAbreise = new Date() >= ab;
   }
 
-  // Auto-set status based on date
-  if (pastAbreise) {
-    if (hasOpenItems(p)) {
-      if (c.personStatus !== 'zu_zahlen') {
-        c.personStatus = 'zu_zahlen';
-      }
-      return 'rot';
-    } else {
-      if (c.personStatus === 'offen') c.personStatus = 'abgereist';
-      return 'gruen';
-    }
+  const open = hasOpenItems(p);
+
+  // Auto-set from date (only if not manually set to something other than 'offen')
+  if (pastAbreise && c.personStatus === 'offen') {
+    c.personStatus = open ? 'zu_zahlen' : 'abgereist';
   }
 
-  // Manual status
+  // Always re-evaluate color based on CURRENT open items — ignores manual status for color
   if (c.personStatus === 'zu_zahlen') return 'rot';
   if (c.personStatus === 'abgereist') {
-    return hasOpenItems(p) ? 'rot' : 'gruen';
+    return open ? 'rot' : 'gruen'; // ← fix: even if abgereist, red if something is open
   }
-  // 'offen': green if all returned and no red NB
-  if (!hasOpenItems(p) && c.zimmer && c.schluessel > 0) return 'gruen';
+  // 'offen': green only if fully done
+  if (!open && c.zimmer && c.schluessel > 0) return 'gruen';
   return 'normal';
 }
 
 function cyclePersonStatus(id) {
   const c = checkins[id];
   if (!c) return;
-  const order = ['offen', 'abgereist', 'zu_zahlen'];
+  const order = ['offen', 'abgereist', 'zu_zahlen', 'no_show'];
   const cur = c.personStatus || 'offen';
   const next = order[(order.indexOf(cur) + 1) % order.length];
-  const old = cur;
+  logChange(id, 'Reisestatus', cur, next);
   c.personStatus = next;
-  logChange(id, 'Reisestatus', old, next);
   renderCheckin();
   saveToStorage();
 }
@@ -2315,8 +2485,10 @@ function cycleNotizColor(id) {
     const nc = checkins[id].notizColor;
     if (dot) dot.style.background = nc || 'transparent';
     if (input) {
-      input.style.background = nc ? nc + '22' : '';
-      input.style.borderColor = nc ? nc + '88' : '';
+      input.style.background = nc ? nc + '55' : '';
+      input.style.borderColor = nc ? nc + 'aa' : '';
+      input.style.color = nc ? '#000' : '';
+      input.style.fontWeight = nc ? '700' : '';
     }
   }
   saveToStorage();
@@ -2498,8 +2670,9 @@ function renderNbList() {
 // ─────────────────────────────
 // Fixed entries with auto-price
 const NB_PREISE = [
-  { label: 'Skipass 1 Tag',   match: /ski/i,    preis: 45  },
-  { label: 'Schlüsselverlust', match: /schl[üu]/i, preis: 120 },
+  { label: 'Skipass 1 Tag',    match: /ski/i,         preis: 45  },
+  { label: 'Schlüsselverlust', match: /schl[üu]/i,    preis: 120 },
+  { label: 'Bettwäsche',       match: /bett|wäsch/i,  preis: null },
 ];
 
 // Usage tracking: { [leistung]: count }
@@ -2522,10 +2695,12 @@ function onNbLeistungInput(val) {
 function autoFillNbPrice(val) {
   const betragField = document.getElementById('nb-betrag');
   const match = NB_PREISE.find(p => p.match.test(val));
-  if (match && !betragField.value) {
-    betragField.value = match.preis.toFixed(2);
-    betragField.style.borderColor = 'rgba(10,158,110,.5)';
-  } else if (!match) {
+  if (match) {
+    if (match.preis !== null && match.preis !== undefined && !betragField.value) {
+      betragField.value = match.preis.toFixed(2);
+      betragField.style.borderColor = 'rgba(10,158,110,.5)';
+    }
+  } else {
     betragField.style.borderColor = '';
   }
 }
@@ -2539,7 +2714,6 @@ function getSuggestions(val) {
   const fixed = NB_PREISE
     .filter(p => p.label.toLowerCase().includes(lower))
     .map(p => ({ label: p.label, preis: p.preis, count: null, fixed: true }));
-
   // History-based suggestions
   const hist = Object.entries(history)
     .filter(([k]) => k.toLowerCase().includes(lower) && !fixed.find(f => f.label === k))
@@ -2645,7 +2819,7 @@ function toggleNbStatus(id, idx) {
 // ─────────────────────────────
 // FILTER
 // ─────────────────────────────
-function filterList() { renderCheckin(); }
+function filterList() { renderCheckin(); renderLeistungBar(); }
 
 // ─────────────────────────────
 // COLUMN RESIZE

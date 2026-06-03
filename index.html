@@ -783,11 +783,19 @@
 
   /* ── LEISTUNG COUNT BAR ── */
   #leistung-bar {
-    display: none; flex-wrap: wrap; gap: 8px;
-    padding: 8px 24px; background: var(--surface);
+    display: none; flex-wrap: wrap; gap: 8px; align-items: center;
+    padding: 6px 24px; background: var(--surface);
     border-bottom: 1px solid var(--border); font-size: .78rem;
   }
   #leistung-bar.visible { display: flex; }
+  #leistung-bar.collapsed .lcount-items { display: none; }
+  .lcount-toggle {
+    background: none; border: none; cursor: pointer;
+    font-size: .72rem; color: var(--muted); padding: 2px 6px;
+    border-radius: 4px; font-family: 'Syne', sans-serif; font-weight: 700;
+    white-space: nowrap; flex-shrink: 0;
+  }
+  .lcount-toggle:hover { color: var(--text); background: var(--surface2); }
   .lcount-item {
     display: flex; align-items: center; gap: 5px;
     background: var(--surface2); border: 1px solid var(--border);
@@ -1870,8 +1878,16 @@ function getFilteredPersons() {
     if (statusF === 'checked' && !isCheckedIn(p)) return false;
     if (statusF === 'pending' && isCheckedIn(p)) return false;
     // Abreise filter
-    if (abreiseF === 'aktiv' && vorgangStatus[p.vorgang] === 'abgereist') return false;
-    if (abreiseF === 'abgereist' && vorgangStatus[p.vorgang] !== 'abgereist') return false;
+    // Reisestatus filter — checks both group AND individual person status
+    if (abreiseF === 'aktiv') {
+      const ps = checkins[p.id]?.personStatus || 'offen';
+      if (ps === 'abgereist' || ps === 'no_show') return false;
+      if (vorgangStatus[p.vorgang] === 'abgereist') return false;
+    }
+    if (abreiseF === 'abgereist') {
+      const ps = checkins[p.id]?.personStatus || 'offen';
+      if (ps !== 'abgereist' && vorgangStatus[p.vorgang] !== 'abgereist') return false;
+    }
     if (abreiseF === 'zu_zahlen') {
       const c = checkins[p.id];
       if (c?.personStatus !== 'zu_zahlen' && computeRowStatus(p) !== 'rot') return false;
@@ -2119,12 +2135,28 @@ function renderLeistungBar() {
 
   if (!items.length) { bar.classList.remove('visible'); return; }
 
-  bar.innerHTML = `<span style="font-size:.72rem;font-weight:700;color:#555;margin-right:4px">Leistungen im Reisezeitraum:</span>` +
+  const isCollapsed = bar.classList.contains('collapsed');
+  bar.innerHTML =
+    `<button class="lcount-toggle" onclick="toggleLeistungBar()" title="${isCollapsed ? 'Einblenden' : 'Ausblenden'}">
+      ${isCollapsed ? '▶' : '▼'} Leistungen im Reisezeitraum
+    </button>
+    <div class="lcount-items" style="display:flex;flex-wrap:wrap;gap:8px;align-items:center">` +
     items.map(x => `<div class="lcount-item" style="border-left:3px solid ${x.color}">
       <span class="lcount-n">${x.count}×</span>
       <span class="lcount-l">${x.label}</span>
-    </div>`).join('');
+    </div>`).join('') + `</div>`;
   bar.classList.add('visible');
+}
+
+function toggleLeistungBar() {
+  const bar = document.getElementById('leistung-bar');
+  if (!bar) return;
+  bar.classList.toggle('collapsed');
+  const isCollapsed = bar.classList.contains('collapsed');
+  const btn = bar.querySelector('.lcount-toggle');
+  const items = bar.querySelector('.lcount-items');
+  if (btn) btn.textContent = (isCollapsed ? '▶' : '▼') + ' Leistungen im Reisezeitraum';
+  if (items) items.style.display = isCollapsed ? 'none' : 'flex';
 }
 
 function setVorgangDate(g, field, val) {
@@ -3413,6 +3445,7 @@ async function loadFromGitHub() {
       }
       renderCheckin();
       updateHeaderStats();
+      renderLeistungBar();
       setSyncStatus('online', `Sync ${new Date().toLocaleTimeString('de-DE', {hour:'2-digit',minute:'2-digit'})}`);
       return true;
     }

@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Check-In System</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap');
 
@@ -909,8 +910,8 @@
       <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/>
     </svg>
     <p><strong>Excel / CSV hochladen</strong></p>
-    <p>Drag & Drop oder klicken</p>
-    <input type="file" id="file-input" accept=".csv,.xlsx,.xls,.xlsm,.txt">
+    <p>.xlsx, .xlsm, .xls, .csv — Drag & Drop oder klicken</p>
+    <input type="file" id="file-input" accept=".csv,.xlsx,.xls,.xlsm,.xlsb,.txt">
   </div>
 
   <div class="divider"><span>oder</span></div>
@@ -1036,7 +1037,7 @@
     <div style="margin-top:8px;text-align:center">
       <label class="btn btn-secondary btn-sm" style="cursor:pointer">
         📂 Datei hochladen
-        <input type="file" id="import-file" accept=".csv,.xlsx,.xls,.xlsm,.txt" style="display:none" onchange="handleImportFile(this)">
+        <input type="file" id="import-file" accept=".csv,.xlsx,.xls,.xlsm,.xlsb,.txt" style="display:none" onchange="handleImportFile(this)">
       </label>
     </div>
     <p id="import-error" style="color:var(--danger);font-size:.78rem;margin-top:8px;display:none"></p>
@@ -1325,15 +1326,16 @@ let dynamicLeistungCols = [];
 function colColor(label) {
   const l = label.toLowerCase();
   if (/früh|breakfast/i.test(l)) return '#ffb84d';
+  if (/vegan/i.test(l)) return '#78d17a';
   if (/vegi|vegetar/i.test(l)) return '#a8ff78';
   if (/lehrer|teacher|erwach/i.test(l)) return '#7b9fff';
-  return '#4fffb0'; // default: Schüler
+  return '#4fffb0';
 }
 function colShort(label) {
   const l = label.toLowerCase();
   if (/früh|breakfast/i.test(l)) return 'F';
-  if (/vegi/i.test(l)) return 'VG';
-  // extract numbers
+  if (/vegan/i.test(l)) return 'VG';
+  if (/vegi|vegetar/i.test(l)) return 'VG';
   const num = (label.match(/\d+/) || [''])[0];
   if (/lehrer/i.test(l)) return num ? `S${num}L` : 'SL';
   if (/erwach/i.test(l)) return num ? `S${num}E` : 'SE';
@@ -1535,18 +1537,45 @@ dz.addEventListener('dragover', e => { e.preventDefault(); dz.classList.add('dra
 dz.addEventListener('dragleave', () => dz.classList.remove('drag-over'));
 dz.addEventListener('drop', e => { e.preventDefault(); dz.classList.remove('drag-over'); handleFile({ target: { files: e.dataTransfer.files } }); });
 
+function isExcelFile(file) {
+  return /\.(xlsx|xlsm|xls|xlsb)$/i.test(file.name);
+}
+
+function readFileAndParse(file, onSuccess, onError) {
+  const reader = new FileReader();
+  if (isExcelFile(file)) {
+    reader.onload = ev => {
+      try {
+        const wb = XLSX.read(ev.target.result, { type: 'array' });
+        // Use first sheet
+        const ws = wb.Sheets[wb.SheetNames[0]];
+        // Convert to tab-separated text (preserves structure)
+        const tsv = XLSX.utils.sheet_to_csv(ws, { FS: '\t', RS: '\n' });
+        const data = parseData(tsv);
+        if (data.length) onSuccess(data);
+        else onError('Keine Daten erkannt. Prüfen Sie ob die Datei eine Vorgangsnummern-Spalte enthält.');
+      } catch(e) {
+        onError('Excel-Datei konnte nicht gelesen werden: ' + e.message);
+      }
+    };
+    reader.readAsArrayBuffer(file);
+  } else {
+    reader.onload = ev => {
+      const data = parseData(ev.target.result);
+      if (data.length) onSuccess(data);
+      else onError('Keine Daten erkannt. Unterstützte Formate: xlsx, xlsm, CSV (Tab/Semikolon/Komma).');
+    };
+    reader.readAsText(file, 'utf-8');
+  }
+}
+
 function handleFile(e) {
   const file = e.target.files[0];
   if (!file) return;
-  const reader = new FileReader();
-  reader.onload = ev => {
-    // Try parse as TSV/CSV text
-    const text = ev.target.result;
-    const data = parseData(text);
-    if (data.length) { showImportDatesModal(data, true); return; }
-    showError('Datei konnte nicht gelesen werden. Unterstützte Formate: CSV (Tab/Semikolon/Komma getrennt). Excel-Dateien bitte als CSV speichern (Datei → Speichern unter → CSV).');
-  };
-  reader.readAsText(file, 'utf-8');
+  readFileAndParse(file,
+    data => showImportDatesModal(data, false),
+    err  => showError(err)
+  );
 }
 
 // ─────────────────────────────
@@ -1596,6 +1625,9 @@ function initApp(data, isMerge = false) {
     });
     ls.onchange = () => { leistungSortKey = ls.value; filterList(); };
   }
+
+  // Rebuild group filter
+  const gf = document.getElementById('group-filter');
   const existing = new Set([...gf.options].map(o => o.value));
   const groups = [...new Set(persons.map(p => p.vorgang))].sort();
   groups.forEach(g => {
@@ -1713,18 +1745,16 @@ function openImportPanel() {
 function handleImportFile(input) {
   const file = input.files[0];
   if (!file) return;
-  const reader = new FileReader();
-  reader.onload = ev => {
-    const data = parseData(ev.target.result);
-    if (!data.length) {
-      document.getElementById('import-error').textContent = 'Keine Daten erkannt.';
+  readFileAndParse(file,
+    data => {
+      document.getElementById('import-modal').classList.remove('open');
+      showImportDatesModal(data, true);
+    },
+    err => {
+      document.getElementById('import-error').textContent = err;
       document.getElementById('import-error').style.display = 'block';
-      return;
     }
-    document.getElementById('import-modal').classList.remove('open');
-    showImportDatesModal(data, true);
-  };
-  reader.readAsText(file, 'utf-8');
+  );
 }
 
 function doImportFromModal() {

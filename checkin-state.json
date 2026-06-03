@@ -4929,7 +4929,7 @@
         "anzahl": 1,
         "retour": false
       },
-      "personStatus": "abgereist",
+      "personStatus": "zu_zahlen",
       "_ts": {}
     },
     "105233_Dörr_Carolina": {
@@ -6396,6 +6396,15 @@
   },
   "changeLog": [
     {
+      "ts": 1780490326887,
+      "personId": "105231_Andresen_Jane",
+      "name": "Jane Andresen",
+      "vorgang": "105231",
+      "field": "Reisestatus",
+      "oldVal": "abgereist",
+      "newVal": "zu_zahlen"
+    },
+    {
       "ts": 1780490322122,
       "personId": "108531_Albrecht_Finn",
       "name": "Finn Albrecht",
@@ -6495,5 +6504,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780490326223
+  "savedAt": 1780490327713
 }

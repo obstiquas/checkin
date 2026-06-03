@@ -3989,6 +3989,2081 @@
         "col_23": false,
         "col_24": true
       }
+    },
+    {
+      "id": "102799_Stelzer_Simon",
+      "vorgang": "102799",
+      "name": "Stelzer",
+      "vorname": "Simon",
+      "email": "s.lorenz.stelzer@gmail.com",
+      "geb": "18.09.05",
+      "zus": "",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": true,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "102799_Hellmann_Max",
+      "vorgang": "102799",
+      "name": "Hellmann",
+      "vorname": "Max",
+      "email": "max.hellmann@rwth-aachen.de",
+      "geb": "02.01.96",
+      "zus": "",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": true,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "105334_Jochim_Martin",
+      "vorgang": "105334",
+      "name": "Jochim",
+      "vorname": "Martin",
+      "email": "Martinjochim@web.de",
+      "geb": "22.12.98",
+      "zus": "101 Upgrade 20€",
+      "leistungen": {
+        "col_6": true,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": true,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "105334_Schnell_Moritz",
+      "vorgang": "105334",
+      "name": "Schnell",
+      "vorname": "Moritz",
+      "email": "moritzsamsung@gmail.com",
+      "geb": "10.02.01",
+      "zus": "204",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": true,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "105334_Bark_Benedikt",
+      "vorgang": "105334",
+      "name": "Bark",
+      "vorname": "Benedikt",
+      "email": "Bendikt.bark@gmx.de",
+      "geb": "05.05.01",
+      "zus": "204",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": true,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "106453_Nagels_Laura",
+      "vorgang": "106453",
+      "name": "Nagels",
+      "vorname": "Laura",
+      "email": "laurairinanagels@gmail.com",
+      "geb": "27.06.07",
+      "zus": "306",
+      "leistungen": {
+        "col_6": false,
+        "col_7": true,
+        "col_8": true,
+        "col_9": false,
+        "col_10": true,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "107089_Bauer_Marcel",
+      "vorgang": "107089",
+      "name": "Bauer",
+      "vorname": "Marcel",
+      "email": "marcel.bauer98@yahoo.com",
+      "geb": "02.03.98",
+      "zus": "102",
+      "leistungen": {
+        "col_6": true,
+        "col_7": true,
+        "col_8": true,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "107089_Tomusic_Ivana",
+      "vorgang": "107089",
+      "name": "Tomusic",
+      "vorname": "Ivana",
+      "email": "ivana.tomusic@gmail.com",
+      "geb": "18.10.99",
+      "zus": "102",
+      "leistungen": {
+        "col_6": false,
+        "col_7": true,
+        "col_8": true,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "107089_Erath_Simone",
+      "vorgang": "107089",
+      "name": "Erath",
+      "vorname": "Simone",
+      "email": "simone.erath1605@gmail.com",
+      "geb": "28.11.72",
+      "zus": "102",
+      "leistungen": {
+        "col_6": true,
+        "col_7": true,
+        "col_8": true,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "107089_Bauer_Nico",
+      "vorgang": "107089",
+      "name": "Bauer",
+      "vorname": "Nico",
+      "email": "nicobauer00@gmail.com",
+      "geb": "27.08.00",
+      "zus": "102",
+      "leistungen": {
+        "col_6": false,
+        "col_7": true,
+        "col_8": true,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "107089_Walter_Tim",
+      "vorgang": "107089",
+      "name": "Walter",
+      "vorname": "Tim",
+      "email": "Tim.walter205@gmail.com",
+      "geb": "20.05.99",
+      "zus": "102",
+      "leistungen": {
+        "col_6": false,
+        "col_7": true,
+        "col_8": true,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "107089_Wahlenmeier_Rico",
+      "vorgang": "107089",
+      "name": "Wahlenmeier",
+      "vorname": "Rico",
+      "email": "rico.wahlenmeier@gmail.com",
+      "geb": "12.08.98",
+      "zus": "102",
+      "leistungen": {
+        "col_6": false,
+        "col_7": true,
+        "col_8": true,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "108139_Krall_Lukas",
+      "vorgang": "108139",
+      "name": "Krall",
+      "vorname": "Lukas",
+      "email": "lukas.krall@web.de",
+      "geb": "25.01.95",
+      "zus": "202",
+      "leistungen": {
+        "col_6": true,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": true,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "108139_Freudenstein_Christoph",
+      "vorgang": "108139",
+      "name": "Freudenstein",
+      "vorname": "Christoph",
+      "email": "christoph.freudenstein@web.de",
+      "geb": "17.05.94",
+      "zus": "202",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": true,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "108139_Horlacher_Kai",
+      "vorgang": "108139",
+      "name": "Horlacher",
+      "vorname": "Kai",
+      "email": "horlacher.kai1994@gmail.com",
+      "geb": "08.08.94",
+      "zus": "202",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": true,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "108139_Schmid_Felix",
+      "vorgang": "108139",
+      "name": "Schmid",
+      "vorname": "Felix",
+      "email": "Felix.a.schmid@web.de",
+      "geb": "17.04.94",
+      "zus": "202",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": true,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "108584_Greiner_Joann",
+      "vorgang": "108584",
+      "name": "Greiner",
+      "vorname": "Joann",
+      "email": "joann-greiner@web.de",
+      "geb": "15.09.97",
+      "zus": "306",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": true,
+        "col_11": true,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "108584_Eisele_Sophie",
+      "vorgang": "108584",
+      "name": "Eisele",
+      "vorname": "Sophie",
+      "email": "s.eisele1@gmx.de",
+      "geb": "21.04.95",
+      "zus": "306",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": true,
+        "col_11": true,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "108584_Manz_Tina",
+      "vorgang": "108584",
+      "name": "Manz",
+      "vorname": "Tina",
+      "email": "tina@die-manzis.de",
+      "geb": "19.01.81",
+      "zus": "306",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": true,
+        "col_11": true,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "108584_Bender_Katharina",
+      "vorgang": "108584",
+      "name": "Bender",
+      "vorname": "Katharina",
+      "email": "katharina.bender97@web.de",
+      "geb": "31.01.97",
+      "zus": "306",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": true,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "108584_Gräber_Isabel",
+      "vorgang": "108584",
+      "name": "Gräber",
+      "vorname": "Isabel",
+      "email": "Isabel.graeber93@gmail.com",
+      "geb": "12.07.93",
+      "zus": "306",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": true,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "108686_Kreilgaard_Lars",
+      "vorgang": "108686",
+      "name": "Kreilgaard",
+      "vorname": "Lars",
+      "email": "larsawp@gmail.com",
+      "geb": "22.07.96",
+      "zus": "204",
+      "leistungen": {
+        "col_6": true,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": true,
+        "col_11": true,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "108686_Kowalski_Marius",
+      "vorgang": "108686",
+      "name": "Kowalski",
+      "vorname": "Marius",
+      "email": "marius.kowalski@posteo.de",
+      "geb": "04.06.95",
+      "zus": "204",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": true,
+        "col_11": true,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "108686_Bahmer_Tobias",
+      "vorgang": "108686",
+      "name": "Bahmer",
+      "vorname": "Tobias",
+      "email": "tobiasbahmer@gmx.de",
+      "geb": "31.01.94",
+      "zus": "204",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": true,
+        "col_11": true,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "108686_Huber_Moritz",
+      "vorgang": "108686",
+      "name": "Huber",
+      "vorname": "Moritz",
+      "email": "mh-stein@web.de",
+      "geb": "17.09.97",
+      "zus": "204",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": true,
+        "col_11": true,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "108686_Jackel_Alexander",
+      "vorgang": "108686",
+      "name": "Jackel",
+      "vorname": "Alexander",
+      "email": "jackel@luckycloud.de",
+      "geb": "26.10.92",
+      "zus": "204",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": true,
+        "col_11": true,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "108988_Schmid_Niklas",
+      "vorgang": "108988",
+      "name": "Schmid",
+      "vorname": "Niklas",
+      "email": "niklas.schmid.ns@gmail.com",
+      "geb": "01.05.02",
+      "zus": "101",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": true,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "108994_Cakmakci_Mekin",
+      "vorgang": "108994",
+      "name": "Cakmakci",
+      "vorname": "Mekin",
+      "email": "m.mekincakmakci@gmail.com",
+      "geb": "04.03.07",
+      "zus": "",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": true,
+        "col_17": false,
+        "col_18": false,
+        "col_19": true
+      }
+    },
+    {
+      "id": "109015_Maier_Lars",
+      "vorgang": "109015",
+      "name": "Maier",
+      "vorname": "Lars",
+      "email": "Lars.maier.3012@gmail.com",
+      "geb": "01.03.02",
+      "zus": "301",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": true,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109016_Bauer_Luis",
+      "vorgang": "109016",
+      "name": "Bauer",
+      "vorname": "Luis",
+      "email": "luis-bauer@t-online.de",
+      "geb": "22.12.00",
+      "zus": "301",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": true,
+        "col_9": true,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109110_Sowinski_Serafina",
+      "vorgang": "109110",
+      "name": "Sowinski",
+      "vorname": "Serafina",
+      "email": "sabrina_sowinski@web.de",
+      "geb": "25.03.09",
+      "zus": "",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": true,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": true,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109113_Frömer_Carl",
+      "vorgang": "109113",
+      "name": "Frömer",
+      "vorname": "Carl",
+      "email": "carlfroemer@gmail.com",
+      "geb": "08.11.04",
+      "zus": "501",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": true,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109113_Stuhlweißenburg_Enid",
+      "vorgang": "109113",
+      "name": "Stuhlweißenburg",
+      "vorname": "Enid",
+      "email": "enid.madita@icloud.com",
+      "geb": "28.04.05",
+      "zus": "501",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": true,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109136_Förschner_Pekka Matti",
+      "vorgang": "109136",
+      "name": "Förschner",
+      "vorname": "Pekka Matti",
+      "email": "anke.foerschner@outlook.de",
+      "geb": "08.08.06",
+      "zus": "",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": true,
+        "col_13": false,
+        "col_14": true,
+        "col_15": false,
+        "col_16": true,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109141_Heinrich_Timm",
+      "vorgang": "109141",
+      "name": "Heinrich",
+      "vorname": "Timm",
+      "email": "everell72@gmail.com",
+      "geb": "13.05.72",
+      "zus": "",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": true,
+        "col_14": true,
+        "col_15": true,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109208_Bartesch_Levin",
+      "vorgang": "109208",
+      "name": "Bartesch",
+      "vorname": "Levin",
+      "email": "levinbartesch@gmail.com",
+      "geb": "11.02.07",
+      "zus": "",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": true,
+        "col_15": false,
+        "col_16": true,
+        "col_17": false,
+        "col_18": false,
+        "col_19": true
+      }
+    },
+    {
+      "id": "109273_Holzwart_Maxim",
+      "vorgang": "109273",
+      "name": "Holzwart",
+      "vorname": "Maxim",
+      "email": "maxim.holzwart@gmx.de",
+      "geb": "18.04.07",
+      "zus": "",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": true,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109326_Franke_Frederik",
+      "vorgang": "109326",
+      "name": "Franke",
+      "vorname": "Frederik",
+      "email": "frederik.franke@googlemail.com",
+      "geb": "20.08.93",
+      "zus": "502",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": true,
+        "col_9": false,
+        "col_10": true,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109326_Veit_Julia",
+      "vorgang": "109326",
+      "name": "Veit",
+      "vorname": "Julia",
+      "email": "jessy.veit@gmail.com",
+      "geb": "04.10.98",
+      "zus": "502",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": true,
+        "col_9": false,
+        "col_10": true,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109350_Lupu_Mario Sebastian",
+      "vorgang": "109350",
+      "name": "Lupu",
+      "vorname": "Mario Sebastian",
+      "email": "sebastian2007_man@hotmail.com",
+      "geb": "24.01.07",
+      "zus": "",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": true,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109392_Muth_Max",
+      "vorgang": "109392",
+      "name": "Muth",
+      "vorname": "Max",
+      "email": "max.muth2006@gmail.com",
+      "geb": "08.06.06",
+      "zus": "",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": true,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109396_Schmid_Jessica",
+      "vorgang": "109396",
+      "name": "Schmid",
+      "vorname": "Jessica",
+      "email": "jaz.schmid@googlemail.com",
+      "geb": "06.08.99",
+      "zus": "105",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": true,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109398_Glück_Jasmin",
+      "vorgang": "109398",
+      "name": "Glück",
+      "vorname": "Jasmin",
+      "email": "jasmin_glueck@gmx.de",
+      "geb": "08.07.09",
+      "zus": "",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": true,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109408_Geier_Manuel",
+      "vorgang": "109408",
+      "name": "Geier",
+      "vorname": "Manuel",
+      "email": "ger@css-nsu.de",
+      "geb": "09.03.78",
+      "zus": "",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": true,
+        "col_15": true,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109449_König_Eric",
+      "vorgang": "109449",
+      "name": "König",
+      "vorname": "Eric",
+      "email": "user.erko2@gmail.com",
+      "geb": "04.07.07",
+      "zus": "",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": true,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109467_Deibert_Max",
+      "vorgang": "109467",
+      "name": "Deibert",
+      "vorname": "Max",
+      "email": "deibertmax1@gmail.com",
+      "geb": "13.06.06",
+      "zus": "",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": true,
+        "col_15": false,
+        "col_16": true,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109469_Geringer_Robin",
+      "vorgang": "109469",
+      "name": "Geringer",
+      "vorname": "Robin",
+      "email": "robin.geringer@web.de",
+      "geb": "20.06.05",
+      "zus": "",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": true,
+        "col_13": false,
+        "col_14": true,
+        "col_15": false,
+        "col_16": true,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109470_Ilzhoefer_Lennert",
+      "vorgang": "109470",
+      "name": "Ilzhoefer",
+      "vorname": "Lennert",
+      "email": "l.ilzhoefer@icloud.com",
+      "geb": "02.05.07",
+      "zus": "",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": true,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109473_Eroglu_Faruk",
+      "vorgang": "109473",
+      "name": "Eroglu",
+      "vorname": "Faruk",
+      "email": "feroglu571@gmail.com",
+      "geb": "28.12.06",
+      "zus": "",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": true,
+        "col_17": false,
+        "col_18": true,
+        "col_19": true
+      }
+    },
+    {
+      "id": "109474_Eroglu_Ömer",
+      "vorgang": "109474",
+      "name": "Eroglu",
+      "vorname": "Ömer",
+      "email": "oe.eroglu55@gmail.com",
+      "geb": "28.12.06",
+      "zus": "",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": true,
+        "col_17": false,
+        "col_18": true,
+        "col_19": true
+      }
+    },
+    {
+      "id": "109475_Lehmann_Marcel",
+      "vorgang": "109475",
+      "name": "Lehmann",
+      "vorname": "Marcel",
+      "email": "vinalehmann@outlook.de",
+      "geb": "02.02.09",
+      "zus": "",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": true,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109501_Kubatbaev_Alp-Erkhan",
+      "vorgang": "109501",
+      "name": "Kubatbaev",
+      "vorname": "Alp-Erkhan",
+      "email": "alperkhan.kubatbaev@gmail.com",
+      "geb": "23.03.01",
+      "zus": "",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": true,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109502_Bilgi_Yunus emre",
+      "vorgang": "109502",
+      "name": "Bilgi",
+      "vorname": "Yunus emre",
+      "email": "yunusemrebilgi@outlook.de",
+      "geb": "04.09.04",
+      "zus": "",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": true,
+        "col_17": false,
+        "col_18": true,
+        "col_19": true
+      }
+    },
+    {
+      "id": "109514_Özdemir_Haci Bedirhan",
+      "vorgang": "109514",
+      "name": "Özdemir",
+      "vorname": "Haci Bedirhan",
+      "email": "Prv.bedirhanozdemir@gmail.com",
+      "geb": "14.08.07",
+      "zus": "",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": true,
+        "col_17": false,
+        "col_18": true,
+        "col_19": true
+      }
+    },
+    {
+      "id": "109535_Mildner_Max",
+      "vorgang": "109535",
+      "name": "Mildner",
+      "vorname": "Max",
+      "email": "max.mildner@gmx.de",
+      "geb": "23.11.99",
+      "zus": "205",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": true,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109535_Bender_Nick",
+      "vorgang": "109535",
+      "name": "Bender",
+      "vorname": "Nick",
+      "email": "nick-bender1@web.de",
+      "geb": "21.06.00",
+      "zus": "205",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": true,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109535_Müller_Friedrich",
+      "vorgang": "109535",
+      "name": "Müller",
+      "vorname": "Friedrich",
+      "email": "friedrich.mueller@stud.srh-university.de",
+      "geb": "16.08.01",
+      "zus": "205",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": true,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109535_Fickert_Jonas",
+      "vorgang": "109535",
+      "name": "Fickert",
+      "vorname": "Jonas",
+      "email": "jonasfickert00@gmail.com",
+      "geb": "25.10.00",
+      "zus": "205",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": true,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109535_Tschunichin_Dennis",
+      "vorgang": "109535",
+      "name": "Tschunichin",
+      "vorname": "Dennis",
+      "email": "dtschunichin5@gmail.com",
+      "geb": "05.05.02",
+      "zus": "205",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": true,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109537_Heyden_Luca",
+      "vorgang": "109537",
+      "name": "Heyden",
+      "vorname": "Luca",
+      "email": "luca.heyden@outlook.de",
+      "geb": "09.11.01",
+      "zus": "103",
+      "leistungen": {
+        "col_6": false,
+        "col_7": true,
+        "col_8": true,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109537_Salerno_Daniel",
+      "vorgang": "109537",
+      "name": "Salerno",
+      "vorname": "Daniel",
+      "email": "22princedaniel22@web.de",
+      "geb": "18.06.99",
+      "zus": "103",
+      "leistungen": {
+        "col_6": false,
+        "col_7": true,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": true,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109537_Schöps_Benedikt",
+      "vorgang": "109537",
+      "name": "Schöps",
+      "vorname": "Benedikt",
+      "email": "Benediktnoah1995@gmail.com",
+      "geb": "09.08.95",
+      "zus": "103",
+      "leistungen": {
+        "col_6": false,
+        "col_7": true,
+        "col_8": true,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109537_Finke_Tristan Lennart",
+      "vorgang": "109537",
+      "name": "Finke",
+      "vorname": "Tristan Lennart",
+      "email": "tl.finke@web.de",
+      "geb": "06.05.04",
+      "zus": "103",
+      "leistungen": {
+        "col_6": false,
+        "col_7": true,
+        "col_8": true,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109537_Garcia_Denzel",
+      "vorgang": "109537",
+      "name": "Garcia",
+      "vorname": "Denzel",
+      "email": "denzel3004@gmail.com",
+      "geb": "01.01.02",
+      "zus": "103",
+      "leistungen": {
+        "col_6": false,
+        "col_7": true,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": true,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109584_Moser_Gina",
+      "vorgang": "109584",
+      "name": "Moser",
+      "vorname": "Gina",
+      "email": "gina.moser02@gmail.com",
+      "geb": "25.05.02",
+      "zus": "503",
+      "leistungen": {
+        "col_6": false,
+        "col_7": true,
+        "col_8": false,
+        "col_9": true,
+        "col_10": false,
+        "col_11": true,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109584_Kroeger-Diaz_Isabella Brigitt",
+      "vorgang": "109584",
+      "name": "Kroeger-Diaz",
+      "vorname": "Isabella Brigitt",
+      "email": "Isabellakroegerdiaz99@gmail.com",
+      "geb": "15.09.99",
+      "zus": "503",
+      "leistungen": {
+        "col_6": false,
+        "col_7": true,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": true,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109608_Müller_Marvin",
+      "vorgang": "109608",
+      "name": "Müller",
+      "vorname": "Marvin",
+      "email": "mmfitness@gmx.de",
+      "geb": "29.08.99",
+      "zus": "101",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": true,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109693_Herrmann_Thomas",
+      "vorgang": "109693",
+      "name": "Herrmann",
+      "vorname": "Thomas",
+      "email": "thomasjherrmann@proton.me",
+      "geb": "20.09.02",
+      "zus": "101",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": true,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109697_Cwynar_Eliza",
+      "vorgang": "109697",
+      "name": "Cwynar",
+      "vorname": "Eliza",
+      "email": "eliza.cwynar@gmail.com",
+      "geb": "29.12.76",
+      "zus": "105",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": true,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109699_Zimmermann_Jakob",
+      "vorgang": "109699",
+      "name": "Zimmermann",
+      "vorname": "Jakob",
+      "email": "jakobzimmermann2008@icloud.com",
+      "geb": "13.05.08",
+      "zus": "Nicht Teil der Schule",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": true,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109699_Sönnichsen_Caspar",
+      "vorgang": "109699",
+      "name": "Sönnichsen",
+      "vorname": "Caspar",
+      "email": "Caspar.soennichsen@gmail.com",
+      "geb": "10.11.07",
+      "zus": "Nicht Teil der Schule",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": true,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109699_Winkelmann_Vince",
+      "vorgang": "109699",
+      "name": "Winkelmann",
+      "vorname": "Vince",
+      "email": "Vince.winkelmann@gmx.de",
+      "geb": "02.11.07",
+      "zus": "Nicht Teil der Schule",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": true,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109699_Tobien_Amelie",
+      "vorgang": "109699",
+      "name": "Tobien",
+      "vorname": "Amelie",
+      "email": "Amelie.tobien@icloud.com",
+      "geb": "06.08.08",
+      "zus": "Nicht Teil der Schule",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": true,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109699_Burlet_Carla",
+      "vorgang": "109699",
+      "name": "Burlet",
+      "vorname": "Carla",
+      "email": "carla@burlet.de",
+      "geb": "05.03.08",
+      "zus": "Nicht Teil der Schule",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": true,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109703_Coli_Simone",
+      "vorgang": "109703",
+      "name": "Coli",
+      "vorname": "Simone",
+      "email": "coli.simone001@gmail.com",
+      "geb": "05.10.01",
+      "zus": "101",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": true,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109741_Schmierer_Silas",
+      "vorgang": "109741",
+      "name": "Schmierer",
+      "vorname": "Silas",
+      "email": "hksschmierer@gmx.de",
+      "geb": "05.03.09",
+      "zus": "",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": true,
+        "col_15": false,
+        "col_16": false,
+        "col_17": true,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109764_Bögner_Jasmin",
+      "vorgang": "109764",
+      "name": "Bögner",
+      "vorname": "Jasmin",
+      "email": "bn@css-nsu.de",
+      "geb": "28.03.74",
+      "zus": "",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": true,
+        "col_16": false,
+        "col_17": false,
+        "col_18": true,
+        "col_19": true
+      }
+    },
+    {
+      "id": "109775_Thoma_Luis",
+      "vorgang": "109775",
+      "name": "Thoma",
+      "vorname": "Luis",
+      "email": "hath24@web.de",
+      "geb": "09.04.09",
+      "zus": "",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": true,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": true,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109849_Leon Garcia_Amy Christy Alejandra",
+      "vorgang": "109849",
+      "name": "Leon Garcia",
+      "vorname": "Amy Christy Alejandra",
+      "email": "amy_leon_garcia@yahoo.de",
+      "geb": "20.10.91",
+      "zus": "105",
+      "leistungen": {
+        "col_6": false,
+        "col_7": true,
+        "col_8": false,
+        "col_9": false,
+        "col_10": true,
+        "col_11": true,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109879_Dupont_Karla",
+      "vorgang": "109879",
+      "name": "Dupont",
+      "vorname": "Karla",
+      "email": "k.dupont@gmx.net",
+      "geb": "19.11.00",
+      "zus": "",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": false,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109947_Kanzinger_Jasmin",
+      "vorgang": "109947",
+      "name": "Kanzinger",
+      "vorname": "Jasmin",
+      "email": "jasminkathrin96@gmail.com",
+      "geb": "19.01.96",
+      "zus": "201",
+      "leistungen": {
+        "col_6": true,
+        "col_7": true,
+        "col_8": false,
+        "col_9": false,
+        "col_10": true,
+        "col_11": true,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "109947_Kräutle_Annika",
+      "vorgang": "109947",
+      "name": "Kräutle",
+      "vorname": "Annika",
+      "email": "annikakraeutle97@gmail.com",
+      "geb": "19.09.97",
+      "zus": "201",
+      "leistungen": {
+        "col_6": false,
+        "col_7": true,
+        "col_8": false,
+        "col_9": false,
+        "col_10": true,
+        "col_11": true,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
+    },
+    {
+      "id": "110107_Schleß_Erik",
+      "vorgang": "110107",
+      "name": "Schleß",
+      "vorname": "Erik",
+      "email": "erikschless10@gmail.com",
+      "geb": "07.03.03",
+      "zus": "204",
+      "leistungen": {
+        "col_6": false,
+        "col_7": false,
+        "col_8": true,
+        "col_9": false,
+        "col_10": false,
+        "col_11": false,
+        "col_12": false,
+        "col_13": false,
+        "col_14": false,
+        "col_15": false,
+        "col_16": false,
+        "col_17": false,
+        "col_18": false,
+        "col_19": false
+      }
     }
   ],
   "checkins": {
@@ -5857,160 +7932,1282 @@
       },
       "personStatus": "abgereist",
       "_ts": {}
+    },
+    "102799_Stelzer_Simon": {
+      "zimmer": "",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "102799_Hellmann_Max": {
+      "zimmer": "",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "105334_Jochim_Martin": {
+      "zimmer": "101 Upgrade 20€",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "105334_Schnell_Moritz": {
+      "zimmer": "204",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "105334_Bark_Benedikt": {
+      "zimmer": "204",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "106453_Nagels_Laura": {
+      "zimmer": "306",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "107089_Bauer_Marcel": {
+      "zimmer": "102",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "107089_Tomusic_Ivana": {
+      "zimmer": "102",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "107089_Erath_Simone": {
+      "zimmer": "102",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "107089_Bauer_Nico": {
+      "zimmer": "102",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "107089_Walter_Tim": {
+      "zimmer": "102",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "107089_Wahlenmeier_Rico": {
+      "zimmer": "102",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "108139_Krall_Lukas": {
+      "zimmer": "202",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "108139_Freudenstein_Christoph": {
+      "zimmer": "202",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "108139_Horlacher_Kai": {
+      "zimmer": "202",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "108139_Schmid_Felix": {
+      "zimmer": "202",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "108584_Greiner_Joann": {
+      "zimmer": "306",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "108584_Eisele_Sophie": {
+      "zimmer": "306",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "108584_Manz_Tina": {
+      "zimmer": "306",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "108584_Bender_Katharina": {
+      "zimmer": "306",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "108584_Gräber_Isabel": {
+      "zimmer": "306",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "108686_Kreilgaard_Lars": {
+      "zimmer": "204",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "108686_Kowalski_Marius": {
+      "zimmer": "204",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "108686_Bahmer_Tobias": {
+      "zimmer": "204",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "108686_Huber_Moritz": {
+      "zimmer": "204",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "108686_Jackel_Alexander": {
+      "zimmer": "204",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "108988_Schmid_Niklas": {
+      "zimmer": "101",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "108994_Cakmakci_Mekin": {
+      "zimmer": "",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109015_Maier_Lars": {
+      "zimmer": "301",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109016_Bauer_Luis": {
+      "zimmer": "301",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109110_Sowinski_Serafina": {
+      "zimmer": "",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109113_Frömer_Carl": {
+      "zimmer": "501",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109113_Stuhlweißenburg_Enid": {
+      "zimmer": "501",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109136_Förschner_Pekka Matti": {
+      "zimmer": "",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109141_Heinrich_Timm": {
+      "zimmer": "",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109208_Bartesch_Levin": {
+      "zimmer": "",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109273_Holzwart_Maxim": {
+      "zimmer": "",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109326_Franke_Frederik": {
+      "zimmer": "502",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109326_Veit_Julia": {
+      "zimmer": "502",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109350_Lupu_Mario Sebastian": {
+      "zimmer": "",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109392_Muth_Max": {
+      "zimmer": "",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109396_Schmid_Jessica": {
+      "zimmer": "105",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109398_Glück_Jasmin": {
+      "zimmer": "",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109408_Geier_Manuel": {
+      "zimmer": "",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109449_König_Eric": {
+      "zimmer": "",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109467_Deibert_Max": {
+      "zimmer": "",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109469_Geringer_Robin": {
+      "zimmer": "",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109470_Ilzhoefer_Lennert": {
+      "zimmer": "",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109473_Eroglu_Faruk": {
+      "zimmer": "",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109474_Eroglu_Ömer": {
+      "zimmer": "",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109475_Lehmann_Marcel": {
+      "zimmer": "",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109501_Kubatbaev_Alp-Erkhan": {
+      "zimmer": "",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109502_Bilgi_Yunus emre": {
+      "zimmer": "",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109514_Özdemir_Haci Bedirhan": {
+      "zimmer": "",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109535_Mildner_Max": {
+      "zimmer": "205",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109535_Bender_Nick": {
+      "zimmer": "205",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109535_Müller_Friedrich": {
+      "zimmer": "205",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109535_Fickert_Jonas": {
+      "zimmer": "205",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109535_Tschunichin_Dennis": {
+      "zimmer": "205",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109537_Heyden_Luca": {
+      "zimmer": "103",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109537_Salerno_Daniel": {
+      "zimmer": "103",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109537_Schöps_Benedikt": {
+      "zimmer": "103",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109537_Finke_Tristan Lennart": {
+      "zimmer": "103",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109537_Garcia_Denzel": {
+      "zimmer": "103",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109584_Moser_Gina": {
+      "zimmer": "503",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109584_Kroeger-Diaz_Isabella Brigitt": {
+      "zimmer": "503",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109608_Müller_Marvin": {
+      "zimmer": "101",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109693_Herrmann_Thomas": {
+      "zimmer": "101",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109697_Cwynar_Eliza": {
+      "zimmer": "105",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109699_Zimmermann_Jakob": {
+      "zimmer": "Nicht Teil der Schule",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109699_Sönnichsen_Caspar": {
+      "zimmer": "Nicht Teil der Schule",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109699_Winkelmann_Vince": {
+      "zimmer": "Nicht Teil der Schule",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109699_Tobien_Amelie": {
+      "zimmer": "Nicht Teil der Schule",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109699_Burlet_Carla": {
+      "zimmer": "Nicht Teil der Schule",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109703_Coli_Simone": {
+      "zimmer": "101",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109741_Schmierer_Silas": {
+      "zimmer": "",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109764_Bögner_Jasmin": {
+      "zimmer": "",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109775_Thoma_Luis": {
+      "zimmer": "",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109849_Leon Garcia_Amy Christy Alejandra": {
+      "zimmer": "105",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109879_Dupont_Karla": {
+      "zimmer": "",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109947_Kanzinger_Jasmin": {
+      "zimmer": "201",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "109947_Kräutle_Annika": {
+      "zimmer": "201",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
+    },
+    "110107_Schleß_Erik": {
+      "zimmer": "204",
+      "schluessel": 0,
+      "schluessel_retour": false,
+      "nachbuchungen": [],
+      "notiz": "",
+      "notizColor": "",
+      "stirnlampe": {
+        "anzahl": 0,
+        "retour": false
+      },
+      "personStatus": "offen",
+      "_ts": {}
     }
   },
   "dynamicLeistungCols": [
     {
       "colIdx": 6,
       "key": "col_6",
-      "label": "Frühstück am Anreisetag",
-      "short": "F",
-      "color": "#ffb84d",
-      "isSkipass": false
-    },
-    {
-      "colIdx": 7,
-      "key": "col_7",
-      "label": "Skipass 7 Tage (Erwachsene) inkl. Anreisetag",
-      "short": "S7E",
-      "color": "#7b9fff",
-      "isSkipass": true
-    },
-    {
-      "colIdx": 8,
-      "key": "col_8",
-      "label": "Skipass 7 Tage (Studierende) inkl. Anreisetag",
-      "short": "S7",
-      "color": "#4fffb0",
-      "isSkipass": true
-    },
-    {
-      "colIdx": 9,
-      "key": "col_9",
-      "label": "Skipass 7 Tage (Studierende) inkl. Anreisetag",
-      "short": "S7",
-      "color": "#4fffb0",
-      "isSkipass": true
-    },
-    {
-      "colIdx": 10,
-      "key": "col_10",
       "label": "Parkplatz am Haus Spinabad",
       "short": "S",
       "color": "#4fffb0",
       "isSkipass": false
     },
     {
-      "colIdx": 11,
-      "key": "col_11",
+      "colIdx": 7,
+      "key": "col_7",
       "label": "Bettwäsche-Set inkl. Handtuch",
       "short": "S",
       "color": "#4fffb0",
       "isSkipass": false
     },
     {
-      "colIdx": 12,
-      "key": "col_12",
+      "colIdx": 8,
+      "key": "col_8",
+      "label": "Skipass 3 Tage (Erwachsene) inkl. Anreisetag",
+      "short": "S3E",
+      "color": "#7b9fff",
+      "isSkipass": true
+    },
+    {
+      "colIdx": 9,
+      "key": "col_9",
       "label": "veganes = laktosefreies Essen (nur bei Vorabbuchung möglich)",
-      "short": "S",
-      "color": "#4fffb0",
+      "short": "VG",
+      "color": "#78d17a",
       "isSkipass": false
     },
     {
-      "colIdx": 13,
-      "key": "col_13",
+      "colIdx": 10,
+      "key": "col_10",
       "label": "vegetarisches Essen (nur bei Vorabbuchung möglich)",
-      "short": "S",
+      "short": "VG",
       "color": "#a8ff78",
       "isSkipass": false
     },
     {
-      "colIdx": 14,
-      "key": "col_14",
-      "label": "Skipass 6 Tage (Erwachsene)",
-      "short": "S6E",
+      "colIdx": 11,
+      "key": "col_11",
+      "label": "Skipass 2 Tage (Erwachsene)",
+      "short": "S2E",
       "color": "#7b9fff",
       "isSkipass": true
     },
     {
-      "colIdx": 15,
-      "key": "col_15",
-      "label": "Skipass 6 Tage (Studierende)",
-      "short": "S6",
-      "color": "#4fffb0",
-      "isSkipass": true
-    },
-    {
-      "colIdx": 16,
-      "key": "col_16",
-      "label": "Skipass 6 Tage (Studierende)",
-      "short": "S6",
-      "color": "#4fffb0",
-      "isSkipass": true
-    },
-    {
-      "colIdx": 17,
-      "key": "col_17",
-      "label": "Nacht-Rodeln (Fr) am Rinerhorn (Erwachsene)",
-      "short": "SE",
-      "color": "#7b9fff",
-      "isSkipass": false
-    },
-    {
-      "colIdx": 18,
-      "key": "col_18",
-      "label": "Nacht-Skifahren (Fr) am Rinerhorn (Erwachsene) (nur mit eigenem Material)",
-      "short": "SE",
-      "color": "#7b9fff",
-      "isSkipass": false
-    },
-    {
-      "colIdx": 19,
-      "key": "col_19",
+      "colIdx": 12,
+      "key": "col_12",
       "label": "Frühstück am Anreisetag",
       "short": "F",
       "color": "#ffb84d",
       "isSkipass": false
     },
     {
-      "colIdx": 20,
-      "key": "col_20",
-      "label": "Skipass 7 Tage (Erwachsene) inkl. Anreisetag",
-      "short": "S7E",
-      "color": "#7b9fff",
-      "isSkipass": true
+      "colIdx": 13,
+      "key": "col_13",
+      "label": "Parkplatz am Haus Spinabad",
+      "short": "S",
+      "color": "#4fffb0",
+      "isSkipass": false
     },
     {
-      "colIdx": 21,
-      "key": "col_21",
+      "colIdx": 14,
+      "key": "col_14",
       "label": "Bettwäsche-Set inkl. Handtuch",
       "short": "S",
       "color": "#4fffb0",
       "isSkipass": false
     },
     {
-      "colIdx": 22,
-      "key": "col_22",
-      "label": "veganes = laktosefreies Essen (nur bei Vorabbuchung möglich)",
-      "short": "S",
-      "color": "#4fffb0",
-      "isSkipass": false
-    },
-    {
-      "colIdx": 23,
-      "key": "col_23",
-      "label": "vegetarisches Essen (nur bei Vorabbuchung möglich)",
-      "short": "S",
-      "color": "#a8ff78",
-      "isSkipass": false
-    },
-    {
-      "colIdx": 24,
-      "key": "col_24",
-      "label": "Skipass 6 Tage (Erwachsene)",
-      "short": "S6E",
+      "colIdx": 15,
+      "key": "col_15",
+      "label": "Skipass 3 Tage (Lehrer:innen) inkl. An- & Abreisetag",
+      "short": "S3L",
       "color": "#7b9fff",
       "isSkipass": true
+    },
+    {
+      "colIdx": 16,
+      "key": "col_16",
+      "label": "Skipass 3 Tage (Schüler:innen) inkl. An- & Abreisetag",
+      "short": "S3",
+      "color": "#4fffb0",
+      "isSkipass": true
+    },
+    {
+      "colIdx": 17,
+      "key": "col_17",
+      "label": "Skipass 3 Tage (Schüler:innen) inkl. An- & Abreisetag",
+      "short": "S3",
+      "color": "#4fffb0",
+      "isSkipass": true
+    },
+    {
+      "colIdx": 18,
+      "key": "col_18",
+      "label": "veganes = laktosefreies Essen (nur bei Vorabbuchung möglich)",
+      "short": "VG",
+      "color": "#78d17a",
+      "isSkipass": false
+    },
+    {
+      "colIdx": 19,
+      "key": "col_19",
+      "label": "vegetarisches Essen (nur bei Vorabbuchung möglich)",
+      "short": "VG",
+      "color": "#a8ff78",
+      "isSkipass": false
     }
   ],
   "customGroups": {},
@@ -6112,6 +9309,10 @@
       "anreise": "2026-06-03",
       "abreise": "2026-06-05"
     },
+    "102799": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
     "103154": {
       "anreise": "2026-06-03",
       "abreise": "2026-06-05"
@@ -6152,6 +9353,10 @@
       "anreise": "2026-06-03",
       "abreise": "2026-06-05"
     },
+    "105334": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
     "105526": {
       "anreise": "2026-06-03",
       "abreise": "2026-06-05"
@@ -6160,12 +9365,20 @@
       "anreise": "2026-06-03",
       "abreise": "2026-06-05"
     },
+    "106453": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
     "106626": {
       "anreise": "2026-06-03",
       "abreise": "2026-06-05"
     },
     "106724": {
       "anreise": "2026-06-03",
+      "abreise": "2026-06-05"
+    },
+    "107089": {
+      "anreise": "2026-06-01",
       "abreise": "2026-06-05"
     },
     "107423": {
@@ -6188,8 +9401,16 @@
       "anreise": "2026-06-03",
       "abreise": "2026-06-05"
     },
+    "108139": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
     "108531": {
       "anreise": "2026-06-03",
+      "abreise": "2026-06-05"
+    },
+    "108584": {
+      "anreise": "2026-06-01",
       "abreise": "2026-06-05"
     },
     "108674": {
@@ -6200,16 +9421,168 @@
       "anreise": "2026-06-03",
       "abreise": "2026-06-05"
     },
+    "108686": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "108988": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "108994": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109015": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109016": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109110": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109113": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109136": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109141": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109208": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109273": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
     "109297": {
       "anreise": "2026-06-03",
+      "abreise": "2026-06-05"
+    },
+    "109326": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109350": {
+      "anreise": "2026-06-01",
       "abreise": "2026-06-05"
     },
     "109352": {
       "anreise": "2026-06-03",
       "abreise": "2026-06-05"
     },
+    "109392": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109396": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109398": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109408": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109449": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109467": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109469": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109470": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109473": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109474": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109475": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109501": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109502": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109514": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109535": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109537": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109584": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109608": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
     "109663": {
       "anreise": "2026-06-03",
+      "abreise": "2026-06-05"
+    },
+    "109693": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109697": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109699": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109703": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109741": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109764": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109775": {
+      "anreise": "2026-06-01",
       "abreise": "2026-06-05"
     },
     "109784": {
@@ -6228,8 +9601,20 @@
       "anreise": "2026-06-03",
       "abreise": "2026-06-05"
     },
+    "109849": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
+    "109879": {
+      "anreise": "2026-06-01",
+      "abreise": "2026-06-05"
+    },
     "109919": {
       "anreise": "2026-06-03",
+      "abreise": "2026-06-05"
+    },
+    "109947": {
+      "anreise": "2026-06-01",
       "abreise": "2026-06-05"
     },
     "109979": {
@@ -6242,6 +9627,10 @@
     },
     "110041": {
       "anreise": "2026-06-03",
+      "abreise": "2026-06-05"
+    },
+    "110107": {
+      "anreise": "2026-06-01",
       "abreise": "2026-06-05"
     },
     "110115": {
@@ -6342,6 +9731,7 @@
     "101985": "aktiv",
     "102443": "aktiv",
     "102791": "aktiv",
+    "102799": "aktiv",
     "103154": "aktiv",
     "103211": "aktiv",
     "103788": "aktiv",
@@ -6352,29 +9742,76 @@
     "105233": "aktiv",
     "105235": "aktiv",
     "105249": "aktiv",
+    "105334": "aktiv",
     "105526": "aktiv",
     "106129": "aktiv",
+    "106453": "aktiv",
     "106626": "aktiv",
     "106724": "aktiv",
+    "107089": "aktiv",
     "107423": "aktiv",
     "107578": "aktiv",
     "107782": "aktiv",
     "107931": "aktiv",
     "108020": "aktiv",
+    "108139": "aktiv",
     "108531": "aktiv",
+    "108584": "aktiv",
     "108674": "aktiv",
     "108676": "aktiv",
+    "108686": "aktiv",
+    "108988": "aktiv",
+    "108994": "aktiv",
+    "109015": "aktiv",
+    "109016": "aktiv",
+    "109110": "aktiv",
+    "109113": "aktiv",
+    "109136": "aktiv",
+    "109141": "aktiv",
+    "109208": "aktiv",
+    "109273": "aktiv",
     "109297": "aktiv",
+    "109326": "aktiv",
+    "109350": "aktiv",
     "109352": "aktiv",
+    "109392": "aktiv",
+    "109396": "aktiv",
+    "109398": "aktiv",
+    "109408": "aktiv",
+    "109449": "aktiv",
+    "109467": "aktiv",
+    "109469": "aktiv",
+    "109470": "aktiv",
+    "109473": "aktiv",
+    "109474": "aktiv",
+    "109475": "aktiv",
+    "109501": "aktiv",
+    "109502": "aktiv",
+    "109514": "aktiv",
+    "109535": "aktiv",
+    "109537": "aktiv",
+    "109584": "aktiv",
+    "109608": "aktiv",
     "109663": "aktiv",
+    "109693": "aktiv",
+    "109697": "aktiv",
+    "109699": "aktiv",
+    "109703": "aktiv",
+    "109741": "aktiv",
+    "109764": "aktiv",
+    "109775": "aktiv",
     "109784": "aktiv",
     "109832": "aktiv",
     "109834": "aktiv",
     "109835": "aktiv",
+    "109849": "aktiv",
+    "109879": "aktiv",
     "109919": "aktiv",
+    "109947": "aktiv",
     "109979": "aktiv",
     "110008": "aktiv",
     "110041": "aktiv",
+    "110107": "aktiv",
     "110115": "aktiv",
     "110131": "aktiv",
     "110135": "aktiv",
@@ -7773,5 +11210,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780512762869
+  "savedAt": 1780512872831
 }

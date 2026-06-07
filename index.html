@@ -30,8 +30,9 @@
     font-family: 'Syne', sans-serif;
     background: var(--bg);
     color: var(--text);
-    min-height: 100vh;
     font-weight: 500;
+    overflow: hidden;
+    height: 100vh;
   }
 
   /* ── HEADER ── */
@@ -160,7 +161,6 @@
   .btn-xs { padding: 3px 8px; font-size: .7rem; }
 
   /* ── MAIN APP ── */
-  #app { display: none; }
 
   /* ── TOOLBAR ── */
   .toolbar {
@@ -236,16 +236,13 @@
   .tab-btn:hover:not(.active) { color: var(--text); background: var(--surface2); }
 
   /* ── CONTENT ── */
-  #checkin-view {
-    display: flex;
-    flex-direction: column;
-  }
+  #app { display: none; }
+
+  #checkin-view { display: block; }
 
   #main-content {
-    flex: 1;
-    overflow: scroll;  /* always show both scrollbars */
-    padding: 0;
-    position: relative;
+    overflow: scroll;
+    height: calc(100vh - 185px);
   }
 
   /* Sticky table headers */
@@ -257,31 +254,13 @@
     box-shadow: 0 1px 0 var(--border);
   }
 
-  /* Always-visible prominent scrollbars */
-  #main-content::-webkit-scrollbar {
-    width: 14px;
-    height: 14px;
-  }
-  #main-content::-webkit-scrollbar-track {
-    background: #e8eaef;
-    border-radius: 2px;
-  }
-  #main-content::-webkit-scrollbar-thumb {
-    background: #8892aa;
-    border-radius: 3px;
-    border: 2px solid #e8eaef;
-  }
-  #main-content::-webkit-scrollbar-thumb:hover {
-    background: #5a6380;
-  }
-  #main-content::-webkit-scrollbar-corner {
-    background: #e8eaef;
-  }
-  /* Firefox */
-  #main-content {
-    scrollbar-width: auto;
-    scrollbar-color: #8892aa #e8eaef;
-  }
+  /* Always-visible thick scrollbars */
+  #main-content::-webkit-scrollbar        { width: 14px; height: 14px; }
+  #main-content::-webkit-scrollbar-track  { background: #c8ccd8; }
+  #main-content::-webkit-scrollbar-thumb  { background: #5a6484; border-radius: 3px; border: 2px solid #c8ccd8; }
+  #main-content::-webkit-scrollbar-thumb:hover { background: #3b4a6b; }
+  #main-content::-webkit-scrollbar-corner { background: #c8ccd8; }
+  #main-content { scrollbar-width: auto; scrollbar-color: #5a6484 #c8ccd8; }
 
   /* ── GROUP CARDS ── */
   .group-section { margin-bottom: 24px; }
@@ -698,8 +677,8 @@
 
   /* ── SP SETUP ── */
   #sp-setup {
-    display:none;flex-direction:column;align-items:center;justify-content:center;
-    min-height:calc(100vh - 57px);padding:40px;gap:24px;
+    display: none; flex-direction: column; align-items: center; justify-content: center;
+    padding: 40px; gap: 24px;
   }
   .setup-card {
     background:var(--surface);border:1px solid var(--border);border-radius:12px;
@@ -1225,6 +1204,8 @@ const TOOLBAR_ITEMS_DEF = [
     </div>` },
   { id: 'btn-groups', label: '⊞ Gruppen', visible: true,
     html: () => `<button class="btn btn-secondary btn-sm" onclick="openGroupModal()">⊞ Gruppen</button>` },
+  { id: 'btn-delete', label: '🗑 Auswahl löschen', visible: true,
+    html: () => `<button class="btn btn-danger btn-sm" onclick="deleteSelectedRows()" style="font-size:.75rem">🗑 Auswahl löschen</button>` },
   { id: 'btn-reset',  label: '⟳ Zurücksetzen', visible: true,
     html: () => `<button class="btn btn-danger btn-sm" onclick="resetApp()" title="Daten zurücksetzen">⟳</button>` },
   { id: 'btn-sp',     label: '⊗ Sync trennen', visible: true,
@@ -1750,7 +1731,7 @@ function initApp(data, isMerge = false) {
   // Save to GitHub after import (creates the file if it doesn't exist yet)
   if (ghConnected) setTimeout(() => saveToStorage(), 600);
   renderLeistungBar();
-  setTimeout(updateMainContentHeight, 50);
+  setTimeout(updateMainContentHeight, 60);
 }
 
 // ─────────────────────────────
@@ -2041,10 +2022,15 @@ function renderCheckin() {
     t.id = t.id || 'ct_' + i;
     initResizableColumns(t);
   });
+  updateMainContentHeight();
   } catch(err) {
     console.error('renderCheckin error:', err);
-    document.getElementById('main-content').innerHTML =
-      `<div style="padding:40px;color:#d63545;font-weight:700">⚠ Fehler beim Anzeigen: ${err.message}<br><small style="font-weight:400">(Bitte Seite neu laden)</small></div>`;
+    const mc = document.getElementById('main-content');
+    if (mc) mc.innerHTML =
+      `<div style="padding:40px;color:#d63545;font-weight:700;font-size:.9rem">
+        ⚠ Fehler: ${err.message}
+        <pre style="margin-top:10px;font-size:.7rem;font-weight:400;white-space:pre-wrap;color:#555">${err.stack||''}</pre>
+      </div>`;
   }
 }
 
@@ -2100,7 +2086,7 @@ function renderFlatView() {
   </div>
   <table class="checkin-table">
     <thead><tr>
-      <th style="width:32px;padding:8px 10px"></th>
+      <th style="width:32px;padding:4px 8px"></th>
       <th><button class="th-btn ${fsc('name')}" onclick="sortFlat('name')">Name <span class="sort-arrow">${fsa('name')}</span></button></th>
       <th><button class="th-btn ${fsc('vorname')}" onclick="sortFlat('vorname')">Vorname <span class="sort-arrow">${fsa('vorname')}</span></button></th>
       <th class="hide-sm"><button class="th-btn ${fsc('vorgang')}" onclick="sortFlat('vorgang')">Vorgang <span class="sort-arrow">${fsa('vorgang')}</span></button></th>
@@ -2259,6 +2245,58 @@ function toggleLeistungBar() {
   if (items) items.style.display = isCollapsed ? 'none' : 'flex';
 }
 
+function deleteSelectedRows() {
+  // Collect all checked rows across the whole table
+  const checkboxes = document.querySelectorAll('.row-check:checked[data-id]');
+  const ids = [...checkboxes].map(cb => cb.dataset.id).filter(Boolean);
+
+  if (!ids.length) {
+    toast('Bitte zuerst Zeilen auswählen (Checkbox links in der Zeile).');
+    return;
+  }
+
+  const names = ids.map(id => {
+    const p = persons.find(x => x.id === id);
+    return p ? `${p.vorname} ${p.name}` : id;
+  });
+
+  const preview = names.slice(0, 8).join('\n') + (ids.length > 8 ? `\n… und ${ids.length - 8} weitere` : '');
+  const msg = ids.length === 1
+    ? `„${names[0]}" wirklich löschen?\n\nDieser Vorgang kann nicht rückgängig gemacht werden.`
+    : `${ids.length} Personen wirklich löschen?\n\n${preview}\n\nDieser Vorgang kann nicht rückgängig gemacht werden.`;
+
+  if (!confirm(msg)) return;
+
+  const idSet = new Set(ids);
+  persons = persons.filter(p => !idSet.has(p.id));
+  idSet.forEach(id => delete checkins[id]);
+
+  renderCheckin();
+  updateHeaderStats();
+  renderLeistungBar();
+  saveToStorage();
+  toast(`${ids.length} Eintrag${ids.length !== 1 ? 'e' : ''} gelöscht`);
+}
+
+function deleteRows(scope, target) {
+  // Legacy: collect ids by scope/target
+  let ids = [];
+  if (target === 'selected') {
+    const sel = scope === 'flat'
+      ? document.querySelectorAll('#main-content .row-check:checked[data-id]')
+      : document.querySelectorAll(`#body-${scope} .row-check:checked[data-id]`);
+    ids = [...sel].map(cb => cb.dataset.id).filter(Boolean);
+  }
+  if (!ids.length) { toast('Keine Zeilen ausgewählt.'); return; }
+  const names = ids.map(id => { const p = persons.find(x=>x.id===id); return p ? `${p.vorname} ${p.name}` : id; });
+  if (!confirm(`${ids.length === 1 ? `„${names[0]}"` : ids.length + ' Personen'} wirklich löschen?`)) return;
+  const idSet = new Set(ids);
+  persons = persons.filter(p => !idSet.has(p.id));
+  idSet.forEach(id => delete checkins[id]);
+  renderCheckin(); updateHeaderStats(); saveToStorage();
+  toast(`${ids.length} Eintrag${ids.length !== 1 ? 'e' : ''} gelöscht`);
+}
+
 function setVorgangDate(g, field, val) {
   if (!vorgangDates[g]) vorgangDates[g] = { anreise: '', abreise: '' };
   vorgangDates[g][field] = val;
@@ -2333,7 +2371,7 @@ function renderVorgangBlock(g, filtered) {
     <table class="checkin-table">
       <thead>
         <tr>
-          <th style="width:32px;padding:8px 10px"></th>
+          <th style="width:32px;padding:4px 8px"></th>
           <th><button class="th-btn ${sortClass(g,'name')}" onclick="sortGroup('${g}','name')">Name <span class="sort-arrow">${sortArrow(g,'name')}</span></button></th>
           <th><button class="th-btn ${sortClass(g,'vorname')}" onclick="sortGroup('${g}','vorname')">Vorname <span class="sort-arrow">${sortArrow(g,'vorname')}</span></button></th>
           <th class="hide-sm col-geb"><button class="th-btn ${sortClass(g,'geb')}" onclick="sortGroup('${g}','geb')">Geburtsdatum <span class="sort-arrow">${sortArrow(g,'geb')}</span></button></th>
@@ -2372,7 +2410,7 @@ function renderRow(p, showVorgang = false) {
   const checked = isCheckedIn(p);
 
   const activeCols = dynamicLeistungCols
-    .filter(lc => p.leistungen[lc.key])
+    .filter(lc => (p.leistungen || {})[lc.key])
     .filter(lc => !visibleLeistungenKeys || visibleLeistungenKeys.has(lc.key))
     .sort((a, b) => a.label.localeCompare(b.label, 'de'));
 
@@ -2463,8 +2501,8 @@ function renderRow(p, showVorgang = false) {
 
   return `
 <tr class="${checked ? 'checked-in' : ''}" id="row-${CSS.escape(p.id)}" style="${rowBg}${rowStrike}">
-  <td style="padding:8px 10px;width:32px">
-    <input type="checkbox" class="row-check" data-id="${p.id}" title="Auswählen">
+  <td style="padding:4px 8px;width:32px">
+    <input type="checkbox" class="row-check" data-id="${p.id}" title="Auswählen" style="vertical-align:middle">
   </td>
   <td class="name-cell">${p.name}</td>
   <td class="vorname-cell">${p.vorname}</td>
@@ -2518,7 +2556,8 @@ function renderRow(p, showVorgang = false) {
 // ─────────────────────────────
 function hasOpenItems(p) {
   const c = checkins[p.id];
-  if (!c) return false;  const hasUnreturnedSchluessel = c.schluessel > 0 && !c.schluessel_retour;
+  if (!c) return false;
+  const hasUnreturnedSchluessel = c.schluessel > 0 && !c.schluessel_retour;
   const hasUnreturnedStirnlampe = c.stirnlampe?.anzahl > 0 && !c.stirnlampe?.retour;
   const hasRedNb = c.nachbuchungen?.some(nb => nb.status !== true);
   return hasUnreturnedSchluessel || hasUnreturnedStirnlampe || hasRedNb;
@@ -3006,7 +3045,8 @@ function updateMainContentHeight() {
   const mc = document.getElementById('main-content');
   if (!mc) return;
   const top = mc.getBoundingClientRect().top;
-  mc.style.height = (window.innerHeight - top - 4) + 'px';
+  if (top <= 0) return; // not visible yet
+  mc.style.height = (window.innerHeight - top - 2) + 'px';
 }
 
 function filterList() { renderCheckin(); renderLeistungBar(); updateMainContentHeight(); }

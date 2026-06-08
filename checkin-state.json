@@ -9850,6 +9850,15 @@
   },
   "changeLog": [
     {
+      "ts": 1780911339322,
+      "personId": "109849_Leon Garcia_Amy Christy Alejandra",
+      "name": "Amy Christy Alejandra Leon Garcia",
+      "vorgang": "109849",
+      "field": "Reisestatus",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
       "ts": 1780910769466,
       "personId": "103154_Albertsen_Jannis",
       "name": "Jannis Albertsen",
@@ -11560,5 +11569,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780910770271
+  "savedAt": 1780911340172
 }

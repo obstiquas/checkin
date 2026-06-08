@@ -6827,7 +6827,7 @@
     },
     "103154_Albertsen_Jannis": {
       "zimmer": "",
-      "schluessel": 1,
+      "schluessel": 0,
       "schluessel_retour": true,
       "nachbuchungen": [],
       "notiz": "",
@@ -9835,6 +9835,15 @@
   },
   "changeLog": [
     {
+      "ts": 1780910476343,
+      "personId": "103154_Albertsen_Jannis",
+      "name": "Jannis Albertsen",
+      "vorgang": "103154",
+      "field": "Schlüssel Anzahl",
+      "oldVal": "1",
+      "newVal": "0"
+    },
+    {
       "ts": 1780910472595,
       "personId": "103154_Albertsen_Jannis",
       "name": "Jannis Albertsen",
@@ -11410,5 +11419,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780910473400
+  "savedAt": 1780910477154
 }

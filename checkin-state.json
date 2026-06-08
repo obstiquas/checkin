@@ -6851,7 +6851,7 @@
         "anzahl": 0,
         "retour": false
       },
-      "personStatus": "abgereist",
+      "personStatus": "zu_zahlen",
       "_ts": {}
     },
     "103154_Rieß_Ylvi": {
@@ -9850,6 +9850,15 @@
   },
   "changeLog": [
     {
+      "ts": 1780910569781,
+      "personId": "103154_Albertsen_Jannis",
+      "name": "Jannis Albertsen",
+      "vorgang": "103154",
+      "field": "Reisestatus",
+      "oldVal": "abgereist",
+      "newVal": "zu_zahlen"
+    },
+    {
       "ts": 1780910558564,
       "personId": "103154_Albertsen_Jannis",
       "name": "Jannis Albertsen",
@@ -11533,5 +11542,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780910559417
+  "savedAt": 1780910570624
 }

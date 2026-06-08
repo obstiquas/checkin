@@ -9833,6 +9833,15 @@
   },
   "changeLog": [
     {
+      "ts": 1780910292598,
+      "personId": "110115_Adler_Kevin",
+      "name": "Kevin Adler",
+      "vorgang": "110115",
+      "field": "Reisestatus",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
       "ts": 1780513946107,
       "personId": "109699_Sönnichsen_Caspar",
       "name": "Caspar Sönnichsen",
@@ -11327,5 +11336,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780910225975
+  "savedAt": 1780910293446
 }

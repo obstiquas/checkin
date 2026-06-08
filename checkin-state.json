@@ -6828,7 +6828,7 @@
     "103154_Albertsen_Jannis": {
       "zimmer": "",
       "schluessel": 0,
-      "schluessel_retour": true,
+      "schluessel_retour": false,
       "nachbuchungen": [
         {
           "leistung": "Skipass 1 Tag",
@@ -7011,7 +7011,7 @@
     "105231_Andresen_Jane": {
       "zimmer": "",
       "schluessel": 1,
-      "schluessel_retour": true,
+      "schluessel_retour": false,
       "nachbuchungen": [],
       "notiz": "",
       "notizColor": "",
@@ -9850,6 +9850,24 @@
   },
   "changeLog": [
     {
+      "ts": 1780910769466,
+      "personId": "103154_Albertsen_Jannis",
+      "name": "Jannis Albertsen",
+      "vorgang": "103154",
+      "field": "Schlüssel retour",
+      "oldVal": "ja",
+      "newVal": "nein"
+    },
+    {
+      "ts": 1780910768935,
+      "personId": "105231_Andresen_Jane",
+      "name": "Jane Andresen",
+      "vorgang": "105231",
+      "field": "Schlüssel retour",
+      "oldVal": "ja",
+      "newVal": "nein"
+    },
+    {
       "ts": 1780910569781,
       "personId": "103154_Albertsen_Jannis",
       "name": "Jannis Albertsen",
@@ -11542,5 +11560,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780910767504
+  "savedAt": 1780910770271
 }

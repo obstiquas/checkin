@@ -7485,7 +7485,7 @@
     },
     "109979_Aistov_Vladislav": {
       "zimmer": "",
-      "schluessel": 3,
+      "schluessel": 0,
       "schluessel_retour": false,
       "nachbuchungen": [],
       "notiz": "",
@@ -9835,6 +9835,33 @@
   },
   "changeLog": [
     {
+      "ts": 1780910492760,
+      "personId": "109979_Aistov_Vladislav",
+      "name": "Vladislav Aistov",
+      "vorgang": "109979",
+      "field": "Schlüssel Anzahl",
+      "oldVal": "1",
+      "newVal": "0"
+    },
+    {
+      "ts": 1780910492600,
+      "personId": "109979_Aistov_Vladislav",
+      "name": "Vladislav Aistov",
+      "vorgang": "109979",
+      "field": "Schlüssel Anzahl",
+      "oldVal": "2",
+      "newVal": "1"
+    },
+    {
+      "ts": 1780910492430,
+      "personId": "109979_Aistov_Vladislav",
+      "name": "Vladislav Aistov",
+      "vorgang": "109979",
+      "field": "Schlüssel Anzahl",
+      "oldVal": "3",
+      "newVal": "2"
+    },
+    {
       "ts": 1780910486201,
       "personId": "109979_Aistov_Vladislav",
       "name": "Vladislav Aistov",
@@ -11446,5 +11473,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780910487014
+  "savedAt": 1780910493572
 }

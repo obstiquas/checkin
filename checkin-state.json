@@ -7485,7 +7485,7 @@
     },
     "109979_Aistov_Vladislav": {
       "zimmer": "",
-      "schluessel": 0,
+      "schluessel": 3,
       "schluessel_retour": false,
       "nachbuchungen": [],
       "notiz": "",
@@ -9835,6 +9835,33 @@
   },
   "changeLog": [
     {
+      "ts": 1780910486201,
+      "personId": "109979_Aistov_Vladislav",
+      "name": "Vladislav Aistov",
+      "vorgang": "109979",
+      "field": "Schlüssel Anzahl",
+      "oldVal": "2",
+      "newVal": "3"
+    },
+    {
+      "ts": 1780910486072,
+      "personId": "109979_Aistov_Vladislav",
+      "name": "Vladislav Aistov",
+      "vorgang": "109979",
+      "field": "Schlüssel Anzahl",
+      "oldVal": "1",
+      "newVal": "2"
+    },
+    {
+      "ts": 1780910485891,
+      "personId": "109979_Aistov_Vladislav",
+      "name": "Vladislav Aistov",
+      "vorgang": "109979",
+      "field": "Schlüssel Anzahl",
+      "oldVal": "0",
+      "newVal": "1"
+    },
+    {
       "ts": 1780910476343,
       "personId": "103154_Albertsen_Jannis",
       "name": "Jannis Albertsen",
@@ -11419,5 +11446,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780910477154
+  "savedAt": 1780910487014
 }

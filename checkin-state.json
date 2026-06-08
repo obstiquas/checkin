@@ -6835,7 +6835,7 @@
           "betrag": 45,
           "notiz": "",
           "ts": 1780910508451,
-          "status": true
+          "status": false
         },
         {
           "leistung": "Bettwäsche",
@@ -9850,6 +9850,15 @@
   },
   "changeLog": [
     {
+      "ts": 1780910558564,
+      "personId": "103154_Albertsen_Jannis",
+      "name": "Jannis Albertsen",
+      "vorgang": "103154",
+      "field": "Nachbuchung \"Skipass 1 Tag\"",
+      "oldVal": "erledigt",
+      "newVal": "offen"
+    },
+    {
       "ts": 1780910556990,
       "personId": "103154_Albertsen_Jannis",
       "name": "Jannis Albertsen",
@@ -11524,5 +11533,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780910557845
+  "savedAt": 1780910559417
 }

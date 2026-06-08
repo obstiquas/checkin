@@ -9835,6 +9835,15 @@
   },
   "changeLog": [
     {
+      "ts": 1780910415943,
+      "personId": "103154_Albertsen_Jannis",
+      "name": "Jannis Albertsen",
+      "vorgang": "103154",
+      "field": "Reisestatus",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
       "ts": 1780910297605,
       "personId": "110115_Adler_Kevin",
       "name": "Kevin Adler",
@@ -11347,5 +11356,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780910347056
+  "savedAt": 1780910416787
 }

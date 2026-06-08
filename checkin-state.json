@@ -7019,7 +7019,7 @@
         "anzahl": 1,
         "retour": false
       },
-      "personStatus": "abgereist",
+      "personStatus": "zu_zahlen",
       "_ts": {}
     },
     "105233_Dörr_Carolina": {
@@ -7509,7 +7509,7 @@
         "anzahl": 0,
         "retour": false
       },
-      "personStatus": "zu_zahlen",
+      "personStatus": "abgereist",
       "_ts": {}
     },
     "109979_Kachalova_Maria": {
@@ -7593,7 +7593,7 @@
         "anzahl": 0,
         "retour": false
       },
-      "personStatus": "no_show",
+      "personStatus": "abgereist",
       "_ts": {
         "notiz": 1780490178985
       }
@@ -7959,7 +7959,7 @@
         "anzahl": 0,
         "retour": false
       },
-      "personStatus": "no_show",
+      "personStatus": "abgereist",
       "_ts": {}
     },
     "102799_Hellmann_Max": {
@@ -9850,6 +9850,1950 @@
   },
   "changeLog": [
     {
+      "ts": 1780911496166,
+      "personId": "110107_Schleß_Erik",
+      "name": "Erik Schleß",
+      "vorgang": "110107",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109947_Kräutle_Annika",
+      "name": "Annika Kräutle",
+      "vorgang": "109947",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109947_Kanzinger_Jasmin",
+      "name": "Jasmin Kanzinger",
+      "vorgang": "109947",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109879_Dupont_Karla",
+      "name": "Karla Dupont",
+      "vorgang": "109879",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109849_Leon Garcia_Amy Christy Alejandra",
+      "name": "Amy Christy Alejandra Leon Garcia",
+      "vorgang": "109849",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109775_Thoma_Luis",
+      "name": "Luis Thoma",
+      "vorgang": "109775",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109764_Bögner_Jasmin",
+      "name": "Jasmin Bögner",
+      "vorgang": "109764",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109741_Schmierer_Silas",
+      "name": "Silas Schmierer",
+      "vorgang": "109741",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109703_Coli_Simone",
+      "name": "Simone Coli",
+      "vorgang": "109703",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109699_Burlet_Carla",
+      "name": "Carla Burlet",
+      "vorgang": "109699",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109699_Tobien_Amelie",
+      "name": "Amelie Tobien",
+      "vorgang": "109699",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109699_Winkelmann_Vince",
+      "name": "Vince Winkelmann",
+      "vorgang": "109699",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109699_Sönnichsen_Caspar",
+      "name": "Caspar Sönnichsen",
+      "vorgang": "109699",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "zu_zahlen",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109699_Zimmermann_Jakob",
+      "name": "Jakob Zimmermann",
+      "vorgang": "109699",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109697_Cwynar_Eliza",
+      "name": "Eliza Cwynar",
+      "vorgang": "109697",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109693_Herrmann_Thomas",
+      "name": "Thomas Herrmann",
+      "vorgang": "109693",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109608_Müller_Marvin",
+      "name": "Marvin Müller",
+      "vorgang": "109608",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109584_Kroeger-Diaz_Isabella Brigitt",
+      "name": "Isabella Brigitt Kroeger-Diaz",
+      "vorgang": "109584",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109584_Moser_Gina",
+      "name": "Gina Moser",
+      "vorgang": "109584",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109537_Garcia_Denzel",
+      "name": "Denzel Garcia",
+      "vorgang": "109537",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109537_Finke_Tristan Lennart",
+      "name": "Tristan Lennart Finke",
+      "vorgang": "109537",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109537_Schöps_Benedikt",
+      "name": "Benedikt Schöps",
+      "vorgang": "109537",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109537_Salerno_Daniel",
+      "name": "Daniel Salerno",
+      "vorgang": "109537",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109537_Heyden_Luca",
+      "name": "Luca Heyden",
+      "vorgang": "109537",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109535_Tschunichin_Dennis",
+      "name": "Dennis Tschunichin",
+      "vorgang": "109535",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109535_Fickert_Jonas",
+      "name": "Jonas Fickert",
+      "vorgang": "109535",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109535_Müller_Friedrich",
+      "name": "Friedrich Müller",
+      "vorgang": "109535",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109535_Bender_Nick",
+      "name": "Nick Bender",
+      "vorgang": "109535",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109535_Mildner_Max",
+      "name": "Max Mildner",
+      "vorgang": "109535",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109514_Özdemir_Haci Bedirhan",
+      "name": "Haci Bedirhan Özdemir",
+      "vorgang": "109514",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109502_Bilgi_Yunus emre",
+      "name": "Yunus emre Bilgi",
+      "vorgang": "109502",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109501_Kubatbaev_Alp-Erkhan",
+      "name": "Alp-Erkhan Kubatbaev",
+      "vorgang": "109501",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109475_Lehmann_Marcel",
+      "name": "Marcel Lehmann",
+      "vorgang": "109475",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109474_Eroglu_Ömer",
+      "name": "Ömer Eroglu",
+      "vorgang": "109474",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109473_Eroglu_Faruk",
+      "name": "Faruk Eroglu",
+      "vorgang": "109473",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109470_Ilzhoefer_Lennert",
+      "name": "Lennert Ilzhoefer",
+      "vorgang": "109470",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109469_Geringer_Robin",
+      "name": "Robin Geringer",
+      "vorgang": "109469",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109467_Deibert_Max",
+      "name": "Max Deibert",
+      "vorgang": "109467",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109449_König_Eric",
+      "name": "Eric König",
+      "vorgang": "109449",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109408_Geier_Manuel",
+      "name": "Manuel Geier",
+      "vorgang": "109408",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109398_Glück_Jasmin",
+      "name": "Jasmin Glück",
+      "vorgang": "109398",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109396_Schmid_Jessica",
+      "name": "Jessica Schmid",
+      "vorgang": "109396",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109392_Muth_Max",
+      "name": "Max Muth",
+      "vorgang": "109392",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109350_Lupu_Mario Sebastian",
+      "name": "Mario Sebastian Lupu",
+      "vorgang": "109350",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109326_Veit_Julia",
+      "name": "Julia Veit",
+      "vorgang": "109326",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109326_Franke_Frederik",
+      "name": "Frederik Franke",
+      "vorgang": "109326",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109273_Holzwart_Maxim",
+      "name": "Maxim Holzwart",
+      "vorgang": "109273",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109208_Bartesch_Levin",
+      "name": "Levin Bartesch",
+      "vorgang": "109208",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109141_Heinrich_Timm",
+      "name": "Timm Heinrich",
+      "vorgang": "109141",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109136_Förschner_Pekka Matti",
+      "name": "Pekka Matti Förschner",
+      "vorgang": "109136",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109113_Stuhlweißenburg_Enid",
+      "name": "Enid Stuhlweißenburg",
+      "vorgang": "109113",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109113_Frömer_Carl",
+      "name": "Carl Frömer",
+      "vorgang": "109113",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109110_Sowinski_Serafina",
+      "name": "Serafina Sowinski",
+      "vorgang": "109110",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109016_Bauer_Luis",
+      "name": "Luis Bauer",
+      "vorgang": "109016",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109015_Maier_Lars",
+      "name": "Lars Maier",
+      "vorgang": "109015",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "108994_Cakmakci_Mekin",
+      "name": "Mekin Cakmakci",
+      "vorgang": "108994",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "108988_Schmid_Niklas",
+      "name": "Niklas Schmid",
+      "vorgang": "108988",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "108686_Jackel_Alexander",
+      "name": "Alexander Jackel",
+      "vorgang": "108686",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "108686_Huber_Moritz",
+      "name": "Moritz Huber",
+      "vorgang": "108686",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "108686_Bahmer_Tobias",
+      "name": "Tobias Bahmer",
+      "vorgang": "108686",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "108686_Kowalski_Marius",
+      "name": "Marius Kowalski",
+      "vorgang": "108686",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "108686_Kreilgaard_Lars",
+      "name": "Lars Kreilgaard",
+      "vorgang": "108686",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "108584_Gräber_Isabel",
+      "name": "Isabel Gräber",
+      "vorgang": "108584",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "108584_Bender_Katharina",
+      "name": "Katharina Bender",
+      "vorgang": "108584",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "108584_Manz_Tina",
+      "name": "Tina Manz",
+      "vorgang": "108584",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "108584_Eisele_Sophie",
+      "name": "Sophie Eisele",
+      "vorgang": "108584",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "108584_Greiner_Joann",
+      "name": "Joann Greiner",
+      "vorgang": "108584",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "108139_Schmid_Felix",
+      "name": "Felix Schmid",
+      "vorgang": "108139",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "108139_Horlacher_Kai",
+      "name": "Kai Horlacher",
+      "vorgang": "108139",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "108139_Freudenstein_Christoph",
+      "name": "Christoph Freudenstein",
+      "vorgang": "108139",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "108139_Krall_Lukas",
+      "name": "Lukas Krall",
+      "vorgang": "108139",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "107089_Wahlenmeier_Rico",
+      "name": "Rico Wahlenmeier",
+      "vorgang": "107089",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "107089_Walter_Tim",
+      "name": "Tim Walter",
+      "vorgang": "107089",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "107089_Bauer_Nico",
+      "name": "Nico Bauer",
+      "vorgang": "107089",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "107089_Erath_Simone",
+      "name": "Simone Erath",
+      "vorgang": "107089",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "107089_Tomusic_Ivana",
+      "name": "Ivana Tomusic",
+      "vorgang": "107089",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "107089_Bauer_Marcel",
+      "name": "Marcel Bauer",
+      "vorgang": "107089",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "106453_Nagels_Laura",
+      "name": "Laura Nagels",
+      "vorgang": "106453",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "105334_Bark_Benedikt",
+      "name": "Benedikt Bark",
+      "vorgang": "105334",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "105334_Schnell_Moritz",
+      "name": "Moritz Schnell",
+      "vorgang": "105334",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "105334_Jochim_Martin",
+      "name": "Martin Jochim",
+      "vorgang": "105334",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "102799_Hellmann_Max",
+      "name": "Max Hellmann",
+      "vorgang": "102799",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "102799_Stelzer_Simon",
+      "name": "Simon Stelzer",
+      "vorgang": "102799",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "no_show",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110428_Birwe_Annika",
+      "name": "Annika Birwe",
+      "vorgang": "110428",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110427_Tönsmann_Julia",
+      "name": "Julia Tönsmann",
+      "vorgang": "110427",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110396_Reuter_Ole",
+      "name": "Ole Reuter",
+      "vorgang": "110396",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110396_Brehmer_Michel",
+      "name": "Michel Brehmer",
+      "vorgang": "110396",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110392_Prütz_Jacob",
+      "name": "Jacob Prütz",
+      "vorgang": "110392",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110343_Marquard_Janina",
+      "name": "Janina Marquard",
+      "vorgang": "110343",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110342_Erlic_Kristina",
+      "name": "Kristina Erlic",
+      "vorgang": "110342",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110339_Frenz_Line Solveig",
+      "name": "Line Solveig Frenz",
+      "vorgang": "110339",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110275_Brandhoff_Ann Carolin",
+      "name": "Ann Carolin Brandhoff",
+      "vorgang": "110275",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110274_Reitz_Maurits",
+      "name": "Maurits Reitz",
+      "vorgang": "110274",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110274_Roeder_Simon",
+      "name": "Simon Roeder",
+      "vorgang": "110274",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110229_Hülle_Jennifer",
+      "name": "Jennifer Hülle",
+      "vorgang": "110229",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110229_Engler_Nele",
+      "name": "Nele Engler",
+      "vorgang": "110229",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110206_Runde_Sophia",
+      "name": "Sophia Runde",
+      "vorgang": "110206",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110200_Licht_Jonas",
+      "name": "Jonas Licht",
+      "vorgang": "110200",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110199_Reetz_Sven",
+      "name": "Sven Reetz",
+      "vorgang": "110199",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110167_Schätzlein_Lisa",
+      "name": "Lisa Schätzlein",
+      "vorgang": "110167",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110167_Kaspers_Christian",
+      "name": "Christian Kaspers",
+      "vorgang": "110167",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110158_Haselbauer_Max",
+      "name": "Max Haselbauer",
+      "vorgang": "110158",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110158_Schoettner_Robin",
+      "name": "Robin Schoettner",
+      "vorgang": "110158",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110135_Novotny_Laurenz",
+      "name": "Laurenz Novotny",
+      "vorgang": "110135",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110135_Wagner_Raphael",
+      "name": "Raphael Wagner",
+      "vorgang": "110135",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110135_Ksoll_Michael",
+      "name": "Michael Ksoll",
+      "vorgang": "110135",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110135_Lübbers_Ihno",
+      "name": "Ihno Lübbers",
+      "vorgang": "110135",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110131_Egbert_Peter",
+      "name": "Peter Egbert",
+      "vorgang": "110131",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110115_Adler_Kevin",
+      "name": "Kevin Adler",
+      "vorgang": "110115",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "no_show",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110115_Müller_Magnus",
+      "name": "Magnus Müller",
+      "vorgang": "110115",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110041_Lingens_Jelka",
+      "name": "Jelka Lingens",
+      "vorgang": "110041",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110008_Kramer_Richard",
+      "name": "Richard Kramer",
+      "vorgang": "110008",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "110008_Egbert_Jan",
+      "name": "Jan Egbert",
+      "vorgang": "110008",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109979_Kachalova_Maria",
+      "name": "Maria Kachalova",
+      "vorgang": "109979",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109979_Aistov_Vladislav",
+      "name": "Vladislav Aistov",
+      "vorgang": "109979",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "zu_zahlen",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109919_Schulz_Jan-David",
+      "name": "Jan-David Schulz",
+      "vorgang": "109919",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109919_Nitsch_Julia Maria",
+      "name": "Julia Maria Nitsch",
+      "vorgang": "109919",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109835_Kraack_Hannes",
+      "name": "Hannes Kraack",
+      "vorgang": "109835",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109834_Wulf_Claas Bjarne",
+      "name": "Claas Bjarne Wulf",
+      "vorgang": "109834",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109832_Wendt_Jesper",
+      "name": "Jesper Wendt",
+      "vorgang": "109832",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109784_Saß_Jannik",
+      "name": "Jannik Saß",
+      "vorgang": "109784",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109663_Shah_Himanshi Ashokkumar",
+      "name": "Himanshi Ashokkumar Shah",
+      "vorgang": "109663",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109352_Herrmann_Henrieke",
+      "name": "Henrieke Herrmann",
+      "vorgang": "109352",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109297_Knutzen_Jakob",
+      "name": "Jakob Knutzen",
+      "vorgang": "109297",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "109297_Beck_Emma",
+      "name": "Emma Beck",
+      "vorgang": "109297",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "108676_Doß_Julian",
+      "name": "Julian Doß",
+      "vorgang": "108676",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "108676_Borcherding_Maxim",
+      "name": "Maxim Borcherding",
+      "vorgang": "108676",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "108674_Hitschfeld_Lorena Fee",
+      "name": "Lorena Fee Hitschfeld",
+      "vorgang": "108674",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "108674_Klopsch_Linus",
+      "name": "Linus Klopsch",
+      "vorgang": "108674",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "108531_Elsässer_Stefanie",
+      "name": "Stefanie Elsässer",
+      "vorgang": "108531",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "108531_Albrecht_Finn",
+      "name": "Finn Albrecht",
+      "vorgang": "108531",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "108020_Thiede_Daniel",
+      "name": "Daniel Thiede",
+      "vorgang": "108020",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "107931_Schläpfer_Joost",
+      "name": "Joost Schläpfer",
+      "vorgang": "107931",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "107931_Scholz_Nicolas",
+      "name": "Nicolas Scholz",
+      "vorgang": "107931",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "107782_Vollbracht_Lara",
+      "name": "Lara Vollbracht",
+      "vorgang": "107782",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "107578_Möller_Kjer",
+      "name": "Kjer Möller",
+      "vorgang": "107578",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "107423_Holzapfel_Nils",
+      "name": "Nils Holzapfel",
+      "vorgang": "107423",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "106724_Lang_Niklas",
+      "name": "Niklas Lang",
+      "vorgang": "106724",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "106626_Oldenbürger_Moritz",
+      "name": "Moritz Oldenbürger",
+      "vorgang": "106626",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "106129_Stender_Hannes",
+      "name": "Hannes Stender",
+      "vorgang": "106129",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "105526_Buchmüller_Till",
+      "name": "Till Buchmüller",
+      "vorgang": "105526",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "105526_Schütt_Hjalmar",
+      "name": "Hjalmar Schütt",
+      "vorgang": "105526",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "105249_Zacharias_Timon",
+      "name": "Timon Zacharias",
+      "vorgang": "105249",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "105249_Jepsen_Hannah",
+      "name": "Hannah Jepsen",
+      "vorgang": "105249",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "105249_Mehl_Vicky",
+      "name": "Vicky Mehl",
+      "vorgang": "105249",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "105249_Premke_Charlotte",
+      "name": "Charlotte Premke",
+      "vorgang": "105249",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "105249_Linke_Dorotea",
+      "name": "Dorotea Linke",
+      "vorgang": "105249",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "105235_Wittrock_Finn",
+      "name": "Finn Wittrock",
+      "vorgang": "105235",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "105233_Dörr_Carolina",
+      "name": "Carolina Dörr",
+      "vorgang": "105233",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "105231_Andresen_Jane",
+      "name": "Jane Andresen",
+      "vorgang": "105231",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "105230_Görs_Julius",
+      "name": "Julius Görs",
+      "vorgang": "105230",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "105152_Brackebusch_Tabea",
+      "name": "Tabea Brackebusch",
+      "vorgang": "105152",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "105152_Tiedemann_Maira",
+      "name": "Maira Tiedemann",
+      "vorgang": "105152",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "104830_Vogt_Sten Janke",
+      "name": "Sten Janke Vogt",
+      "vorgang": "104830",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "103788_Dedekind_Myra",
+      "name": "Myra Dedekind",
+      "vorgang": "103788",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "103788_Schmidt_Kai",
+      "name": "Kai Schmidt",
+      "vorgang": "103788",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "103788_Weiß_Lena",
+      "name": "Lena Weiß",
+      "vorgang": "103788",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "103788_Ziermann_Felix",
+      "name": "Felix Ziermann",
+      "vorgang": "103788",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "103788_Frank_Christian",
+      "name": "Christian Frank",
+      "vorgang": "103788",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "103211_Potthast_Anton",
+      "name": "Anton Potthast",
+      "vorgang": "103211",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "103154_Rieß_Ylvi",
+      "name": "Ylvi Rieß",
+      "vorgang": "103154",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "103154_Albertsen_Jannis",
+      "name": "Jannis Albertsen",
+      "vorgang": "103154",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "zu_zahlen",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "102791_Stöfer_Sebastian",
+      "name": "Sebastian Stöfer",
+      "vorgang": "102791",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "102791_Steffensen_Lennard",
+      "name": "Lennard Steffensen",
+      "vorgang": "102791",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "102443_Paap_Ronja",
+      "name": "Ronja Paap",
+      "vorgang": "102443",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101985_Franzen_Leon",
+      "name": "Leon Franzen",
+      "vorgang": "101985",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101985_Franzen_Jonas",
+      "name": "Jonas Franzen",
+      "vorgang": "101985",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101985_Beckdorf_Fabian",
+      "name": "Fabian Beckdorf",
+      "vorgang": "101985",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101891_Schaus_Leif",
+      "name": "Leif Schaus",
+      "vorgang": "101891",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101891_Löffler_Tim Henrik",
+      "name": "Tim Henrik Löffler",
+      "vorgang": "101891",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101891_Panten_Anton",
+      "name": "Anton Panten",
+      "vorgang": "101891",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101891_Brandau_Svea",
+      "name": "Svea Brandau",
+      "vorgang": "101891",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101891_Hoppe_Felix",
+      "name": "Felix Hoppe",
+      "vorgang": "101891",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101655_Oertel_Merit Hannah",
+      "name": "Merit Hannah Oertel",
+      "vorgang": "101655",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101626_Betz_Lucia",
+      "name": "Lucia Betz",
+      "vorgang": "101626",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101626_Petersen_Hannes",
+      "name": "Hannes Petersen",
+      "vorgang": "101626",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101626_Nielsen_Clemens",
+      "name": "Clemens Nielsen",
+      "vorgang": "101626",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101626_Jessen_Birger",
+      "name": "Birger Jessen",
+      "vorgang": "101626",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101626_Sellmer_Jannik",
+      "name": "Jannik Sellmer",
+      "vorgang": "101626",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101562_Meyer_Melina",
+      "name": "Melina Meyer",
+      "vorgang": "101562",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101305_Kloppe_Chiara",
+      "name": "Chiara Kloppe",
+      "vorgang": "101305",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101230_Wolfromm_Amalia",
+      "name": "Amalia Wolfromm",
+      "vorgang": "101230",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101199_Henning_Jette",
+      "name": "Jette Henning",
+      "vorgang": "101199",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101198_Zierz_Hauke",
+      "name": "Hauke Zierz",
+      "vorgang": "101198",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101197_Otto_Annalena Maria",
+      "name": "Annalena Maria Otto",
+      "vorgang": "101197",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101196_Büllesfeld_Greta",
+      "name": "Greta Büllesfeld",
+      "vorgang": "101196",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101195_Jörgensen_Karoline",
+      "name": "Karoline Jörgensen",
+      "vorgang": "101195",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101157_Isringhaus_Viviane",
+      "name": "Viviane Isringhaus",
+      "vorgang": "101157",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101157_Benson_Frederik",
+      "name": "Frederik Benson",
+      "vorgang": "101157",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101157_Schad_Henry",
+      "name": "Henry Schad",
+      "vorgang": "101157",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101157_Fischer_Hannah",
+      "name": "Hannah Fischer",
+      "vorgang": "101157",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101157_Röhler_Antonia",
+      "name": "Antonia Röhler",
+      "vorgang": "101157",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101149_Kleimenhagen_Lars",
+      "name": "Lars Kleimenhagen",
+      "vorgang": "101149",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101149_Wittorf_Paul",
+      "name": "Paul Wittorf",
+      "vorgang": "101149",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101129_Graf_Mia",
+      "name": "Mia Graf",
+      "vorgang": "101129",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "101129_Lemberger_Ben",
+      "name": "Ben Lemberger",
+      "vorgang": "101129",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "100972_Bierfreund_Naya",
+      "name": "Naya Bierfreund",
+      "vorgang": "100972",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "100972_Bierfreund_Luca Marie",
+      "name": "Luca Marie Bierfreund",
+      "vorgang": "100972",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "100972_Finck_Julius",
+      "name": "Julius Finck",
+      "vorgang": "100972",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "100802_Moritz_Franziska",
+      "name": "Franziska Moritz",
+      "vorgang": "100802",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "100802_Reimer_Henrieke",
+      "name": "Henrieke Reimer",
+      "vorgang": "100802",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "100802_Hasenpusch_Jona Marie",
+      "name": "Jona Marie Hasenpusch",
+      "vorgang": "100802",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "100779_Schneider_Marie",
+      "name": "Marie Schneider",
+      "vorgang": "100779",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "100779_Heitmann_Anton",
+      "name": "Anton Heitmann",
+      "vorgang": "100779",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "100746_von Houwald_Luisa",
+      "name": "Luisa von Houwald",
+      "vorgang": "100746",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "100746_Roth_Jakob",
+      "name": "Jakob Roth",
+      "vorgang": "100746",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "100746_Krieger_Marc",
+      "name": "Marc Krieger",
+      "vorgang": "100746",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "100746_Richter_Malte",
+      "name": "Malte Richter",
+      "vorgang": "100746",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "100746_Dankers_Jenna",
+      "name": "Jenna Dankers",
+      "vorgang": "100746",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "100746_Helms_Hanna",
+      "name": "Hanna Helms",
+      "vorgang": "100746",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "100746_Böhme_Jasse",
+      "name": "Jasse Böhme",
+      "vorgang": "100746",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "100713_Woog_Mira",
+      "name": "Mira Woog",
+      "vorgang": "100713",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "100543_Siebeneck_Malte",
+      "name": "Malte Siebeneck",
+      "vorgang": "100543",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "100402_Pfannschmidt_Finja",
+      "name": "Finja Pfannschmidt",
+      "vorgang": "100402",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "100402_Bruhn_Julius",
+      "name": "Julius Bruhn",
+      "vorgang": "100402",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
+      "ts": 1780911496166,
+      "personId": "100402_Heer_Alenia",
+      "name": "Alenia Heer",
+      "vorgang": "100402",
+      "field": "Reisestatus (Bulk)",
+      "oldVal": "abgereist",
+      "newVal": "offen"
+    },
+    {
       "ts": 1780911344159,
       "personId": "109849_Leon Garcia_Amy Christy Alejandra",
       "name": "Amy Christy Alejandra Leon Garcia",
@@ -11596,5 +13540,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780911345016
+  "savedAt": 1780911497015
 }

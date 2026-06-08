@@ -6835,6 +6835,12 @@
           "betrag": 45,
           "notiz": "",
           "ts": 1780910508451
+        },
+        {
+          "leistung": "Bettwäsche",
+          "betrag": 12,
+          "notiz": "",
+          "ts": 1780910551799
         }
       ],
       "notiz": "",
@@ -9842,6 +9848,15 @@
   },
   "changeLog": [
     {
+      "ts": 1780910551799,
+      "personId": "103154_Albertsen_Jannis",
+      "name": "Jannis Albertsen",
+      "vorgang": "103154",
+      "field": "Nachbuchung hinzugefügt",
+      "oldVal": "—",
+      "newVal": "Bettwäsche CHF 12.00"
+    },
+    {
       "ts": 1780910508451,
       "personId": "103154_Albertsen_Jannis",
       "name": "Jannis Albertsen",
@@ -11489,5 +11504,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780910509298
+  "savedAt": 1780910552642
 }

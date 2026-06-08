@@ -9051,7 +9051,7 @@
         "anzahl": 0,
         "retour": false
       },
-      "personStatus": "abgereist",
+      "personStatus": "no_show",
       "_ts": {}
     },
     "109879_Dupont_Karla": {
@@ -9849,6 +9849,15 @@
     "110428": "aktiv"
   },
   "changeLog": [
+    {
+      "ts": 1780911341476,
+      "personId": "109849_Leon Garcia_Amy Christy Alejandra",
+      "name": "Amy Christy Alejandra Leon Garcia",
+      "vorgang": "109849",
+      "field": "Reisestatus",
+      "oldVal": "abgereist",
+      "newVal": "no_show"
+    },
     {
       "ts": 1780911339322,
       "personId": "109849_Leon Garcia_Amy Christy Alejandra",
@@ -11569,5 +11578,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780911340172
+  "savedAt": 1780911342358
 }

@@ -6833,7 +6833,7 @@
       "notiz": "",
       "notizColor": "",
       "stirnlampe": {
-        "anzahl": 0,
+        "anzahl": 5,
         "retour": false
       },
       "personStatus": "abgereist",
@@ -11473,5 +11473,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780910493572
+  "savedAt": 1780910497736
 }

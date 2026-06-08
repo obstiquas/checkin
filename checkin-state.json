@@ -6829,7 +6829,14 @@
       "zimmer": "",
       "schluessel": 0,
       "schluessel_retour": true,
-      "nachbuchungen": [],
+      "nachbuchungen": [
+        {
+          "leistung": "Skipass 1 Tag",
+          "betrag": 45,
+          "notiz": "",
+          "ts": 1780910508451
+        }
+      ],
       "notiz": "",
       "notizColor": "",
       "stirnlampe": {
@@ -9835,6 +9842,15 @@
   },
   "changeLog": [
     {
+      "ts": 1780910508451,
+      "personId": "103154_Albertsen_Jannis",
+      "name": "Jannis Albertsen",
+      "vorgang": "103154",
+      "field": "Nachbuchung hinzugefügt",
+      "oldVal": "—",
+      "newVal": "Skipass 1 Tag CHF 45.00"
+    },
+    {
       "ts": 1780910492760,
       "personId": "109979_Aistov_Vladislav",
       "name": "Vladislav Aistov",
@@ -11473,5 +11489,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780910499506
+  "savedAt": 1780910509298
 }

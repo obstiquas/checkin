@@ -9835,6 +9835,42 @@
   },
   "changeLog": [
     {
+      "ts": 1780910472595,
+      "personId": "103154_Albertsen_Jannis",
+      "name": "Jannis Albertsen",
+      "vorgang": "103154",
+      "field": "Schlüssel retour",
+      "oldVal": "nein",
+      "newVal": "ja"
+    },
+    {
+      "ts": 1780910472238,
+      "personId": "103154_Albertsen_Jannis",
+      "name": "Jannis Albertsen",
+      "vorgang": "103154",
+      "field": "Schlüssel retour",
+      "oldVal": "ja",
+      "newVal": "nein"
+    },
+    {
+      "ts": 1780910471447,
+      "personId": "103154_Albertsen_Jannis",
+      "name": "Jannis Albertsen",
+      "vorgang": "103154",
+      "field": "Schlüssel retour",
+      "oldVal": "nein",
+      "newVal": "ja"
+    },
+    {
+      "ts": 1780910471088,
+      "personId": "103154_Albertsen_Jannis",
+      "name": "Jannis Albertsen",
+      "vorgang": "103154",
+      "field": "Schlüssel retour",
+      "oldVal": "ja",
+      "newVal": "nein"
+    },
+    {
       "ts": 1780910468464,
       "personId": "103154_Albertsen_Jannis",
       "name": "Jannis Albertsen",
@@ -11374,5 +11410,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780910469273
+  "savedAt": 1780910473400
 }

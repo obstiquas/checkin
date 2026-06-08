@@ -9211,7 +9211,9 @@
     }
   ],
   "customGroups": {},
-  "vorgangNames": {},
+  "vorgangNames": {
+    "100402": "Uni Tübingen"
+  },
   "vorgangDates": {
     "100402": {
       "anreise": "2026-06-03",
@@ -11345,5 +11347,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780910298449
+  "savedAt": 1780910347056
 }

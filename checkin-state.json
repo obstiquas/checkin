@@ -7578,7 +7578,7 @@
         "anzahl": 0,
         "retour": false
       },
-      "personStatus": "abgereist",
+      "personStatus": "no_show",
       "_ts": {
         "notiz": 1780490178985
       }
@@ -9833,6 +9833,15 @@
   },
   "changeLog": [
     {
+      "ts": 1780910297605,
+      "personId": "110115_Adler_Kevin",
+      "name": "Kevin Adler",
+      "vorgang": "110115",
+      "field": "Reisestatus",
+      "oldVal": "abgereist",
+      "newVal": "no_show"
+    },
+    {
       "ts": 1780910292598,
       "personId": "110115_Adler_Kevin",
       "name": "Kevin Adler",
@@ -11336,5 +11345,5 @@
       "newVal": "110"
     }
   ],
-  "savedAt": 1780910293446
+  "savedAt": 1780910298449
 }
